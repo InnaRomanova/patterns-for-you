@@ -1,0 +1,11 @@
+.page {
+    background: white;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    margin: 0 auto;
+}
+
+.page__content {
+    color: #292F36;
+    width: 100%;
+
+}

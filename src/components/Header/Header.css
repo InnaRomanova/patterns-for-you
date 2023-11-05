@@ -58,14 +58,27 @@
     padding: 0;
 }
 
+.header__link-item:hover {
+    cursor: pointer;
+    color: #925514;
+}
+
 .header__link-item_active {
     border-bottom: 1px solid #A86E30;
     padding-bottom: 12px;
+    color: #925514;
+    /* border-radius: 15px;
+    background: #F3ECE2; */
 }
 
 .header__seach {
     margin: 0 189px 0 0;
     padding: 0;
+}
+
+.header__seach-image:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .header__sign {

@@ -1,0 +1,15 @@
+.news {
+    margin: 0;
+    padding: 0;
+}
+
+.news__container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    max-width: 1616px;
+    min-height: 796px;
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+}

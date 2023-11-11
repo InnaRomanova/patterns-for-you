@@ -42,7 +42,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 51px */
     letter-spacing: 0.34px;
     max-width: 426px;
 }
@@ -105,9 +104,6 @@
     .slide__container {
         margin-left: 150px;
         margin-right: 150px;
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
     }
 
     .slide__title {

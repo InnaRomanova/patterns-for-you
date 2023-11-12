@@ -6,6 +6,57 @@ import ButtonVectorLeft from "../Elements/ButtonVector";
 import ButtonVectorLeftRight from "../Elements/ButtonVectorRight";
 
 function News() {
+  const arrReviews = [
+    {
+      id: 1,
+      image: NewsCard,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+      detailed: "Подробнее",
+    },
+    {
+      id: 2,
+      image: NewsCard,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+      detailed: "Подробнее",
+    },
+    {
+      id: 3,
+      image: NewsCard,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+      detailed: "Подробнее",
+    },
+    {
+      id: 4,
+      image: NewsCard,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+      detailed: "Подробнее",
+    },
+  ];
+
+  const reviews = [];
+
+  arrReviews.forEach((rewiew, index) => {
+    reviews.push(
+      <>
+        <div className="school__user-item">
+          <img className="school__image" src={rewiew.image} />
+          <div className="school__content">
+            <h4 className="school__name">{rewiew.name}</h4>
+            <p className="school__post">{rewiew.text}</p>
+          </div>
+        </div>
+      </>
+    );
+  });
+
   return (
     <section className="news">
       <div className="news__container">
@@ -92,7 +143,6 @@ function News() {
             <ButtonVectorLeft />
           </button>
           <ButtonVectorLeftRight />
-          {/* <button className="news__button-vector news__button-right"></button> */}
         </div>
       </div>
     </section>

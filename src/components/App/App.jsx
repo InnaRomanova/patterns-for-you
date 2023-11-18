@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route
             exac
-            path="/scp"
+            path="/"
             element={
               <>
                 <Header />

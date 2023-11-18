@@ -1,6 +1,7 @@
-export default function ButtonVectorLeftRight() {
+export default function ButtonVectorRight() {
   return (
     <svg
+      // className="news__button-vector news__button-right"
       xmlns="http://www.w3.org/2000/svg"
       width="52"
       height="52"
@@ -12,9 +13,9 @@ export default function ButtonVectorLeftRight() {
       <path
         d="M24 30.8633L29.9429 24.4316L24 18"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

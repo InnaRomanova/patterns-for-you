@@ -214,6 +214,10 @@
     .card__image {
         width: 100%;
     }
+
+    .news__button {
+        margin-top: 55px;
+    }
 }
 
 @media screen and (max-width: 1570px) {
@@ -256,5 +260,9 @@
     .news__container {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .news__button {
+        gap: 32px;
     }
 }

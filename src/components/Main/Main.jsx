@@ -3,6 +3,7 @@ import "./Main.css";
 import Slide from "../Slide/Slide";
 import News from "../News/News";
 import Ready from "../Ready/ReadyMade";
+import Katalog from "../Katalog/Katalog";
 
 function Main() {
   return (
@@ -10,6 +11,7 @@ function Main() {
       <Slide />
       <News />
       <Ready />
+      <Katalog />
     </main>
   );
 }

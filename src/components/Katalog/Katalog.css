@@ -4,6 +4,96 @@
 }
 
 .katalog__container {
+    margin: 138px 281px 0;
+    padding: 0;
+}
+
+.katalog__subtitle {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #4D5053;
+    text-align: center;
+    font-family: 'Jost';
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.43px;
+}
+
+.katalog-cards {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 265px;
+}
+
+.katalog-card {
+    margin: 37px 0 0;
+    padding: 0;
+    max-width: 548px;
+    height: 525px;
+    border-radius: 0 15% 0 0;
+    background-image: url(../../images/katalogImage1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    min-width: 500px;
+}
+
+.katalog-card:nth-child(even) {
+    border-radius: 15% 0 0 0;
+}
+
+/* .katalog-card__image {
+    margin: 0;
+    padding: 0;
+    max-width: 548px;
+    height: 525px;
+    border-radius: 0 15% 0 0;
+}
+
+.katalog-card__image::nth-child(2n) {
+    border-radius: 15% 0 0 0;
+} */
+
+.katalog-card__info {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: -98px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.katalog-card__info-text {
+    margin: 0;
+    padding: 0;
+}
+
+.katalog-card__name {
+    margin: 0;
+    padding: 0;
+    color: var(--style-name-title, #292F36);
+    /* font-family: 'DM Serif Display'; */
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 3px;
+}
+
+.katalog-card__detailed {
+    margin: 0;
+    padding: 0;
+    color: #4D5053;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.22px;
 }

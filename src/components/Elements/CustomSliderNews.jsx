@@ -105,7 +105,7 @@ const SwiperSliderNews = ({ swiperArray }) => {
                       <h3 className="card__inform-name">{teacher.name}</h3>
                       <p className="card__inform-katalog">{teacher.text}</p>
                       <span className="card__inform-price">
-                        {teacher.price}
+                        {teacher.price} Руб.
                       </span>
                     </div>
                     <div className="card__more">

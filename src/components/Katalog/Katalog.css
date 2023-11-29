@@ -1,10 +1,10 @@
 .katalog {
-    margin: 0;
+    margin: 138px 0 0;
     padding: 0;
 }
 
 .katalog__container {
-    margin: 138px 281px 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -25,8 +25,10 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 265px;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 87px; */
+    row-gap: 91px;
+    justify-items: center;
 }
 
 .katalog-card {
@@ -35,7 +37,7 @@
     max-width: 548px;
     height: 525px;
     border-radius: 0 15% 0 0;
-    background-image: url(../../images/katalogImage1.png);
+    /* background-image: url(../../images/katalogImage1.png); */
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -96,4 +98,14 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.22px;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .katalog-cards {
+        margin-left: 102px;
+        margin-right: 102px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }

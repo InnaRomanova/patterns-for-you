@@ -5,13 +5,13 @@ import News from "../News/News";
 import Ready from "../Ready/ReadyMade";
 import Katalog from "../Katalog/Katalog";
 
-function Main() {
+function Main({ arrCards }) {
   return (
     <main className="main">
       <Slide />
       <News />
       <Ready />
-      <Katalog />
+      <Katalog cards={arrCards} />
     </main>
   );
 }

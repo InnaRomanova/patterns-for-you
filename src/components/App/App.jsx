@@ -1,10 +1,13 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 
 function App() {
+  const [cards, setCards] = useState([]);
+
   return (
     <div className="page">
       {/* <CurrentUserContext.Provider value={currentUser}> */}
@@ -16,7 +19,7 @@ function App() {
             element={
               <>
                 <Header />
-                <Main />
+                <Main cards={cards} setCards={setCards} />
                 <Footer />
               </>
             }

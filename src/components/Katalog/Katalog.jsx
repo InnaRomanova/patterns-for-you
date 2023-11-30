@@ -2,10 +2,10 @@ import React from "react";
 import "./Katalog.css";
 import CardButton from "../Elements/CardButton";
 import katalogImage1 from "../../images/katalogImage1.png";
-import map from "lodash/map";
+import Card from "../Card/Card";
 
-function Katalog({ items }) {
-  const arrCards = [
+function Katalog() {
+  const arrReviews = [
     {
       id: 1,
       image: katalogImage1,
@@ -30,42 +30,30 @@ function Katalog({ items }) {
       name: "Блузки",
       text: "Decor / Подробнее",
     },
-    // {
-    //   id: 4,
-    //   // image: NewsCard,
-    //   name: "Modern Kitchen",
-    //   detailed: "женское платье",
-    // },
-    // {
-    //   id: 4,
-    //   //  image: NewsCard,
-    //   name: "Modern Kitchen",
-    //   detailed: "женское платье",
-    // },
   ];
+  // const cards = [];
 
-  const cards = [];
-
-  arrCards.forEach((card, index) => {
-    cards.push(
-      <>
-        <li className="katalog-card">
-          {/* <img
-          src={card.image}
-          alt="картинка выкройки"
-          className="katalog-card"
-        /> */}
-          <div className="katalog-card__info">
-            <div className="katalog-card__info-text">
-              <h4 className="katalog-card__name">{cards.name}</h4>
-              <p className="katalog-card__detailed">{cards.detailed}</p>
-            </div>
-            <CardButton />
-          </div>
-        </li>
-      </>
-    );
-  });
+  // arrReviews.forEach((card, index) => {
+  //   cards.push(
+  //     <>
+  //       {/* <li className="katalog-card">
+  //         {card.image} */}
+  //       {/* <img
+  //         src={card.image}
+  //         alt="картинка выкройки"
+  //         className="katalog-card"
+  //       /> */}
+  //       {/* <div className="katalog-card__info">
+  //           <div className="katalog-card__info-text">
+  //             <h4 className="katalog-card__name">{card.name}</h4>
+  //             <p className="katalog-card__detailed">{card.detailed}</p>
+  //           </div>
+  //           <CardButton />
+  //         </div> */}
+  //       {/* </li> */}
+  //     </>
+  //   );
+  // });
 
   return (
     <section className="katalog">
@@ -75,62 +63,7 @@ function Katalog({ items }) {
           <h3 className="katalog__subtitle">Женская одежда</h3>
         </div>
         <ul className="katalog-cards">
-          {items.map(() => (
-            <arrCards />
-            //     <li className="katalog-card">
-            //       {cards.image}
-            //       {/* <img
-            //   src={card.image}
-            //   alt="картинка выкройки"
-            //   className="katalog-card"
-            // /> */}
-            //       <div className="katalog-card__info">
-            //         <div className="katalog-card__info-text">
-            //           <h4 className="katalog-card__name">{cards.name}</h4>
-            //           <p className="katalog-card__detailed">{cards.detailed}</p>
-            //         </div>
-            //         <CardButton />
-            //       </div>
-            //     </li>
-          ))}
-
-          {/* <div className="katalog-card__info">
-            <div className="katalog-card__info-text">
-              <h4 className="katalog-card__name">Платья</h4>
-              <p className="katalog-card__detailed">Decor / Подробнее</p>
-            </div>
-            <CardButton />
-          </div> 
-        </div>*/}
-
-          {/* <div className="katalog-card">
-          <div className="katalog-card__info">
-            <div className="katalog-card__info-text">
-              <h4 className="katalog-card__name">Платья</h4>
-              <p className="katalog-card__detailed">Decor / Подробнее</p>
-            </div>
-            <CardButton />
-          </div>
-        </div>
-
-        <div className="katalog-card">
-          <div className="katalog-card__info">
-            <div className="katalog-card__info-text">
-              <h4 className="katalog-card__name">Платья</h4>
-              <p className="katalog-card__detailed">Decor / Подробнее</p>
-            </div>
-            <CardButton />
-          </div>
-        </div>
-
-        <div className="katalog-card">
-          <div className="katalog-card__info">
-            <div className="katalog-card__info-text">
-              <h4 className="katalog-card__name">Платья</h4>
-              <p className="katalog-card__detailed">Decor / Подробнее</p>
-            </div>
-            <CardButton />
-          </div>*/}
+          <Card swiperArray={arrReviews} />
         </ul>
       </div>
     </section>

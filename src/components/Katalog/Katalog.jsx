@@ -28,32 +28,21 @@ function Katalog() {
       id: 4,
       image: katalogImage1,
       name: "Блузки",
-      text: "Decor / Подробнее",
+      detailed: "Decor / Подробнее",
+    },
+    {
+      id: 5,
+      image: katalogImage1,
+      name: "Блузки",
+      detailed: "Decor / Подробнее",
+    },
+    {
+      id: 6,
+      image: katalogImage1,
+      name: "Блузки",
+      detailed: "Decor / Подробнее",
     },
   ];
-  // const cards = [];
-
-  // arrReviews.forEach((card, index) => {
-  //   cards.push(
-  //     <>
-  //       {/* <li className="katalog-card">
-  //         {card.image} */}
-  //       {/* <img
-  //         src={card.image}
-  //         alt="картинка выкройки"
-  //         className="katalog-card"
-  //       /> */}
-  //       {/* <div className="katalog-card__info">
-  //           <div className="katalog-card__info-text">
-  //             <h4 className="katalog-card__name">{card.name}</h4>
-  //             <p className="katalog-card__detailed">{card.detailed}</p>
-  //           </div>
-  //           <CardButton />
-  //         </div> */}
-  //       {/* </li> */}
-  //     </>
-  //   );
-  // });
 
   return (
     <section className="katalog">
@@ -65,6 +54,7 @@ function Katalog() {
         <ul className="katalog-cards">
           <Card swiperArray={arrReviews} />
         </ul>
+        <button className="katalog__button-over">Перейти в каталог</button>
       </div>
     </section>
   );

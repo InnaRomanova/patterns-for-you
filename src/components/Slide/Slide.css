@@ -65,6 +65,12 @@
     font-size: 27px;
     line-height: 125%;
     letter-spacing: 0.54px;
+    border: none;
+}
+
+.slide__button-katalog:hover {
+    cursor: pointer;
+    background: rgba(41, 47, 54, 0.70);
 }
 
 .slide__vector {
@@ -146,7 +152,6 @@
         margin: 36px auto 0;
         max-width: 261px;
         height: 49px;
-
         border-radius: 18px;
         background: var(--style-name-title, #292F36);
         box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);

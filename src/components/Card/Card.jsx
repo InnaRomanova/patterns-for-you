@@ -39,7 +39,7 @@ function Card({ swiperArray }) {
           <img
             src={arrCards.image}
             alt="картинка выкройки"
-            className="katalog-card"
+            className="katalog-card__image"
           />
           <div className="katalog-card__info">
             <div className="katalog-card__info-text">

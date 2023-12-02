@@ -10,7 +10,7 @@
 
 .pattern__container {
     margin: 0;
-    padding: 33px 76px 0;
+    padding: 33px 78px 0;
 }
 
 /* .pattern__title {
@@ -20,8 +20,10 @@
 
 .pattern__list {
     list-style-type: none;
-    margin: 90px 0 0;
+    margin: 38px 0 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .pattern__list-item {
@@ -37,4 +39,12 @@
 .pattern__inform {
     margin: 6px 0 0 11px;
     padding: 0;
+}
+
+.pattern__button {
+    margin: 38px auto 0;
+    display: flex;
+    width: 443px;
+    font-size: 36px;
+    letter-spacing: 0.72px;
 }

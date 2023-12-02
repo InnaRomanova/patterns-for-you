@@ -1,0 +1,40 @@
+.pattern {
+    margin: 128px auto 0;
+    padding: 0;
+    max-width: 1608px;
+    min-height: 769px;
+    background: #F4F0EC;
+    background: #F4F0EC;
+    border-radius: 70px;
+}
+
+.pattern__container {
+    margin: 0;
+    padding: 33px 76px 0;
+}
+
+/* .pattern__title {
+    margin: 33px 0 0;
+    padding: 0;
+} */
+
+.pattern__list {
+    list-style-type: none;
+    margin: 90px 0 0;
+    padding: 0;
+}
+
+.pattern__list-item {
+    margin: 0;
+    padding: 0;
+}
+
+.pattern__image {
+    margin: 0;
+    padding: 0;
+}
+
+.pattern__inform {
+    margin: 6px 0 0 11px;
+    padding: 0;
+}

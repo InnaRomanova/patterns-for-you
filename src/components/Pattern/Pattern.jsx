@@ -40,6 +40,24 @@ function Pattern() {
   ];
 
 
+  const patterns = [];
+
+  arrPatterns.forEach((pattern, index) => {
+    patterns.push(
+      <>
+        <li className="pattern__list-item" key={index}>
+                <img src={pattern.image} alt="платье" className="pattern__image" />
+            <div className="pattern__inform">
+              <h3 className="card__inform-name">{pattern.name}</h3>
+              <p className="card__inform-katalog">{pattern.text}</p>
+              <span className="card__inform-price">{pattern.price} Руб.</span>
+            </div>
+            </li>
+      </>
+    );
+  });
+
+
 
   return (
     <section className="pattern">

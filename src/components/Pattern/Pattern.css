@@ -48,3 +48,5 @@
     font-size: 36px;
     letter-spacing: 0.72px;
 }
+
+@media screen and (max-width: 1444px) {}

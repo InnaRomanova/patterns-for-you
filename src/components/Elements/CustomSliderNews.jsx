@@ -11,7 +11,7 @@ register();
 const SwiperSliderNews = ({ swiperArray }) => {
   const swiperElRef = useRef(null);
   const matches = useMediaQuery({ query: "(min-width: 1570px)" });
-  const mobuleMatches = useMediaQuery({ query: "(max-width: 759px)" });
+  const mobileMatches = useMediaQuery({ query: "(max-width: 759px)" });
 
   const handlePrev = useCallback(() => {
     if (!swiperElRef.current) return;

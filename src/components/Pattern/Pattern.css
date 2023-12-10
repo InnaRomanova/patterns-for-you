@@ -1,7 +1,7 @@
 .pattern {
-    margin: 128px auto 0;
+    margin: 128px 50px 0;
     padding: 0;
-    max-width: 1608px;
+    /* width: 100%; */
     min-height: 769px;
     background: #F4F0EC;
     background: #F4F0EC;
@@ -20,7 +20,7 @@
 
 .pattern__list {
     list-style-type: none;
-    margin: 38px 0 0;
+    margin: 38px 0 30px;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -49,4 +49,17 @@
     letter-spacing: 0.72px;
 }
 
-@media screen and (max-width: 1444px) {}
+@media screen and (max-width: 1920px) {
+    .pattern {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1608px;
+    }
+}
+
+@media screen and (max-width: 1442px) {
+    .pattern__swiper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

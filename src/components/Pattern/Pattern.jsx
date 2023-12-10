@@ -37,6 +37,13 @@ function Pattern() {
       text: "женская повседневная блузка",
       price: 135.00,
     },
+    {
+      id: 4,
+      image: blouse,
+      name: "Блузка",
+      text: "женская повседневная блузка",
+      price: 135.00,
+    },
   ];
 
 
@@ -63,9 +70,7 @@ function Pattern() {
     <section className="pattern">
         <div className="pattern__container">
         <h2 className="news__title">Каталог выкроек</h2>
-        <ul className="pattern__list">
-            <PatternCard patternArray={arrPatterns} />           
-        </ul>
+            <PatternCard patternArray={arrPatterns} />
         <button className="slide__button-katalog pattern__button">
           В каталог
           <img

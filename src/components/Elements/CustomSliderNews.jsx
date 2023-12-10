@@ -8,7 +8,7 @@ import ButtonVectorRight from "../Elements/ButtonVectorRight";
 
 register();
 
-const SwiperSliderNews = ({ swiperArray }) => {
+function SwiperSliderNews ({ swiperArray }) {
   const swiperElRef = useRef(null);
   const matches = useMediaQuery({ query: "(min-width: 1570px)" });
   const mobileMatches = useMediaQuery({ query: "(max-width: 759px)" });

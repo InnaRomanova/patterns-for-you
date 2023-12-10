@@ -5,6 +5,7 @@ import News from "../News/News";
 import Ready from "../Ready/ReadyMade";
 import Katalog from "../Katalog/Katalog";
 import Pattern from "../Pattern/Pattern";
+import Forum from "../Forum/Forum";
 
 function Main({ arrCards }) {
   return (
@@ -14,6 +15,7 @@ function Main({ arrCards }) {
       <Ready />
       <Katalog cards={arrCards} />
       <Pattern />
+      <Forum />
     </main>
   );
 }

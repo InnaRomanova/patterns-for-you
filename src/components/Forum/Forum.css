@@ -1,6 +1,7 @@
 .forum {
-    margin: 0;
+    margin: 0 20px 0;
     padding: 23px 0 0;
+    position: relative;
 }
 
 .forum__content {
@@ -33,10 +34,11 @@
 
 .forum__cards {
     display: flex;
-    margin: 0 207px 0;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     justify-content: space-evenly;
+
 }
 
 .forum__card {
@@ -75,4 +77,26 @@
     margin: 52px auto 0;
     width: 240px;
     height: 70px;
+}
+
+.forum__buttons {
+    margin: 0 auto 0;
+    padding: 0;
+    display: flex;
+    width: calc(94% - 20px);
+    justify-content: space-evenly;
+}
+
+.forum__left {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50px;
+}
+
+.forum__right {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50px;
 }

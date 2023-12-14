@@ -47,6 +47,7 @@ function ForumCard({ commentArray }) {
                     >
                         {map(commentArray, (arrComments, index) => (
                             <swiper-slide key={index}>
+
                                 <ul className="commets__cards">
                                     <li className="comment__card">
                                         <div className="comment__personal">
@@ -64,7 +65,7 @@ function ForumCard({ commentArray }) {
                             </swiper-slide>
                         ))}
                     </swiper-container>
-                    <div className="forum__buttons">
+                    <div className="forum__buttons comments__buttons">
                         <CardButtonLeft onClick={handlePrev} className="forum__left" />
                         <CardButton onClick={handleNext} className="forum__right" />
                     </div>
@@ -80,7 +81,7 @@ function ForumCard({ commentArray }) {
                     >
                         {map(commentArray, (arrComments, index) => (
                             <swiper-slide key={index}>
-                                <ul className="forum__cards">
+                                <ul className="commets__cards">
                                     <li className="comment__card">
                                         <div className="comment__personal">
                                             <a href="#" className="comment__link">
@@ -97,7 +98,7 @@ function ForumCard({ commentArray }) {
                             </swiper-slide>
                         ))}
                     </swiper-container>
-                    <div className="forum__buttons">
+                    <div className="forum__buttons comments__buttons">
                         <button onClick={handlePrev} className="forum__left"><CardButtonLeft /></button>
                         <button onClick={handleNext} className="forum__right"><CardButton /></button>
 

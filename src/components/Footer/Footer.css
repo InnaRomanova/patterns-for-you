@@ -1,0 +1,13 @@
+.footer {
+    margin: 26px 0 0;
+    padding: 0;
+    min-height: 475px;
+    width: 100%;
+    background: #E0BE99;
+}
+
+.footer__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

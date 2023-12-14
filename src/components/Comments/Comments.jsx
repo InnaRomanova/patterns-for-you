@@ -73,8 +73,10 @@ function Comments() {
         <div className="comments__container">
           <h2 className="news__title forum__title">Комментарии</h2>
         </div>
-        <PersonalComment commentArray={arrComments} />
-        <button className="forum__over">Перейти к комментариям
+        <div className="comments__block">
+          <PersonalComment commentArray={arrComments} />
+        </div>
+        <button className="forum__over comments__over">Перейти к комментариям
           <img
             src={buttonKatalogSlide}
             alt="В каталог"

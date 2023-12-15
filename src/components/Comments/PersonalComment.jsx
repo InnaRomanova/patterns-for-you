@@ -11,7 +11,7 @@ register();
 
 function ForumCard({ commentArray }) {
     const swiperElRef = useRef(null);
-    const matches = useMediaQuery({ query: "(min-width: 1921px)" });
+    const matches = useMediaQuery({ query: "(min-width: 1920px)" });
     const mobileMatches = useMediaQuery({ query: "(max-width: 1442px)" });
 
     const handlePrev = useCallback(() => {

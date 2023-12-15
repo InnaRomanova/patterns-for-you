@@ -6,8 +6,120 @@
     background: #E0BE99;
 }
 
+.footer__container {
+    margin: 0;
+    padding: 10px 0 0;
+}
+
 .footer__list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    width: calc(70% - 40px);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.footer__list-item {}
+
+.footer__list-block {
+    width: 354px;
+}
+
+.footer__logoImage {}
+
+.footer__text {
+    margin: 8px 0 0;
+    padding: 0;
+    color: #4D5053;
+    font-family: 'Jost', 'Arial', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.22px;
+}
+
+.footer__list-icon {
+    align-items: center;
+    margin: 31px 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 54px;
+}
+
+.footer__list-menu {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.footer__menu {
+    margin: 0 0 26px;
+    padding: 0;
+    width: 258px;
+
+}
+
+.footer__menu-link {
+    text-decoration: none;
+}
+
+.footer__title {
+    color: var(--style-name-title, #292F36);
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1756px) {
+    .footer__list {
+        width: calc(90% - 30px);
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .footer {
+        margin-top: 0;
+    }
+
+    .footer__container {
+        padding-top: 27px;
+    }
+
+    .footer__list {
+        width: calc(82% - 30px);
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        column-gap: 100px;
+        row-gap: 20px;
+    }
+
+    .footer__list-block {
+        width: 272px;
+    }
+}
+
+@media screen and (max-width: 804px) {
+    .footer__list-menu_disable {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .footer__list {
+        width: 100%;
+        justify-content: center;
+        column-gap: 0;
+    }
+
+
 }

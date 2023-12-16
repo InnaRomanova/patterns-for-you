@@ -157,3 +157,14 @@
         box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
     }
 }
+
+
+@media screen and (max-width: 419px) {
+    .slide__title {
+        font-size: 57px;
+    }
+
+    .slide__subtitle {
+        margin-top: 0;
+    }
+}

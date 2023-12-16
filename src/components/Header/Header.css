@@ -212,3 +212,17 @@
     }
 
 }
+
+@media screen and (max-width: 426px) {
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__menu-mobile {
+        margin-right: 5px;
+    }
+}

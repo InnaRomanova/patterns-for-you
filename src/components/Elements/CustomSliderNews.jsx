@@ -1,5 +1,4 @@
-import { useRef, useEffect, useCallback } from "react";
-import { useMediaQuery } from "react-responsive";
+import { useRef, useEffect, useCallback, useState } from "react";
 import { register } from "swiper/element/bundle";
 import map from "lodash/map";
 import "../News/News.css";
@@ -8,10 +7,9 @@ import ButtonVectorRight from "../Elements/ButtonVectorRight";
 
 register();
 
-function SwiperSliderNews ({ swiperArray }) {
+function SwiperSliderNews({ swiperArray }) {
   const swiperElRef = useRef(null);
-  const matches = useMediaQuery({ query: "(min-width: 1570px)" });
-  const mobileMatches = useMediaQuery({ query: "(max-width: 759px)" });
+  const [slidesPerView, setSlidesPerView] = useState(4);
 
   const handlePrev = useCallback(() => {
     if (!swiperElRef.current) return;
@@ -24,117 +22,86 @@ function SwiperSliderNews ({ swiperArray }) {
   }, []);
 
   useEffect(() => {
-    // listen for Swiper events using addEventListener
-    swiperElRef.current.addEventListener("progress", (e) => {
-      const [swiper, progress] = e.detail;
-    });
-
-    swiperElRef.current.addEventListener("slidechange", (e) => {});
+    function handleResize() {
+      const display = window.innerWidth;
+      if (display > 1570) {
+        setSlidesPerView(4);
+      } else if (display > 810) {
+        setSlidesPerView(3);
+      } else if (display > 750) {
+        setSlidesPerView(2);
+      } else if (display < 750) {
+        setSlidesPerView(1);
+      }
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <>
-      {matches ? (
-        <>
-          <swiper-container
-            ref={swiperElRef}
-            slides-per-view="4"
-            navigation="false"
-            pagination="false"
-          >
-            {map(swiperArray, (teacher, index) => (
-              <swiper-slide key={index}>
-                <div className="news__cards-list">
-                  <div className="news__cards">
-                    <div className="news__card">
-                      <img
-                        src={teacher.image}
-                        alt="картинка выкройки"
-                        className="card__image"
-                      />
-                      <div className="card__inform">
-                        <h3 className="card__inform-name">{teacher.name}</h3>
-                        <p className="card__inform-katalog">{teacher.text}</p>
-                        <span className="card__inform-price">
-                          {teacher.price} Руб.
-                        </span>
-                      </div>
-                      <div className="card__more">
-                        <p className="card__more-katalog">{teacher.detailed}</p>
-                        <button className="card__more-button-katalog"></button>
-                      </div>
-                    </div>
+      <swiper-container
+        ref={swiperElRef}
+        slides-per-view={slidesPerView}
+        navigation="false"
+        pagination="false"
+      >
+        {map(swiperArray, (teacher, index) => (
+          <swiper-slide key={index}>
+            <div className="news__cards-list">
+              <div className="news__cards">
+                <div className="news__card">
+                  <img
+                    src={teacher.image}
+                    alt="картинка выкройки"
+                    className="card__image"
+                  />
+                  <div className="card__inform">
+                    <h3 className="card__inform-name">{teacher.name}</h3>
+                    <p className="card__inform-katalog">{teacher.text}</p>
+                    <span className="card__inform-price">
+                      {teacher.price} Руб.
+                    </span>
+                  </div>
+                  <div className="card__more">
+                    <p className="card__more-katalog">{teacher.detailed}</p>
+                    <button className="card__more-button-katalog"></button>
                   </div>
                 </div>
-              </swiper-slide>
-            ))}
-          </swiper-container>
-          <div className="news__button">
-            <button
-              className="news__button-vector news__button-left"
-              onClick={handlePrev}
-            >
-              <ButtonVectorLeft />
-            </button>
-            <button
-              className="news__button-vector news__button-right"
-              onClick={handleNext}
-            >
-              <ButtonVectorRight />
-            </button>
-          </div>
-        </>
-      ) : (
-        <>
-          <swiper-container
-            ref={swiperElRef}
-            slides-per-view="3"
-            navigation="false"
-            pagination="false"
-          >
-            {map(swiperArray, (teacher, index) => (
-              <swiper-slide key={index}>
-                <div className="news__cards">
-                  <div className="news__card">
-                    <img
-                      src={teacher.image}
-                      alt="картинка выкройки"
-                      className="card__image"
-                    />
-                    <div className="card__inform">
-                      <h3 className="card__inform-name">{teacher.name}</h3>
-                      <p className="card__inform-katalog">{teacher.text}</p>
-                      <span className="card__inform-price">
-                        {teacher.price} Руб.
-                      </span>
-                    </div>
-                    <div className="card__more">
-                      <p className="card__more-katalog">{teacher.detailed}</p>
-                      <button className="card__more-button-katalog"></button>
-                    </div>
-                  </div>
-                </div>
-              </swiper-slide>
-            ))}
-          </swiper-container>
-          <div className="news__button">
-            <button
-              className="news__button-vector news__button-left"
-              onClick={handlePrev}
-            >
-              <ButtonVectorLeft />
-            </button>
-            <button
-              className="news__button-vector news__button-right"
-              onClick={handleNext}
-            >
-              <ButtonVectorRight />
-            </button>
-          </div>
-        </>
-      )}
+              </div>
+            </div>
+          </swiper-slide>
+        ))}
+      </swiper-container>
+      <div className="news__button">
+        <button
+          className="news__button-vector news__button-left"
+          onClick={handlePrev}>
+          <ButtonVectorLeft />
+        </button>
+        <button
+          className="news__button-vector news__button-right"
+          onClick={handleNext}>
+          <ButtonVectorRight />
+        </button>
+      </div>
     </>
   );
 };
 
 export default SwiperSliderNews;
+
+{/*
+В этом коде мы используем хук useEffect, 
+чтобы добавить слушатель события resize на объект window. 
+Когда событие resize происходит, мы вызываем функцию 
+handleResize, которая определяет количество карточек, 
+которые нужно отображать на основе текущего размера окна 
+браузера, и устанавливает это значение в состояние slidesPerView. 
+Затем мы используем это значение в качестве значения свойства 
+slidesPerView для контейнера Swiper. Кроме того, мы вызываем 
+handleResize один раз при первом рендере компонента, чтобы установить 
+правильное количество карточек. Наконец, мы удаляем слушатель 
+события resize при размонтировании компонента с помощью функции, 
+возвращаемой из хука useEffect.*/}

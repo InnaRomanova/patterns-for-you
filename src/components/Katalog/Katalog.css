@@ -210,3 +210,14 @@
         letter-spacing: 0.35px;
     }
 }
+
+
+@media screen and (max-width: 375px) {
+    .katalog-card__image {
+        height: 320px;
+    }
+
+    .katalog-card__info {
+        justify-content: space-evenly;
+    }
+}

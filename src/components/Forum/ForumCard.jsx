@@ -9,49 +9,35 @@ import CardButtonLeft from "../Elements/CardButtonLeft";
 
 register();
 
-function ForumCard({forumArray}) {
-    const swiperElRef = useRef(null);
-    const matches = useMediaQuery({ query: "(min-width: 1920px)" });
-    const mobileMatches = useMediaQuery({ query: "(max-width: 1442px)" });
- 
-    const handlePrev = useCallback(() => {
-      if (!swiperElRef.current) return;
-      swiperElRef.current.swiper.slidePrev();
-    }, []);
-  
-    const handleNext = useCallback(() => {
-      if (!swiperElRef.current) return;
-      swiperElRef.current.swiper.slideNext();
-    }, []);
-  
-    useEffect(() => {
-      // listen for Swiper events using addEventListener
-      swiperElRef.current.addEventListener("progress", (e) => {
-        const [swiper, progress] = e.detail;
-      });
-  
-      swiperElRef.current.addEventListener("slidechange", (e) => {});
-    }, []);
+function ForumCard({ forumArray }) {
+  const swiperElRef = useRef(null);
+  const matches = useMediaQuery({ query: "(min-width: 1920px)" });
+  const mobileMatches = useMediaQuery({ query: "(max-width: 1442px)" });
 
-    // const htmlContent = {
-    // {map(forumArray, (arrPatterns, index) => (
-    //    <swiper-slide key={index}>
-    //       <ul className="forum__cards">
-    //         <li className="forum__card">
-    //             <a href="#" className="forum__link">
-    //                 <img src={arrPatterns.image} alt="" className="forum__link-image" />
-    //             </a>
-    //         </li>
-    //     </ul>
-    //         </swiper-slide>
-    //         ))}}
+  const handlePrev = useCallback(() => {
+    if (!swiperElRef.current) return;
+    swiperElRef.current.swiper.slidePrev();
+  }, []);
 
-    // const matchesItem = 
-  
+  const handleNext = useCallback(() => {
+    if (!swiperElRef.current) return;
+    swiperElRef.current.swiper.slideNext();
+  }, []);
+
+  useEffect(() => {
+    // listen for Swiper events using addEventListener
+    swiperElRef.current.addEventListener("progress", (e) => {
+      const [swiper, progress] = e.detail;
+    });
+
+    swiperElRef.current.addEventListener("slidechange", (e) => { });
+  }, []);
+
+
 
   return (
     <>
-    {matches ? (
+      {matches ? (
         <>
           <swiper-container
             ref={swiperElRef}
@@ -59,26 +45,25 @@ function ForumCard({forumArray}) {
             navigation="false"
             pagination="false"
           >
-            {/* <htmlContent /> */}
-    {map(forumArray, (arrPatterns, index) => (
-       <swiper-slide key={index}>
-          <ul className="forum__cards">
-            <li className="forum__card">
-                <a href="#" className="forum__link">
-                    <img src={arrPatterns.image} alt="" className="forum__link-image" />
-                </a>
-            </li>
-        </ul>
-            </swiper-slide>
+            {map(forumArray, (arrPatterns, index) => (
+              <swiper-slide key={index}>
+                <ul className="forum__cards">
+                  <li className="forum__card">
+                    <a href="#" className="forum__link">
+                      <img src={arrPatterns.image} alt="" className="forum__link-image" />
+                    </a>
+                  </li>
+                </ul>
+              </swiper-slide>
             ))}
-               </swiper-container>
-               <div className="forum__buttons">
-            <CardButtonLeft onClick={handlePrev} className="forum__left"/>
-            <CardButton onClick={handleNext} className="forum__right"/>
+          </swiper-container>
+          <div className="forum__buttons">
+            <CardButtonLeft onClick={handlePrev} className="forum__left" />
+            <CardButton onClick={handleNext} className="forum__right" />
           </div>
-               </>
-    ):(
-    <>
+        </>
+      ) : (
+        <>
           <swiper-container
             ref={swiperElRef}
             slides-per-view="3"
@@ -86,27 +71,27 @@ function ForumCard({forumArray}) {
             pagination="false"
             className="pattern__swiper"
           >
-    {map(forumArray, (arrPatterns, index) => (
-      <swiper-slide key={index}>
-    <ul className="forum__cards">
-            <li className="forum__card">
-                <a href="#" className="forum__link">
-                    <img src={arrPatterns.image} alt="" className="forum__link-image" />
-                </a>
-            </li>
-        </ul>
-            </swiper-slide>
+            {map(forumArray, (arrPatterns, index) => (
+              <swiper-slide key={index}>
+                <ul className="forum__cards">
+                  <li className="forum__card">
+                    <a href="#" className="forum__link">
+                      <img src={arrPatterns.image} alt="" className="forum__link-image" />
+                    </a>
+                  </li>
+                </ul>
+              </swiper-slide>
             ))}
-               </swiper-container>
-               <div className="forum__buttons">
-                <button onClick={handlePrev} className="forum__left"><CardButtonLeft /></button>
-                <button onClick={handleNext} className="forum__right"><CardButton /></button>
-              
-          
+          </swiper-container>
+          <div className="forum__buttons">
+            <button onClick={handlePrev} className="forum__left"><CardButtonLeft /></button>
+            <button onClick={handleNext} className="forum__right"><CardButton /></button>
+
+
           </div>
-               </>
-    )}
-{/* 
+        </>
+      )}
+      {/* 
     {mobileMatches ? (
                 <>
           <swiper-container
@@ -179,7 +164,8 @@ function ForumCard({forumArray}) {
           </div>
                </>
     )} */}
-     </>
-    )}
+    </>
+  )
+}
 
 export default ForumCard;

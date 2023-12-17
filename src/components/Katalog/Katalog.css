@@ -215,6 +215,7 @@
 @media screen and (max-width: 375px) {
     .katalog-card__image {
         height: 320px;
+        min-width: 320px;
     }
 
     .katalog-card__info {

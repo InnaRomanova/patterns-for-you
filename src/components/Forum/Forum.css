@@ -79,6 +79,10 @@
     height: 70px;
 }
 
+.forum__over:hover {
+    cursor: pointer;
+}
+
 .forum__buttons {
     margin: 0 auto 0;
     padding: 0;
@@ -99,4 +103,27 @@
     padding: 0;
     border: none;
     border-radius: 50px;
+}
+
+@media screen and (max-width: 879px) {
+    .forum__title {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .forum {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .forum__content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .forum__link-image {
+        border-radius: 0;
+        width: 100%;
+    }
 }

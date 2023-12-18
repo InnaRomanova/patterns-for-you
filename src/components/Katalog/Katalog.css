@@ -54,10 +54,10 @@
     min-width: 500px;
 }
 
-/*
-.katalog-card__image::nth-child(2n) {
-    border-radius: 15% 0 0 0;
-} */
+
+.katalog-card__image:hover {
+    cursor: pointer;
+}
 
 .katalog-card__info {
     position: absolute;

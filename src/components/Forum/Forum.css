@@ -81,6 +81,7 @@
 
 .forum__over:hover {
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .forum__buttons {

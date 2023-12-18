@@ -162,6 +162,12 @@
         margin-right: 62px;
     }
 
+    .header__menu-mobile:hover {
+        cursor: pointer;
+        opacity: 0.5;
+        ;
+    }
+
     .header__menu-image {
         width: 53px;
         height: 33px;

@@ -25,6 +25,11 @@
     padding: 0;
 }
 
+.pattern__list-item:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .pattern__image {
     margin: 0;
     padding: 0;

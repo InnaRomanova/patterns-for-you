@@ -72,8 +72,10 @@ function ForumCard({ commentArray }) {
                 ))}
             </swiper-container>
             <div className="forum__buttons comments__buttons">
-                <CardButtonLeft onClick={handlePrev} className="forum__left" />
-                <CardButton onClick={handleNext} className="forum__right" />
+                <button onClick={handlePrev} className="forum__left"><CardButtonLeft /></button>
+                <button onClick={handleNext} className="forum__right"><CardButton /></button>
+
+
             </div>
         </>
     )

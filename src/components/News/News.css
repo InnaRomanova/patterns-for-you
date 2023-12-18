@@ -147,6 +147,8 @@
     text-transform: capitalize;
 }
 
+
+
 .card__more-button-katalog {
     margin: 0;
     padding: 0;
@@ -157,6 +159,18 @@
     width: 52px;
     height: 52px;
     border-radius: 50px;
+}
+
+.card__more-katalog:hover, .card__more-button-katalog:hover {
+    cursor: pointer;
+}
+
+.card__more-katalog:hover {
+    color: #824504;
+}
+
+.card__more-button-katalog:hover {
+    background-image: url(../../images/detiled-hover.png);
 }
 
 .news__button {

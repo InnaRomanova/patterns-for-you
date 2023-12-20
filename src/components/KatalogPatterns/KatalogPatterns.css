@@ -1,0 +1,52 @@
+.katalogPatterns {
+    margin: 0;
+    padding: 0;
+}
+
+.katalogPatterns__img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.katalogPatterns__image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 356px;
+}
+
+.katalogPatterns__name {
+    position: absolute;
+    display: flex;
+    width: 503px;
+    height: 178px;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px 37px 0px 0px;
+    background: #FFF;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1260px) {
+    .katalogPatterns__name {
+        width: 221px;
+        height: 113px;
+        gap: 0;
+    }
+
+    .katalogPatterns__title {
+        font-size: 24px;
+    }
+
+    .katalogPatterns__subtitle {
+        font-size: 15px;
+        width: 155px;
+    }
+}

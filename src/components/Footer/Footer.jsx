@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { useMediaQuery } from "react-responsive";
 import Logo from "../../images/Logo.svg";
+import LogoMobile from "../../images/LogoMobile.svg";
 import whatssApp from "../../images/whatsapp-icon.png";
 import telegramm from "../../images/telegramm-icon.png";
 import viber from "../../images/viber-icon.png";
@@ -12,7 +13,6 @@ function Footer() {
 
   return (
     <>
-
       <footer className="footer">
         <div className="footer__container">
           <ul className="footer__list">
@@ -90,9 +90,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
                       <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
-                    </a>
                   </li>
                   <li className="footer__menu">
                     <a href="#" className="footer__menu-link">
@@ -100,15 +98,13 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
                       <p className="footer__text">(123) 456 - 7890</p>
-                    </a>
                   </li>
                 </ul>
               </li>
 
               <li className="footer__list-item footer__list-block">
-                <img className="footer__logoImage" src={Logo} alt="логотип" />
+                <img className="footer__logoImage" src={LogoMobile} alt="логотип" />
                 <p className="footer__text">Мы в социальных сетях</p>
                 <ul className="footer__list-icon">
                   <li className="footer__icon">
@@ -225,9 +221,7 @@ function Footer() {
                       </a>
                     </li>
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
                         <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
-                      </a>
                     </li>
                     <li className="footer__menu">
                       <a href="#" className="footer__menu-link">
@@ -235,16 +229,15 @@ function Footer() {
                       </a>
                     </li>
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
                         <p className="footer__text">(123) 456 - 7890</p>
-                      </a>
                     </li>
                   </ul>
                 </li></>
             )}
           </ul>
-          <div className="footer__line">
-            <p className="footer__line-text">Политика проекта</p>
+          <div className="footer__line">            
+          <a href="#" className="footer__line-link">
+            <p className="footer__line-text">Политика проекта</p></a>
           </div>
         </div>
       </footer>

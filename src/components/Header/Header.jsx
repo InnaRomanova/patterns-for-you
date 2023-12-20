@@ -1,16 +1,36 @@
 import React from "react";
 import "./Header.css";
+import { useState } from "react";
 import Logo from "../../images/Logo.svg";
 import Seach from "../../images/search.svg";
 import SignInUp from "../../images/signInUp.svg";
 import menuMobile from "../../images/menuMobile.svg";
+import Menu from "../Menu/Menu";
 
 function Header() {
+  const [openModal, setOpenModal] = useState(false);
+
+  function handleOpen() {
+    setOpenModal(true);
+  }
+
+  function handleClose() {
+    setOpenModal(false);
+  }
+
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__menu-mobile">
-          <img src={menuMobile} alt="меню" className="header__menu-image" />
+
+
+          {openModal ? (<button className="header__menu-button" onClick={handleClose}>
+            <img src={menuMobile} alt="меню" className="header__menu-image" /></button>) :
+            (<button className="header__menu-button" onClick={handleOpen}>
+              <img src={menuMobile} alt="меню" className="header__menu-image" /></button>)}
+
+          {openModal ? (<Menu handleClose={handleClose} />) : ""}
+
         </div>
         <div className="header__logo">
           <img className="header__logo-image" src={Logo} alt="логотип" />

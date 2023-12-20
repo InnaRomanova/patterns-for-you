@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
+import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -24,6 +25,11 @@ function App() {
               </>
             }
           ></Route>
+
+          <Route path="/katalog" element={<>
+            <KatalogPatterns />
+          </>} >
+          </Route>
         </Routes>
       </div>
       {/* </CurrentUserContext.Provider> */}

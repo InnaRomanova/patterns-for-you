@@ -26,8 +26,6 @@
     width: 354px;
 }
 
-.footer__logoImage {}
-
 .footer__text {
     margin: 8px 0 0;
     padding: 0;
@@ -63,8 +61,17 @@
 
 }
 
-.footer__menu-link {
+.footer__menu-link, .footer__line-link {
     text-decoration: none;
+}
+
+.footer__menu-link:hover {
+    color: #925514;
+    opacity: 0.65;
+}
+
+.footer__line-text:hover {
+        opacity: 0.65;
 }
 
 .footer__title {
@@ -133,6 +140,10 @@
     .footer__list-menu_disable {
         display: none;
     }
+
+    .footer__list-block {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 427px) {
@@ -142,5 +153,8 @@
         column-gap: 0;
     }
 
+    .footer__list-icon {
+        margin-bottom: 26px;
+    }
 
 }

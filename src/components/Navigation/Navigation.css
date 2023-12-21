@@ -1,0 +1,37 @@
+.navigation__container {
+    position: absolute;
+    margin: 61px 0 0 9px;
+    padding: 0;
+    width: 240px;
+    background: #F3ECE2;
+    border-radius: 5%;
+    z-index: 1;
+}
+
+.navigation__list {
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.openVector {
+    margin-left: 17px;
+}
+
+.navigation__text {
+    color: #000;
+    font-family: 'Jost', 'Arial', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+}
+
+.navigation__text:hover {
+    cursor: pointer;
+    color: #925514;
+}

@@ -17,7 +17,7 @@ function Card({ swiperArray }) {
           <div className="katalog-card__info">
             <div className="katalog-card__info-text">
               <h4 className="katalog-card__name">{arrCards.name}</h4>
-              <p className="katalog-card__detailed">{arrCards.detailed}</p>
+              <p className="katalog-card__detailed">{arrCards.detailed} / Подробнее</p>
             </div>
             <CardButton />
           </div>

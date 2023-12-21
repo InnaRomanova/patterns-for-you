@@ -65,7 +65,7 @@ function SwiperSliderNews({ swiperArray }) {
                     </span>
                   </div>
                   <div className="card__more">
-                    <p className="card__more-katalog">{teacher.detailed}</p>
+                    <p className="card__more-katalog">Подробнее</p>
                     <button className="card__more-button-katalog"></button>
                   </div>
                 </div>

@@ -1,0 +1,13 @@
+.navigationList__container {
+    margin: 0 0 0 52px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigationList__list {
+    margin-bottom: 8px;
+}
+
+.navigationList__list:last-child {
+    margin-bottom: 0;
+}

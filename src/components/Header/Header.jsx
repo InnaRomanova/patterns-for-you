@@ -5,7 +5,8 @@ import Logo from "../../images/Logo.svg";
 import Seach from "../../images/search.svg";
 import SignInUp from "../../images/signInUp.svg";
 import menuMobile from "../../images/menuMobile.svg";
-import Menu from "../Menu/Menu";
+import Navigation from "../Navigation/Navigation";
+import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
 
 function Header() {
   const [openModal, setOpenModal] = useState(false);
@@ -24,12 +25,12 @@ function Header() {
         <div className="header__menu-mobile">
 
 
-          {openModal ? (<button className="header__menu-button" onClick={handleClose}>
-            <img src={menuMobile} alt="меню" className="header__menu-image" /></button>) :
+          {openModal ? (<button className="header__closeButton-menu" onClick={handleClose}>
+            <img src={CloseButtonMenu} alt="меню" className="header__closeButton-image" /></button>) :
             (<button className="header__menu-button" onClick={handleOpen}>
               <img src={menuMobile} alt="меню" className="header__menu-image" /></button>)}
 
-          {openModal ? (<Menu handleClose={handleClose} />) : ""}
+          {openModal ? (<Navigation handleClose={handleClose} />) : ""}
 
         </div>
         <div className="header__logo">

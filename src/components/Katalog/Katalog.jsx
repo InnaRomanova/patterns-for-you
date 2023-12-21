@@ -10,37 +10,37 @@ function Katalog() {
       id: 1,
       image: katalogImage1,
       name: "Платья",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
     {
       id: 2,
       image: katalogImage1,
       name: "Жакеты",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
     {
       id: 3,
       image: katalogImage1,
       name: "Юбки",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
     {
       id: 4,
       image: katalogImage1,
       name: "Блузки",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
     {
       id: 5,
       image: katalogImage1,
       name: "Блузки",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
     {
       id: 6,
       image: katalogImage1,
       name: "Блузки",
-      detailed: "Decor / Подробнее",
+      detailed: "Decor",
     },
   ];
 

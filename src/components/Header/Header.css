@@ -176,7 +176,12 @@
         opacity: 0.5;
     }
 
-    .header__menu-image {
+    .header__closeButton-menu {
+        border: none;
+        background-color: transparent;
+    }
+
+    .header__menu-image, .header__closeButton-image {
         width: 53px;
         height: 33px;
     }

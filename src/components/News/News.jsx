@@ -11,7 +11,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
     {
       id: 2,
@@ -19,7 +18,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
     {
       id: 3,
@@ -27,7 +25,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
     {
       id: 4,
@@ -35,7 +32,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
     {
       id: 4,
@@ -43,7 +39,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
     {
       id: 4,
@@ -51,7 +46,6 @@ function News() {
       name: "Modern Kitchen",
       text: "женское платье",
       price: 135.0,
-      detailed: "Подробнее",
     },
   ];
 
@@ -73,7 +67,7 @@ function News() {
               <span className="card__inform-price">{reviews.price} Руб.</span>
             </div>
             <div className="card__more">
-              <p className="card__more-katalog">{reviews.detailed}</p>
+              <p className="card__more-katalog">Подробнее</p>
               <button className="card__more-button-katalog"></button>
             </div>
           </div>

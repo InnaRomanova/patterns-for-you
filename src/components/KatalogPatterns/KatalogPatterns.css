@@ -1,5 +1,5 @@
 .katalogPatterns {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -21,7 +21,7 @@
 .katalogPatterns__name {
     position: absolute;
     display: flex;
-    /* width: 503px; */
+    width: 503px;
     height: 178px;
     padding: 0;
     margin: 0;
@@ -31,11 +31,12 @@
     gap: 10px;
     border-radius: 37px 37px 0px 0px;
     bottom: 0;
+    background: #FFF;
 }
 
 .katalogPatterns__container {
     margin: 0;
-    padding: 101px 113px 0;
+    padding: 70px 113px 35px;
     background: #F4F0EC;
 }
 
@@ -55,8 +56,6 @@
     letter-spacing: 0.22px;
     text-transform: capitalize;
     display: flex;
-    width: 637px;
-    height: 24px;
     flex-direction: column;
     justify-content: center;
 }
@@ -66,21 +65,20 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 382px;
     align-items: center;
     list-style-type: none;
+    justify-items: center;
+    row-gap: 43px;
 }
 
 .katalogPatterns__card {
     margin: 0;
     display: flex;
     max-width: 382px;
-    height: 811.947px;
     padding: 25px 24px 0px 24px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
     border-radius: 62px;
     border: 1px solid #E7E7E7;
     background: #A4907B;
@@ -103,22 +101,16 @@
 }
 
 .katalogPatterns__info {
-    position: absolute;
     margin: 0;
     padding: 0;
-    bottom: 34px;
-    display: flex;
     width: 100%;
-    height: 166px;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
     color: #FFFFFF;
+    text-align: center;
 }
 
-.katalogPatterns__info-text {
-    color: #FFF;
+.katalogPatterns__info-name {
+    margin: 0;
+    padding: 0;
     text-align: center;
     font-family: 'DM Serif Display', 'Arial', sans-serif;
     font-size: 37px;
@@ -126,9 +118,41 @@
     font-weight: 400;
     line-height: 125%;
     letter-spacing: 0.74px;
+    color: #FFFFFF;
 }
 
-@media screen and (max-width: 1260px) {
+.katalogPatterns__more {
+    margin-bottom: 15px;
+}
+
+.katalogPatterns__show-more {
+    margin: 65px auto 0;
+    padding: 0;
+    display: flex;
+    width: 399px;
+    height: 75.196px;
+    padding: 26px 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: var(--style-name-title, #292F36);
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 1919px) {
+    .katalogPatterns__cards {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1489px) {
     .katalogPatterns__name {
         width: 221px;
         height: 113px;
@@ -142,5 +166,131 @@
     .katalogPatterns__subtitle {
         font-size: 15px;
         width: 155px;
+    }
+
+    .katalogPatterns__card-image {
+        height: 480px;
+    }
+}
+
+@media screen and (max-width: 1282px) {
+    .katalogPatterns__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .katalogPatterns__container {
+        padding-top: 8px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .katalogPatterns__block {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 8px;
+    }
+
+    .katalogPatterns__navigate {
+        margin-bottom: 15px;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+    }
+
+    .katalogPatterns__title-text {
+        margin-bottom: 24px;
+        font-size: 40px;
+        letter-spacing: 0.8px;
+    }
+
+    .katalogPatterns__cards {
+        background: #A4907B;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 18px;
+    }
+
+    .katalogPatterns__card {
+        max-width: 100%;
+        padding: 0;
+        border-radius: 62px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        gap: 0;
+    }
+
+    .katalogPatterns__card-image {
+        border-radius: 8px;
+    }
+
+    .katalogPatterns__info-name {
+        font-size: 25px;
+        letter-spacing: 0.5px;
+    }
+
+    .katalogPatterns__button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .katalogPatterns__more {
+        margin-bottom: 15px;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    .katalogPatterns__title-text {
+        font-size: 29px;
+    }
+
+    .katalogPatterns__card-image {
+        height: 275px;
+    }
+
+    .katalogPatterns__cards {
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .katalogPatterns__info-name {
+        font-size: 20px;
+    }
+
+    .katalogPatterns__text {
+        font-size: 17px;
+    }
+
+    .katalogPatterns__price {
+        font-size: 17px;
+    }
+
+    .katalogPatterns__show-more {
+        width: 227px;
+        height: 49px;
+        margin: 65px auto 0;
+        padding: 0;
+        display: flex;
+        width: 399px;
+        height: 75.196px;
+        padding: 26px 48px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 18px;
+        background: var(--style-name-title, #292F36);
+        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 379px) {
+    .katalogPatterns__cards {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

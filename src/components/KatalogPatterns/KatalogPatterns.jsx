@@ -75,12 +75,15 @@ function KatalogPatterns() {
 
 {/* блок отображения всех карточек с фотографиями */}
       <div className="katalogPatterns__container">
+        <div className="katalogPatterns__block">
         <h2 className="news__title katalogPatterns__title-text">Женская одежда</h2>
         <span className="katalogPatterns__navigate">Главная/Каталог/Выкройки/Женская одежда/</span>
+        </div>
 
         <ul className="katalogPatterns__cards">
         <CardKatalog swiperKatalog={arrKatalogs} />
         </ul>
+        <button className="katalogPatterns__show-more">Показать еще</button>
       </div>
 
     </section>

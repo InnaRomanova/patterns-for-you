@@ -14,18 +14,14 @@ function CardKatalog({ swiperKatalog }) {
                         <img className="katalogPatterns__card-image" src={arrCards.image} alt="карточка-картинка товара-выкройки" />
                     </div>
                     <div className="katalogPatterns__info">
-                        <div className="katalogPatterns__info-text">
-                            <h4 className="katalogPatterns__name">{arrCards.name}</h4>
-                            <p className="card__inform-katalog">{arrCards.text}</p>
-                            <span className="card__inform-price">{arrCards.price} Руб.</span>
+                            <h4 className="katalogPatterns__info-name">{arrCards.name}</h4>
+                            <p className="card__inform-katalog katalogPatterns__text">{arrCards.text}</p>
+                            <span className="card__inform-price katalogPatterns__price">{arrCards.price} Руб.</span>
                         </div>
-                        <div className="card__more">
+                        <div className="card__more katalogPatterns__more">
                             <p className="card__more-katalog">Подробнее</p>
-                            <button className="card__more-button-katalog"></button>
-                            {/* <CardButton /> */}
+                            <button className="card__more-button-katalog katalogPatterns__button"></button>
                         </div>
-
-                    </div>
                 </li>
             ))}
         </>

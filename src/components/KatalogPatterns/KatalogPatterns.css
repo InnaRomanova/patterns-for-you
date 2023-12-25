@@ -122,7 +122,13 @@
 }
 
 .katalogPatterns__more {
-    margin-bottom: 15px;
+    margin: 0 0 15px;
+    padding: 0;
+    display: flex;
+    /* width: 221px; */
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
 }
 
 .katalogPatterns__show-more {
@@ -271,21 +277,7 @@
     .katalogPatterns__show-more {
         width: 227px;
         height: 49px;
-        margin: 65px auto 0;
-        padding: 0;
-        display: flex;
-        width: 399px;
-        height: 75.196px;
-        padding: 26px 48px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-        border-radius: 18px;
-        background: var(--style-name-title, #292F36);
-        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-        color: #FFFFFF;
+        margin: 54px auto 0;
     }
 }
 

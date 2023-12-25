@@ -1,7 +1,6 @@
 export default function ButtonVectorRight() {
   return (
     <svg
-      // className="news__button-vector news__button-right"
       xmlns="http://www.w3.org/2000/svg"
       width="52"
       height="52"

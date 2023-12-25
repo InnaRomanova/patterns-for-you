@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
+import Details from "../Details/Details";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -28,6 +29,10 @@ function App() {
 
           <Route path="/katalog" element={<>
             <KatalogPatterns />
+          </>} >
+          </Route>
+          <Route path="/details" element={<>
+            <Details />
           </>} >
           </Route>
         </Routes>

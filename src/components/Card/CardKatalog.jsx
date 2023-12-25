@@ -1,6 +1,5 @@
 import React from "react";
 import "../KatalogPatterns/KatalogPatterns.css";
-import CardButton from "../Elements/CardButton";
 import map from "lodash/map";
 
 
@@ -18,7 +17,7 @@ function CardKatalog({ swiperKatalog }) {
                             <p className="card__inform-katalog katalogPatterns__text">{arrCards.text}</p>
                             <span className="card__inform-price katalogPatterns__price">{arrCards.price} Руб.</span>
                         </div>
-                        <div className="card__more katalogPatterns__more">
+                        <div className="katalogPatterns__more">
                             <p className="card__more-katalog">Подробнее</p>
                             <button className="card__more-button-katalog katalogPatterns__button"></button>
                         </div>

@@ -10,6 +10,9 @@ import map from "lodash/map";
 import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import Shoppings from "../Elements/Shopping";
 import Favourites from "../Elements/Favourites";
+import Work from "../Work/Work";
+import DetailsSlide from "../Details/DetailsSlide";
+import DetailsSlide1 from "../../images/detailsSlide1.png";
 
 
 function Details() {
@@ -22,7 +25,7 @@ function Details() {
         },
         {
             id: 2,
-            image: DetailsImage,
+            image: DetailsSlide1,
         },
         {
             id: 3,
@@ -30,7 +33,7 @@ function Details() {
         },
         {
             id: 4,
-            image: DetailsImage,
+            image: DetailsSlide1,
         },
         {
             id: 5,
@@ -38,9 +41,22 @@ function Details() {
         },
         {
             id: 6,
-            image: DetailsImage,
+            image: DetailsSlide1,
         },
     ];
+
+    const details = [];
+
+    arrDetails.forEach((detail, index) => {
+        details.push(
+            <>
+                <li className="details__list-item">
+                    <img src={detail.image} alt="картинка" className="details__image" />
+                </li>
+            </>
+        );
+    });
+
 
     return (
         <>
@@ -56,23 +72,10 @@ function Details() {
                         <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                     </div>
                     <div className="details__content">
-                        <div className="details__description">
-                            <ul className="details__list" >
-                                <li className="details__list-item">
-                                    <img src={DetailsImage} alt="картинка" className="details__image" />
-                                </li>
-                                <li className="details__list-item">
-                                    <img src={DetailsImage} alt="картинка" className="details__image" />
-                                </li>
-                                <li className="details__list-item">
-                                    <img src={DetailsImage} alt="картинка" className="details__image" />
-                                </li>
-                                <li className="details__list-item">
-                                    <img src={DetailsImage} alt="картинка" className="details__image" />
-                                </li>
-                            </ul>
-                            <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
-                        </div>
+
+                        <DetailsSlide swiperDetails={arrDetails} />
+
+                        {/* Сайт-бар */}
                         <div className="details__sidebar">
                             <ul className="details__sidmaster">
                                 <li className="details__sidmaster-item details__sidebar-number">
@@ -91,37 +94,40 @@ function Details() {
                                             <DetailsVectorSidbar /></li>
                                     </ul></li>
 
-                                <li className="details__sidmaster-title">Категории
-                                    <ul className="details__sidebar-list">
-                                        
-                                        <li className="details__sidebar-item">
+                                <li className="details__sidmaster-title">
+
+                                    <ul className="details__sidebar-list-kategories">
+                                        Категории
+                                        <li className="details__sidebar-kategories">
                                             Женская верхняя одежда
                                             <DetailsVectorSidbar /></li>
-                                        <li className="details__sidebar-item">
+                                        <li className="details__sidebar-kategories">
                                             Пиджаки
                                             <DetailsVectorSidbar /></li>
-                                        <li className="details__sidebar-item">
+                                        <li className="details__sidebar-kategories">
                                             Блузки
                                             <DetailsVectorSidbar /></li>
-                                        <li className="details__sidebar-item">
+                                        <li className="details__sidebar-kategories">
                                             Юбки
                                             <DetailsVectorSidbar /></li>
-                                        <li className="details__sidebar-item">
+                                        <li className="details__sidebar-kategories">
                                             Платья
                                             <DetailsVectorSidbar /></li>
                                     </ul></li>
 
-                                    <li className="details__sidmaster-item">
+                                <li className="details__sidmaster-price">
                                     Цена: 150 руб.</li>
 
-                                    <li className="details__sidmaster-item">
-                                    <button className="">Купить <Shoppings /></button><Favourites /></li>
+                                <li className="details__sidebar-item">
+                                    <button className="details__sidmaster-shopping">Купить <Shoppings /></button><Favourites /></li>
                             </ul>
 
                         </div>
                     </div>
-
                 </div>
+
+                {/* Работы по выкройке */}
+                <Work />
             </section>
             <Footer />
         </>

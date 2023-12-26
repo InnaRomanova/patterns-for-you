@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Comments";
 import map from "lodash/map";
 import { useRef, useEffect, useCallback } from "react";
-import { useMediaQuery } from "react-responsive";
 import { register } from "swiper/element/bundle";
 import CardButton from "../Elements/CardButton";
 import CardButtonLeft from "../Elements/CardButtonLeft";

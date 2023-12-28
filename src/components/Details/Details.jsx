@@ -71,9 +71,11 @@ function Details() {
                         <span className="katalogPatterns__navigate">Главная/Каталог выроек/Выкройка изделия/Платье/</span>
                         <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                     </div>
-                    <div className="details__content">
-
+                     <div className="details__content">
+                   <div className="details__description">
                         <DetailsSlide swiperDetails={arrDetails} />
+                        <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
+                        </div>
 
                         {/* Сайт-бар */}
                         <div className="details__sidebar">
@@ -119,7 +121,8 @@ function Details() {
                                     Цена: 150 руб.</li>
 
                                 <li className="details__sidebar-item">
-                                    <button className="details__sidmaster-shopping">Купить <Shoppings /></button><Favourites /></li>
+                                    <button className="details__sidmaster-shopping">Купить <Shoppings />
+                                    </button><Favourites /></li>
                             </ul>
 
                         </div>

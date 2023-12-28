@@ -73,8 +73,6 @@ function ForumCard({ commentArray }) {
             <div className="forum__buttons comments__buttons">
                 <button onClick={handlePrev} className="forum__left"><CardButtonLeft /></button>
                 <button onClick={handleNext} className="forum__right"><CardButton /></button>
-
-
             </div>
         </>
     )

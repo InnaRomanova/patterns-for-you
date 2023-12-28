@@ -7,7 +7,7 @@ register();
 
 function DetailsSlide({ swiperDetails }) {
     const swiperElRef = useRef(null);
-    const [slidesPerView, setSlidesPerView] = useState(3);
+    const [slidesPerView, setSlidesPerView] = useState(2);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
 
     const handlePrev = useCallback(() => {
@@ -36,32 +36,32 @@ function DetailsSlide({ swiperDetails }) {
 
     return (
         <>
-            {matchesMobile ? (
-                <div className="details__description">
-                    
-                        <swiper-container
-                            ref={swiperElRef}
-                            slides-per-view={slidesPerView}
-                            navigation="false"
-                            pagination="false">
-<ul className="details__list">
-                            {map(swiperDetails, (teacher, index) => (
-                                <swiper-slide key={index}>
+            {matchesMobile ? (<>
 
-                                    <li className="details__list-item">
-                                        <img src={teacher.image} alt="картинка" className="details__image" />
-                                    </li>
+                <swiper-container
+                    ref={swiperElRef}
+                    slides-per-view="1"
+                    navigation="false"
+                    pagination="false">
+                    <ul className="details__list">
+                        {map(swiperDetails, (teacher, index) => (
+                            <swiper-slide key={index}>
 
-                                </swiper-slide>
-                            ))}</ul>
-                        </swiper-container>
-                    <div className="news__button">
-                        <button className="card__more-button-katalog" onClick={handlePrev}></button>
-                        <button className="card__more-button-katalog" onClick={handleNext}></button>
-                    </div>
-                    <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
+                                <li className="details__list-item">
+                                    <img src={teacher.image} alt="картинка" className="details__image" />
+                                </li>
+
+
+                            </swiper-slide>
+                        ))}
+                    </ul>
+                </swiper-container>
+                <div className="news__button">
+                    <button onClick={handlePrev} className="card__more-button-katalog"></button>
+                    <button onClick={handleNext} className="card__more-button-katalog"></button>
                 </div>
-            ) : (<div className="details__description">
+            </>
+            ) : (<>
                 <ul className="details__list">
                     {map(swiperDetails, (teacher, index) => (
                         <swiper-slide key={index}>
@@ -71,9 +71,9 @@ function DetailsSlide({ swiperDetails }) {
                             </li>
 
                         </swiper-slide>
-                    ))}</ul>
-                <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
-            </div>)}
+                    ))}
+                </ul>
+            </>)}
         </>
     );
 };

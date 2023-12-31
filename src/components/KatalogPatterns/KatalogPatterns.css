@@ -247,18 +247,17 @@
     }
 }
 
-@media screen and (max-width: 623px) {
+@media screen and (max-width: 630px) {
     .katalogPatterns__title-text {
         font-size: 29px;
     }
 
-    .katalogPatterns__card-image {
-        height: 275px;
-    }
-
     .katalogPatterns__cards {
+        padding-left: 0;
+        padding-right: 0;
         column-gap: 0;
         row-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .katalogPatterns__info-name {
@@ -280,8 +279,8 @@
     }
 }
 
-@media screen and (max-width: 379px) {
+/* @media screen and (max-width: 379px) {
     .katalogPatterns__cards {
         grid-template-columns: repeat(1, 1fr);
     }
-}
+} */

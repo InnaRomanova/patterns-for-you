@@ -7,8 +7,33 @@ register();
 
 function DetailsSlide({ swiperDetails }) {
     const swiperElRef = useRef(null);
-    const [slidesPerView, setSlidesPerView] = useState(2);
+    const [slidesPerView, setSlidesPerView] = useState(3);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
+
+    // const handlePrev = useCallback(() => {
+    //     if (!swiperElRef.current) return;
+    //     swiperElRef.current.swiper.slidePrev();
+    // }, []);
+
+    // const handleNext = useCallback(() => {
+    //     if (!swiperElRef.current) return;
+    //     swiperElRef.current.swiper.slideNext();
+    // }, []);
+
+    // useEffect(() => {
+    //     function handleResize() {
+    //         const display = window.innerWidth;
+    //         if (display <= 1500) {
+    //             setSlidesPerView(1);
+    //         }
+    //         // else if (display < 1272) {
+    //         //     setSlidesPerView(1);
+    //         // }
+    //     }
+    //     window.addEventListener("resize", handleResize);
+    //     handleResize();
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
 
     const handlePrev = useCallback(() => {
         if (!swiperElRef.current) return;
@@ -23,9 +48,11 @@ function DetailsSlide({ swiperDetails }) {
     useEffect(() => {
         function handleResize() {
             const display = window.innerWidth;
-            if (display > 1272) {
+            if (display >= 1500) {
+                setSlidesPerView(3);
+            } else if (display >= 1000 && display < 1500) {
                 setSlidesPerView(2);
-            } else if (display < 1272) {
+            } else if (display < 1000) {
                 setSlidesPerView(1);
             }
         }
@@ -34,32 +61,35 @@ function DetailsSlide({ swiperDetails }) {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+
     return (
         <>
             {matchesMobile ? (<>
 
                 <swiper-container
                     ref={swiperElRef}
-                    slides-per-view="1"
+                    slides-per-view={slidesPerView}
                     navigation="false"
                     pagination="false">
-                    <ul className="details__list">
-                        {map(swiperDetails, (teacher, index) => (
-                            <swiper-slide key={index}>
 
+                    {map(swiperDetails, (teacher, index) => (
+                        <swiper-slide key={index} className="details__swiperSlide">
+                            <ul className="details__list">
                                 <li className="details__list-item">
                                     <img src={teacher.image} alt="картинка" className="details__image" />
                                 </li>
+                            </ul>
 
+                        </swiper-slide>
+                    ))}
 
-                            </swiper-slide>
-                        ))}
-                    </ul>
                 </swiper-container>
+                {/* {slidesPerView === 2 && ( */}
                 <div className="news__button">
                     <button onClick={handlePrev} className="card__more-button-katalog"></button>
                     <button onClick={handleNext} className="card__more-button-katalog"></button>
                 </div>
+                {/* )} */}
             </>
             ) : (<>
                 <ul className="details__list">

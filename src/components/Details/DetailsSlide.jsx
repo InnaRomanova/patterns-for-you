@@ -50,9 +50,9 @@ function DetailsSlide({ swiperDetails }) {
             const display = window.innerWidth;
             if (display >= 1500) {
                 setSlidesPerView(3);
-            } else if (display >= 1000 && display < 1500) {
+            } else if (display >= 883) {
                 setSlidesPerView(2);
-            } else if (display < 1000) {
+            } else if (display < 883) {
                 setSlidesPerView(1);
             }
         }
@@ -84,12 +84,10 @@ function DetailsSlide({ swiperDetails }) {
                     ))}
 
                 </swiper-container>
-                {/* {slidesPerView === 2 && ( */}
                 <div className="news__button">
-                    <button onClick={handlePrev} className="card__more-button-katalog"></button>
-                    <button onClick={handleNext} className="card__more-button-katalog"></button>
+                    <button onClick={handlePrev} className="card__more-button-katalog card__more-button-katalogLeft"></button>
+                    <button onClick={handleNext} className="card__more-button-katalog card__more-button-katalogRight"></button>
                 </div>
-                {/* )} */}
             </>
             ) : (<>
                 <ul className="details__list">

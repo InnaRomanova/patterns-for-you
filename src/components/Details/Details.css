@@ -39,7 +39,7 @@
 }
 
 .details__text {
-    margin: 0 0 0 10px;
+    margin: 10px 0 60px 10px;
     padding: 0;
     color: #4D5053;
     font-family: 'Jost', 'Arial', sans-serif;
@@ -274,11 +274,10 @@
     }
 
     .details__description {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
+        margin: 0;
+        display: flow;
+        max-width: 824px;
+        width: 100%;
     }
 
     .details__sidebar {
@@ -317,5 +316,50 @@
 
     .details__sidmaster-price {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 883px) {
+    .details__container {
+        border-left: none;
+        border-right: none;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .details__description {
+        max-width: 380px;
+        width: 100%;
+    }
+
+    .details__list {
+        justify-content: center;
+    }
+
+    .details__image {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .details__list-item {
+        position: relative;
+    }
+
+    .news__button {
+        margin-top: 0;
+    }
+
+    .card__more-button-katalogLeft {
+        position: absolute;
+        z-index: 1;
+        margin-top: -134px;
+        margin-right: 186px;
+    }
+
+    .card__more-button-katalogRight {
+        position: absolute;
+        z-index: 1;
+        margin-top: -134px;
+        margin-left: 186px;
     }
 }

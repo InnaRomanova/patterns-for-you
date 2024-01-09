@@ -6,13 +6,15 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
 import Details from "../Details/Details";
+import { CurrentUserContext } from "../contexts/CurrentContexts";
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [currentUser, setCurrentUser] = useState({});
 
   return (
     <div className="page">
-      {/* <CurrentUserContext.Provider value={currentUser}> */}
+      <CurrentUserContext.Provider value={currentUser}>
       <div className="page__content">
         <Routes>
           <Route
@@ -37,7 +39,7 @@ function App() {
           </Route>
         </Routes>
       </div>
-      {/* </CurrentUserContext.Provider> */}
+      </CurrentUserContext.Provider>
     </div>
   );
 }

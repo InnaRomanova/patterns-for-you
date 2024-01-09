@@ -17,6 +17,7 @@ import DetailsSlide1 from "../../images/detailsSlide1.png";
 
 function Details() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
+    const mobile = useMediaQuery({ query: "(max-width: 883px)" });
 
     const arrDetails = [
         {
@@ -71,10 +72,65 @@ function Details() {
                         <span className="katalogPatterns__navigate">Главная/Каталог выроек/Выкройка изделия/Платье/</span>
                         <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                     </div>
+
                      <div className="details__content">
-                   <div className="details__description">
+                     {mobile ? (<>
+                        <div className="details__description">
                         <DetailsSlide swiperDetails={arrDetails} />
-                        <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
+                        </div>
+                         {/* Сайт-бар  */}
+                        <div className="details__sidebar">
+                            <ul className="details__sidmaster">
+                                <li className="details__sidmaster-item details__sidebar-number">
+                                    Выкройка №023984209</li>
+
+                                <li className="details__sidmaster-item">
+                                    <ul className="details__sidebar-list">
+                                        <li className="details__sidebar-item">
+                                            Расход материала
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-item">
+                                            Рекомендации по материалам
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-item">
+                                            Как купить выкройку
+                                            <DetailsVectorSidbar /></li>
+                                    </ul></li>
+
+                                <li className="details__sidmaster-title">
+
+                                    <ul className="details__sidebar-list-kategories">
+                                        Категории
+                                        <li className="details__sidebar-kategories">
+                                            Женская верхняя одежда
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-kategories">
+                                            Пиджаки
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-kategories">
+                                            Блузки
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-kategories">
+                                            Юбки
+                                            <DetailsVectorSidbar /></li>
+                                        <li className="details__sidebar-kategories">
+                                            Платья
+                                            <DetailsVectorSidbar /></li>
+                                    </ul></li>
+
+                                <li className="details__sidmaster-price">
+                                    Цена: 150 руб.</li>
+
+                                <li className="details__sidebar-item">
+                                    <button className="details__sidmaster-shopping">Купить <Shoppings />
+                                    </button><Favourites /></li>
+                            </ul>
+                            <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
+                        </div>
+                        </>) : (<>
+                        <div className="details__description">
+                        <DetailsSlide swiperDetails={arrDetails} />
+                       <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
                         </div>
 
                         {/* Сайт-бар */}
@@ -126,6 +182,7 @@ function Details() {
                             </ul>
 
                         </div>
+                        </>)}
                     </div>
                 </div>
 

@@ -1,0 +1,24 @@
+.work__container {
+    margin: 0 auto;
+    padding: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works__container-cards {
+    display: flex;
+    height: 756px;
+    padding: 21px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+    border-radius: 62px;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+}
+
+@media screen and (max-width: 1894px) {
+    .work__container {}
+}

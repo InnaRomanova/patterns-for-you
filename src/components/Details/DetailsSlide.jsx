@@ -2,6 +2,9 @@ import { useRef, useEffect, useCallback, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { useMediaQuery } from "react-responsive";
 import map from "lodash/map";
+import Dots from "../Dots/Dots";
+import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
+import DetailsButtonRight from "../Elements/DetailsButtonRight";
 
 register();
 
@@ -10,30 +13,6 @@ function DetailsSlide({ swiperDetails }) {
     const [slidesPerView, setSlidesPerView] = useState(3);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
 
-    // const handlePrev = useCallback(() => {
-    //     if (!swiperElRef.current) return;
-    //     swiperElRef.current.swiper.slidePrev();
-    // }, []);
-
-    // const handleNext = useCallback(() => {
-    //     if (!swiperElRef.current) return;
-    //     swiperElRef.current.swiper.slideNext();
-    // }, []);
-
-    // useEffect(() => {
-    //     function handleResize() {
-    //         const display = window.innerWidth;
-    //         if (display <= 1500) {
-    //             setSlidesPerView(1);
-    //         }
-    //         // else if (display < 1272) {
-    //         //     setSlidesPerView(1);
-    //         // }
-    //     }
-    //     window.addEventListener("resize", handleResize);
-    //     handleResize();
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
 
     const handlePrev = useCallback(() => {
         if (!swiperElRef.current) return;
@@ -73,7 +52,7 @@ function DetailsSlide({ swiperDetails }) {
                     pagination="false">
 
                     {map(swiperDetails, (teacher, index) => (
-                        <swiper-slide key={index} className="details__swiperSlide">
+                        <swiper-slide key={index + 1} className="details__swiperSlide">
                             <ul className="details__list">
                                 <li className="details__list-item">
                                     <img src={teacher.image} alt="картинка" className="details__image" />
@@ -84,10 +63,12 @@ function DetailsSlide({ swiperDetails }) {
                     ))}
 
                 </swiper-container>
-                <div className="news__button">
-                    <button onClick={handlePrev} className="card__more-button-katalog card__more-button-katalogLeft"></button>
-                    <button onClick={handleNext} className="card__more-button-katalog card__more-button-katalogRight"></button>
+                <Dots />
+                <div className="news__button details__button">
+                    <button onClick={handlePrev} className="details__more-button-katalog"><DetailsButtonLeft /></button>
+                    <button onClick={handleNext} className="details__more-button-katalog"><DetailsButtonRight /></button>
                 </div>
+
             </>
             ) : (<>
                 <ul className="details__list">

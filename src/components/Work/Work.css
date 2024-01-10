@@ -7,18 +7,213 @@
 }
 
 .works__container-cards {
-    display: flex;
-    height: 756px;
+    margin: 0;
+    padding: 0;
+}
+
+.works__cards {
+    list-style-type: none;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 44px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 29px 0;
     padding: 21px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-shrink: 0;
     border-radius: 62px;
     border: 1px solid #E7E7E7;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 }
 
-@media screen and (max-width: 1894px) {
-    .work__container {}
+.works__card {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 720px;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.work__image-block {
+    position: relative;
+    border: none;
+}
+
+.work__image {
+    width: 100%;
+    border-radius: 45px 45px 0px 0px;
+    background: #EAEAEA;
+}
+
+.work__nic {
+    position: absolute;
+    display: flex;
+    height: 60.88px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px 8px 8px 0px;
+    background: #FFF;
+    bottom: 75px;
+    left: 23px;
+    border: none;
+}
+
+.work__inform {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.work__inform-name {
+    text-align: center;
+}
+
+.work__more {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    color: #4D5053;
+    font-family: 'Jost', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+}
+
+.work__icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 145px;
+}
+
+.work__icon-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--style-orange-comments-like, #A86E30);
+    text-align: center;
+    font-family: 'Jost', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+    gap: 10px;
+}
+
+.work__icon-likes,
+.work__icons-comments {
+    border: none;
+    background: transparent;
+}
+
+.work__pagination {
+    position: relative;
+    margin: 44px 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.work__pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 44px;
+}
+
+.work__number {
+    margin: 0;
+    padding: 0;
+    border: #CDA274 1px solid;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+    background: transparent;
+}
+
+.work__number_active {
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+    border: none;
+    background: #F4F0EC;
+}
+
+.work__add-entry {
+    position: absolute;
+    right: 13px;
+    top: 0;
+    display: flex;
+    width: 282px;
+    height: 75px;
+    padding: 26px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Jost;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: 0.36px;
+    border-radius: 18px;
+    background: #E0BE99;
+    box-shadow: 15px 15px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+}
+
+.work__download {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.work__download-button {
+    display: flex;
+    width: 497px;
+    padding: 26px 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 18px;
+    background: #F2E4CF;
+    box-shadow: 15px 15px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #000;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Jost;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: 0.36px;
+}
+
+@media screen and (max-width: 1820px) {
+    .works__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

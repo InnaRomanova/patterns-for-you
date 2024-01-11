@@ -8,10 +8,11 @@ import DetailsButtonRight from "../Elements/DetailsButtonRight";
 
 register();
 
-function DetailsSlide({ swiperDetails }) {
+function DetailsSlide({ swiperDetails, onClick }) {
     const swiperElRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(3);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
+    const [currentIndex, setCurrentIndex] = useState(1);
 
 
     const handlePrev = useCallback(() => {
@@ -41,6 +42,12 @@ function DetailsSlide({ swiperDetails }) {
     }, []);
 
 
+
+    const moveDot = index => {
+        setCurrentIndex(index);
+    }
+
+
     return (
         <>
             {matchesMobile ? (<>
@@ -52,7 +59,7 @@ function DetailsSlide({ swiperDetails }) {
                     pagination="false">
 
                     {map(swiperDetails, (teacher, index) => (
-                        <swiper-slide key={index + 1} className="details__swiperSlide">
+                        <swiper-slide key={index} className="details__swiperSlide">
                             <ul className="details__list">
                                 <li className="details__list-item">
                                     <img src={teacher.image} alt="картинка" className="details__image" />
@@ -64,6 +71,14 @@ function DetailsSlide({ swiperDetails }) {
 
                 </swiper-container>
                 <Dots />
+                {/* <div className="dots__container">
+                    {Array.from({ length: 5 }).map((item, index) => (
+                        <div
+                            onClick={() => moveDot(index + 1)}
+                            className={currentIndex.id === index + 1 ? "dots active" : "dots"}></div>
+                    ))}
+
+                </div> */}
                 <div className="news__button details__button">
                     <button onClick={handlePrev} className="details__more-button-katalog"><DetailsButtonLeft /></button>
                     <button onClick={handleNext} className="details__more-button-katalog"><DetailsButtonRight /></button>

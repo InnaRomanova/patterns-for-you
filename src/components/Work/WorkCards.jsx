@@ -29,26 +29,24 @@ function WorkCards({ swiperArray }) {
 
   return (
     <>
+      <swiper-container
+        ref={swiperElRef}
+        slides-per-view={slidesPerView}
+        navigation="false"
+        pagination="false">
+        <ul className="works__cards">
 
-      <ul className="works__cards">
-
-        {map(swiperArray, (work, index) => (
-          <swiper-container
-            ref={swiperElRef}
-            slides-per-view={slidesPerView}
-            navigation="false"
-            pagination="false">
-
+          {map(swiperArray, (work, index) => (
             <li className="works__card" key={index}>
               <div className="work__image-block">
                 <img
-                src={work.image}
-                alt="картинка"
-                className="work__image"
-              />
-              <button className="work__nic">Авток НИК</button>
+                  src={work.image}
+                  alt="картинка"
+                  className="work__image"
+                />
+                <button className="work__nic">Авток НИК</button>
               </div>
-              
+
 
               <div className="work__inform">
                 <h3 className="card__inform-name work__inform-name">{work.name}</h3>
@@ -69,9 +67,9 @@ function WorkCards({ swiperArray }) {
                   <span className="work__comments-number">3</span>
                 </div>
               </div>
-            </li> </swiper-container>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul></swiper-container>
 
     </>
   );

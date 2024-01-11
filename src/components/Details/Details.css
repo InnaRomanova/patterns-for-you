@@ -331,6 +331,7 @@
     .details__description {
         max-width: 380px;
         width: 100%;
+        position: relative;
     }
 
     .details__text {
@@ -356,9 +357,15 @@
         margin-top: 0;
     }
 
-    .details__more-button-katalogLeft {
+    .details__button {
+        bottom: 54px;
+        left: 125px;
         position: absolute;
         z-index: 1;
+        }
+/* 
+    .details__more-button-katalogLeft {
+      
         margin-top: -134px;
         margin-right: 186px;
     }
@@ -368,14 +375,11 @@
         z-index: 1;
         margin-top: -134px;
         margin-left: 186px;
-    }
+    } */
 
     .details__sidebar-item:last-child {
         gap: 0;
     }
 
-    .details__button {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    }
+   
 }

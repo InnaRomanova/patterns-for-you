@@ -1,6 +1,6 @@
 .dots__container {
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     max-width: 200px;
 }
 

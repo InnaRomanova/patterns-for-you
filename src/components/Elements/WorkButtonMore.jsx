@@ -1,11 +1,16 @@
+import { useMediaQuery } from "react-responsive";
+
 export default function WorkButtonMore() {
+    const macthesMobile = useMediaQuery({ guery: "(max-width: 560px)" });
+
+    // let styleWidth = innerWidth: 53;
+    // let styleHeight = innerHeight: 53;
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="53"
-            height="53"
-            viewBox="0 0 53 53"
-            fill="none">
+            width={53}
+            height={53}
+            fill="none" >
             <circle
                 cx="26.5"
                 cy="26.267"
@@ -17,6 +22,6 @@ export default function WorkButtonMore() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round" />
-        </svg>
+        </svg >
     );
 }

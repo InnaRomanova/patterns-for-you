@@ -8,10 +8,11 @@ import DetailsButtonRight from "../Elements/DetailsButtonRight";
 
 register();
 
-function DetailsSlide({ swiperDetails, onClick }) {
+function DetailsSlide({ swiperDetails }) {
     const swiperElRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(3);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
+    const mobile = useMediaQuery({ query: "(max-width: 883px)" });
     const [currentIndex, setCurrentIndex] = useState(1);
 
 
@@ -41,11 +42,18 @@ function DetailsSlide({ swiperDetails, onClick }) {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const handleSlideChange = useCallback((swiper) => {
+        setCurrentIndex(swiper.realIndex + 1);
+    }, []);
 
 
-    const moveDot = index => {
-        setCurrentIndex(index);
-    }
+    //useEffect, который следит за изменением currentIndex 
+    //и переключает слайды в соответствии с этим значением.
+    useEffect(() => {
+        if (!swiperElRef.current) return;
+        swiperElRef.current.swiper.slideTo(currentIndex - 1);
+    }, [currentIndex]);
+
 
 
     return (
@@ -56,9 +64,10 @@ function DetailsSlide({ swiperDetails, onClick }) {
                     ref={swiperElRef}
                     slides-per-view={slidesPerView}
                     navigation="false"
-                    pagination="false">
+                    pagination="false"
+                    onSlideChange={handleSlideChange}>
 
-                    {map(swiperDetails, (teacher, index) => (
+                    {swiperDetails.map((teacher, index) => (
                         <swiper-slide key={index} className="details__swiperSlide">
                             <ul className="details__list">
                                 <li className="details__list-item">
@@ -70,15 +79,7 @@ function DetailsSlide({ swiperDetails, onClick }) {
                     ))}
 
                 </swiper-container>
-                <Dots />
-                {/* <div className="dots__container">
-                    {Array.from({ length: 5 }).map((item, index) => (
-                        <div
-                            onClick={() => moveDot(index + 1)}
-                            className={currentIndex.id === index + 1 ? "dots active" : "dots"}></div>
-                    ))}
-
-                </div> */}
+                {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")}
                 <div className="news__button details__button">
                     <button onClick={handlePrev} className="details__more-button-katalog"><DetailsButtonLeft /></button>
                     <button onClick={handleNext} className="details__more-button-katalog"><DetailsButtonRight /></button>

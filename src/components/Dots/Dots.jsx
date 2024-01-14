@@ -1,49 +1,35 @@
-import React, { useContext, useState, useRef } from "react";
+import React from "react";
 
 import "./Dots.css";
 
 //компонент точек слайдера, их перебор
- function Dots({onClick}) {
-  // const swiperElRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(1);
+function Dots({ currentIndex, setCurrentIndex, onSlideChange }) {
 
-//   const handlePrev = useCallback(() => {
-//     if (!swiperElRef.current) return;
-//     swiperElRef.current.swiper.slidePrev();
-// }, []);
+  const moveDot = index => {
+    setCurrentIndex(index);
+  }
 
-// const handleNext = useCallback(() => {
-//     if (!swiperElRef.current) return;
-//     swiperElRef.current.swiper.slideNext();
-// }, []);
-  // const { slidesCount } = useContext(CurrentUserContext);
 
-  // const renderDots = () => {
-  //   const dots = [];
-  //   for (let i = 0; i < slidesCount; i++) {
-  //     dots.push(<Dot key={`dot-${i}`} number={i} />);
-  //   }
-
-  //   return dots;
- // };
-
- const moveDot = index => {
-  setCurrentIndex(index);
- }
+  //Чтобы прописать передачу обработчика события `onSlideChange` 
+  //добавленить в список принимаемых 
+  //свойств компонента `Dots` и вызывает его при изменении значения 
+  //`currentIndex`\.
+  React.useEffect(() => {
+    if (onSlideChange) {
+      onSlideChange(currentIndex);
+    }
+  }, [currentIndex, onSlideChange]);
 
   return (
-     <div className="dots__container">
-      {Array.from({length: 5}).map((item, index) => (
-         <div
-         key={index}
-         onClick={() => moveDot(index + 1)} 
-         className={currentIndex.id === index + 1 ? "dots active" : "dots"}></div>
+    <div className="dots__container">
+      {Array.from({ length: 5 }).map((item, index) => (
+        <div
+          key={index}
+          onClick={() => moveDot(index + 1)}
+          className={currentIndex === index + 1 ? "active" : "dots"}
+        ></div>
       ))}
-    
-  </div>
-  )
- 
-  
-
-}
+    </div>
+  );
+};
 export default Dots

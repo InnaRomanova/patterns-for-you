@@ -7,7 +7,7 @@
 Команда запустить проект локально:
 ### `npm start`
 
-или  [откройте](https://innaromanova.github.io/PatternsForYou/) в браузере.
+или  [откройте](permalink: /index.html) в браузере.
 
 Собрать проект для продакшена:
 ### `npm run build`

@@ -59,6 +59,11 @@
     border: none;
 }
 
+.work__nic:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 .work__inform {
     margin: 0;
     padding: 0;
@@ -119,6 +124,12 @@
 .work__icons-comments {
     border: none;
     background: transparent;
+}
+
+.work__icon-likes:hover,
+.work__icons-comments:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .work__pagination {
@@ -198,7 +209,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 18px;
-    background: #F2E4CF;
+    background: #D7C4B0;
     box-shadow: 15px 15px 20px 0px rgba(192, 192, 192, 0.35);
     border: none;
     color: #000;
@@ -210,6 +221,16 @@
     font-weight: 600;
     line-height: 125%;
     letter-spacing: 0.36px;
+}
+
+.work__add-entry:hover, .work__download-button:hover {
+    cursor: pointer;
+    background: rgba(205, 162, 116, 0.30);
+}
+
+.workButtonMore:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 1820px) {
@@ -265,7 +286,7 @@
     }
 
     .work__add-entry {
-       width: 100%;
+        width: 100%;
     }
 
     .work__pagination-container {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../Details/Details.css";
 
 export default function DetailsVectorSidbar({ onOpen }) {
     const [transform, setTransform] = useState(0);
@@ -13,6 +14,7 @@ export default function DetailsVectorSidbar({ onOpen }) {
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg"
+            className="detailsVectorSidbar"
             width="30"
             height="30"
             viewBox="0 0 30 30"

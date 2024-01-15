@@ -1,10 +1,11 @@
-import { useMediaQuery } from "react-responsive";
+
 
 export default function WorkButtonMore() {
 
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="workButtonMore"
             width="53"
             height="53"
             fill="none" >

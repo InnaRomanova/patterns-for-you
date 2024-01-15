@@ -126,6 +126,11 @@
     gap: 68px;
 }
 
+.details__sidebar-item:hover, .details__sidebar-kategories:hover {
+    color: rgba(139, 74, 5, 0.70);
+    cursor: pointer;
+}
+
 .details__sidmaster-title {
     display: flex;
     flex-direction: column;
@@ -201,6 +206,7 @@
     letter-spacing: 0.62px;
 }
 
+
 .details__sidmaster-shopping {
     display: flex;
     width: 227px;
@@ -223,9 +229,25 @@
     letter-spacing: 0.62px;
 }
 
+
+.details__sidmaster-price:hover, .details__sidmaster-shopping:hover {
+    background: rgba(215, 196, 176, 0.62);
+    cursor: pointer;
+}
+
 .details__more-button-katalog {
     border-radius: 50%;
     border: #CDA274 1px solid;
+}
+
+.details__more-button-katalog:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.detailsVectorSidbar:hover, .favourites:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 1894px) {
@@ -362,24 +384,11 @@
         left: 125px;
         position: absolute;
         z-index: 1;
-        }
-/* 
-    .details__more-button-katalogLeft {
-      
-        margin-top: -134px;
-        margin-right: 186px;
     }
-
-    .details__more-button-katalogRight {
-        position: absolute;
-        z-index: 1;
-        margin-top: -134px;
-        margin-left: 186px;
-    } */
 
     .details__sidebar-item:last-child {
         gap: 0;
     }
 
-   
+
 }

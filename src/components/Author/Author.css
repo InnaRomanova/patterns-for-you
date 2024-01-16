@@ -1,0 +1,199 @@
+.author__container {
+    margin: 0 82px 0 37px;
+    padding: 71px 0 104px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.author__avatar {
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    width: 229px;
+    height: 229px;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
+}
+
+.author__avatar:hover {
+    opacity: 1;
+}
+
+.author__avatar:hover::after {
+    background-color: rgba(155, 147, 147, 0.8);
+    background-image: url(../../images/AuthorEdit.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    bottom: 0;
+    content: "";
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.author__avatar-image {
+    border-radius: 50%;
+    margin: 0;
+    min-height: 229px;
+    object-fit: cover;
+    width: 229px;
+}
+
+.author__info {
+    margin: 0;
+    padding: 0;
+    width: 765px;
+}
+
+.author__data {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.author__name {
+    margin: 0;
+    padding: 0;
+    border-radius: 28px;
+    background: #E0BE99;
+    width: 648px;
+    min-height: 79px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #121110;
+    font-family: 'DM Serif Text', 'Arial', sans-serif;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.39px;
+}
+
+.author__name-edit {
+    margin: 0;
+    padding: 0;
+    width: 78px;
+    height: 72px;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
+    background: #E0BE99;
+    border: none;
+    border-radius: 28px;
+    background-image: url(../../images/AuthorEdit.svg);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 50%;
+}
+
+.author__works {
+    margin: 26px 0 0 53px;
+    padding: 0;
+    width: 559px;
+    height: 96px;
+    border-radius: 28px;
+    background: #E0BE99;
+    border: none;
+    color: #000;
+    font-family: 'DM Serif Text', 'Arial', sans-serif;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.41px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width: 1125px) {
+    .author__container {
+        align-items: center;
+        margin-right: 37px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author__avatar {
+        margin-bottom: 11px;
+        width: 144px;
+        height: 144px;
+    }
+
+    .author__avatar:hover::after {
+        background-size: 33px;
+    }
+
+    .author__avatar-image {
+        min-height: 144px;
+        width: 144px;
+    }
+
+    .author__name {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .author__name-edit {
+        width: 70px;
+        height: 60px;
+    }
+
+    .author__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author__works {
+        font-size: 30px;
+        margin-left: 0;
+    }
+
+    .author__data {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .author__name:hover {
+        opacity: 1;
+    }
+
+    .author__name:hover::after {
+        background-color: rgba(155, 147, 147, 0.8);
+        background-image: url(../../images/AuthorEdit.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 33px;
+        border-radius: 16%;
+        bottom: 0;
+        content: "";
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    .author__name-edit {
+        display: none;
+    }
+}

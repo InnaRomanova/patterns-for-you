@@ -158,6 +158,11 @@
     background: transparent;
 }
 
+.work__number:hover {
+    cursor: pointer;
+    background: rgba(168, 110, 48, 0.40);;
+}
+
 .work__number_active {
     margin: 0;
     padding: 0;
@@ -165,7 +170,7 @@
     width: 53px;
     height: 53px;
     border: none;
-    background: #F4F0EC;
+    background: #CDA274;
 }
 
 .work__add-entry {
@@ -229,6 +234,11 @@
 }
 
 .workButtonMore:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.paginationLeft:hover, .paginationRight:hover {
     cursor: pointer;
     opacity: 0.5;
 }

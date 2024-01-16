@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
 import Details from "../Details/Details";
 import { CurrentUserContext } from "../contexts/CurrentContexts";
+import Author from "../Author/Author";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -35,6 +36,10 @@ function App() {
           </Route>
           <Route path="/details" element={<>
             <Details />
+          </>} >
+          </Route>
+          <Route path="/author" element={<>
+            <Author />
           </>} >
           </Route>
         </Routes>

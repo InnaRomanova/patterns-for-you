@@ -13,6 +13,11 @@
     background: #D9D9D9;
 }
 
+.dots:hover {
+    cursor: pointer;
+    background: rgba(187, 164, 139, 0.50);
+}
+
 .active {
     margin: 20px auto 0;
     padding: 0;

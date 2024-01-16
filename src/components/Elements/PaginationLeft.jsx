@@ -4,6 +4,7 @@ export default function PaginationLeft() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="paginationLeft"
             width="53"
             height="52"
             viewBox="0 0 53 52"

@@ -172,6 +172,15 @@
 }
 
 @media screen and (max-width: 599px) {
+    .author__container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .author__name {
+        font-size: 24px;
+    }
+
     .author__name:hover {
         opacity: 1;
     }
@@ -195,5 +204,16 @@
 
     .author__name-edit {
         display: none;
+    }
+
+    .author__works {
+        width: 100%;
+        font-size: 24px;
+        justify-content: space-around;
+    }
+
+    .tailorImage {
+        width: 60px;
+        height: 60px;
     }
 }

@@ -3,6 +3,7 @@ function TailorImage() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="tailorImage"
             width="79"
             height="79"
             viewBox="0 0 79 79"

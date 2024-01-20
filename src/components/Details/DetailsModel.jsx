@@ -5,6 +5,7 @@ import map from "lodash/map";
 import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
+import arrDetails from "./DetailsData";
 import arrForum from "../Forum/ForumData";
 
 register();
@@ -55,6 +56,21 @@ function DetailsSlide() {
         swiperElRef.current.swiper.slideTo(currentIndex - 1);
     }, [currentIndex]);
 
+
+    // const details = [];
+
+    // arrDetails.forEach((detail, index) => {
+    //     details.push(
+    //         <>
+    //             <li className="details__list-item">
+    //                 <img src={detail.image} alt="картинка" className="details__image" />
+    //             </li>
+    //         </>
+    //     );
+    // });
+
+
+
     return (
         <>
 
@@ -67,9 +83,8 @@ function DetailsSlide() {
                         pagination="false"
                         onSlideChange={handleSlideChange}>
 
-                        {arrForum.map((teacher, index) => (
-                            <swiper-slide key={index} id={index.id} className="details__swiperSlide" >
-
+                        {arrDetails.map((teacher, index) => (
+                            <swiper-slide key={index} className="details__swiperSlide">
                                 <ul className="details__list">
                                     <li className="details__list-item">
                                         <img src={teacher.image} alt="картинка" className="details__image" />
@@ -92,7 +107,7 @@ function DetailsSlide() {
             ) : (<>
                 <div className="details__description">
                     <ul className="details__list">
-                        {map(arrForum, (teacher, index) => (
+                        {map(arrDetails, (teacher, index) => (
                             <swiper-slide key={index}>
 
                                 <li className="details__list-item">
@@ -103,8 +118,7 @@ function DetailsSlide() {
                         ))}
                     </ul>
                     <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p></div>
-            </>)
-            }
+            </>)}
         </>
     );
 };

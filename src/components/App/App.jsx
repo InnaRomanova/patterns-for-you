@@ -16,34 +16,34 @@ function App() {
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
-      <div className="page__content">
-        <Routes>
-          <Route
-            exac
-            path="/PatternsForYou"
-            element={
-              <>
-                <Header />
-                <Main cards={cards} setCards={setCards} />
-                <Footer />
-              </>
-            }
-          ></Route>
+        <div className="page__content">
+          <Routes>
+            <Route
+              exac
+              path="/PatternsForYou"
+              element={
+                <>
+                  <Header />
+                  <Main cards={cards} setCards={setCards} />
+                  <Footer />
+                </>
+              }
+            ></Route>
 
-          <Route path="/katalog" element={<>
-            <KatalogPatterns />
-          </>} >
-          </Route>
-          <Route path="/details" element={<>
-            <Details />
-          </>} >
-          </Route>
-          <Route path="/author" element={<>
-            <Author />
-          </>} >
-          </Route>
-        </Routes>
-      </div>
+            <Route path="/katalog" element={<>
+              <KatalogPatterns />
+            </>} >
+            </Route>
+            <Route path="/details" element={<>
+              <Details />
+            </>} >
+            </Route>
+            <Route path="/author" element={<>
+              <Author />
+            </>} >
+            </Route>
+          </Routes>
+        </div>
       </CurrentUserContext.Provider>
     </div>
   );

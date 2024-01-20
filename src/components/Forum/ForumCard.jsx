@@ -5,10 +5,11 @@ import { useRef, useEffect, useCallback } from "react";
 import { register } from "swiper/element/bundle";
 import CardButton from "../Elements/CardButton";
 import CardButtonLeft from "../Elements/CardButtonLeft";
+import arrForum from "./ForumData";
 
 register();
 
-function ForumCard({ forumArray }) {
+function ForumCard() {
   const swiperElRef = useRef(null);
   const [slidesPerView, setSlidesPerView] = useState(4);
 
@@ -42,6 +43,17 @@ function ForumCard({ forumArray }) {
 
 
 
+  // const forums = map(arrForum, (arrPatterns, index) => {
+  //   const firstImage = arrPatterns.image[0]; // получаем первое изображение из массива
+  //   return (
+  //     <li key={index} className="forum__card">
+  //       <a href="#" className="forum__link">
+  //         <img src={firstImage} alt="картинка пользователя" className="forum__link-image" />
+  //       </a>
+  //     </li>
+  //   );
+  // })
+
   return (
     <>
       <swiper-container
@@ -50,18 +62,21 @@ function ForumCard({ forumArray }) {
         navigation="false"
         pagination="false"
       >
-        {map(forumArray, (arrPatterns, index) => (
+
+        {arrForum.map((arrPatterns, index) => (
+
           <swiper-slide key={index}>
             <ul className="forum__cards">
               <li className="forum__card">
                 <a href="#" className="forum__link">
-                  <img src={arrPatterns.image} alt="" className="forum__link-image" />
+                  <img src={arrPatterns.image[0]} alt="картинка пользователя" className="forum__link-image" />
                 </a>
-              </li>
-            </ul>
+              </li> </ul>
           </swiper-slide>
         ))}
-      </swiper-container>
+
+
+      </swiper-container >
       <div className="forum__buttons">
         <button onClick={handlePrev} className="forum__left">
           <CardButtonLeft />

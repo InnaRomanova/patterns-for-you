@@ -5,7 +5,7 @@ import map from "lodash/map";
 import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
-import arrForum from "../Forum/ForumData";
+import { arrForum } from "../Constants/Objects/Massiv";
 
 register();
 
@@ -67,17 +67,20 @@ function DetailsSlide() {
                         pagination="false"
                         onSlideChange={handleSlideChange}>
 
-                        {arrForum.map((teacher, index) => (
-                            <swiper-slide key={index} id={index.id} className="details__swiperSlide" >
 
+                        {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                        {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
+                            <swiper-slide key={index} className="details__swiperSlide" >
                                 <ul className="details__list">
-                                    <li className="details__list-item">
-                                        <img src={teacher.image} alt="картинка" className="details__image" />
-                                    </li>
-                                </ul>
+                                    {teacher.image.map((image, i) => (
+                                        <li key={i} className="details__list-item">
+                                            <img src={image} alt="картинка" className="details__image" />
+                                        </li>
+                                    ))}</ul>
 
                             </swiper-slide>
                         ))}
+
 
                     </swiper-container>
                     {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")}
@@ -91,7 +94,23 @@ function DetailsSlide() {
             </>
             ) : (<>
                 <div className="details__description">
-                    <ul className="details__list">
+
+                    {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                    {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
+                        <swiper-slide key={index} className="details__swiperSlide" >
+                            <ul className="details__list">
+                                {teacher.image.map((image, i) => (
+                                    <li key={i} className="details__list-item">
+                                        <img src={image} alt="картинка" className="details__image" />
+                                    </li>
+                                ))}
+                            </ul>
+                        </swiper-slide>
+                    ))}
+
+
+
+                    {/* <ul className="details__list">
                         {map(arrForum, (teacher, index) => (
                             <swiper-slide key={index}>
 
@@ -101,7 +120,7 @@ function DetailsSlide() {
 
                             </swiper-slide>
                         ))}
-                    </ul>
+                    </ul> */}
                     <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p></div>
             </>)
             }

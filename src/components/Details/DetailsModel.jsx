@@ -5,12 +5,11 @@ import map from "lodash/map";
 import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
-import arrDetails from "./DetailsData";
-import arrForum from "../Forum/ForumData";
+import { arrDetails } from "../Constants/Objects/Massiv";
 
 register();
 
-function DetailsSlide() {
+function DetailsModel() {
     const swiperElRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(3);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
@@ -57,17 +56,17 @@ function DetailsSlide() {
     }, [currentIndex]);
 
 
-    // const details = [];
+    const details = [];
 
-    // arrDetails.forEach((detail, index) => {
-    //     details.push(
-    //         <>
-    //             <li className="details__list-item">
-    //                 <img src={detail.image} alt="картинка" className="details__image" />
-    //             </li>
-    //         </>
-    //     );
-    // });
+    arrDetails.forEach((detail, index) => {
+        details.push(
+            <>
+                <li className="details__list-item">
+                    <img src={detail.image} alt="картинка" className="details__image" />
+                </li>
+            </>
+        );
+    });
 
 
 
@@ -83,7 +82,21 @@ function DetailsSlide() {
                         pagination="false"
                         onSlideChange={handleSlideChange}>
 
-                        {arrDetails.map((teacher, index) => (
+                        {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
+                            <swiper-slide key={index} className="details__swiperSlide">
+                                {teacher.image.map((image, i) => (
+                                    <ul key={i} className="details__list">
+                                        <li className="details__list-item">
+                                            <img src={image} alt="картинка" className="details__image" />
+                                        </li>
+                                    </ul>
+                                ))}
+
+
+                            </swiper-slide>
+                        ))}
+
+                        {/* {arrDetails.map((teacher, index) => (
                             <swiper-slide key={index} className="details__swiperSlide">
                                 <ul className="details__list">
                                     <li className="details__list-item">
@@ -92,7 +105,7 @@ function DetailsSlide() {
                                 </ul>
 
                             </swiper-slide>
-                        ))}
+                        ))} */}
 
                     </swiper-container>
                     {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")}
@@ -123,7 +136,7 @@ function DetailsSlide() {
     );
 };
 
-export default DetailsSlide;
+export default DetailsModel;
 
 {/* В этом коде мы используем хук useEffect, 
 чтобы добавить слушатель события resize на объект window. 

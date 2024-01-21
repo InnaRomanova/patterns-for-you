@@ -11,7 +11,7 @@ import DetailsSlide from "../Details/DetailsSlide";
 import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import ModelImage from "../../images/model1.png";
 
-function Author({ arrDetails }) {
+function Author() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
 
@@ -50,7 +50,7 @@ function Author({ arrDetails }) {
                             <div className="details__sidebar">
                                 <ul className="details__sidmaster">
                                     <li className="details__sidmaster-item">
-                                        <img src={ModelImage} alt="модель" className="details__model" /></li>
+                                        <img src={ModelImage} alt="модель" className="author__model" /></li>
                                     <li className="details__sidmaster-item details__sidebar-number">
                                         Выкройка №023984209</li>
 
@@ -91,7 +91,7 @@ function Author({ arrDetails }) {
                             <article className="details__sidebar">
                                 <ul className="details__sidmaster">
                                     <li className="details__sidmaster-item">
-                                        <img src={ModelImage} alt="модель" className="details__model" /></li>
+                                        <img src={ModelImage} alt="модель" className="" /></li>
 
                                     <li className="author__sidmaster">
 

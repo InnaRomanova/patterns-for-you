@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route
               exac
-              path="/PatternsForYou"
+              path="/patterns-for-you"
               element={
                 <>
                   <Header />
@@ -35,11 +35,11 @@ function App() {
             </>} >
             </Route>
             <Route path="/details" element={<>
-              <Details />
+              <Author />
             </>} >
             </Route>
             <Route path="/author" element={<>
-              <Author />
+              <Details />
             </>} >
             </Route>
           </Routes>

@@ -2,7 +2,7 @@ import React from "react";
 import "./Forum.css";
 import buttonKatalogSlide from "../../images/buttonKatalogSlide.svg";
 import ForumCard from "./ForumCard";
-import arrForum from "./ForumData";
+// import arrForum from "../Constants/Objects/Massiv";
 
 function Forum() {
 

@@ -2,7 +2,7 @@
   "name": "patterns",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://innaromanova.github.io/PatternsForYou",
+  "homepage": "https://innaromanova.github.io/patterns-for-you",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

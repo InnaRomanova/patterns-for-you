@@ -158,6 +158,10 @@
     color: #000;
 }
 
+.author__model {
+    width: 100%;
+}
+
 @media screen and (max-width: 1125px) {
     .author__container {
         align-items: center;

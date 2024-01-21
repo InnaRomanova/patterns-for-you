@@ -5,7 +5,7 @@ import { useRef, useEffect, useCallback } from "react";
 import { register } from "swiper/element/bundle";
 import CardButton from "../Elements/CardButton";
 import CardButtonLeft from "../Elements/CardButtonLeft";
-import arrForum from "./ForumData";
+import { arrForum } from "../Constants/Objects/Massiv";
 
 register();
 
@@ -43,17 +43,6 @@ function ForumCard() {
 
 
 
-  // const forums = map(arrForum, (arrPatterns, index) => {
-  //   const firstImage = arrPatterns.image[0]; // получаем первое изображение из массива
-  //   return (
-  //     <li key={index} className="forum__card">
-  //       <a href="#" className="forum__link">
-  //         <img src={firstImage} alt="картинка пользователя" className="forum__link-image" />
-  //       </a>
-  //     </li>
-  //   );
-  // })
-
   return (
     <>
       <swiper-container
@@ -69,6 +58,7 @@ function ForumCard() {
             <ul className="forum__cards">
               <li className="forum__card">
                 <a href="#" className="forum__link">
+
                   <img src={arrPatterns.image[0]} alt="картинка пользователя" className="forum__link-image" />
                 </a>
               </li> </ul>

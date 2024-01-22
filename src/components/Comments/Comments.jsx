@@ -1,56 +1,12 @@
 import React from "react";
 import "./Comments.css";
 import buttonKatalogSlide from "../../images/buttonKatalogSlide.svg";
-import commentsSmile from "../../images/comments-smile.png";
 import PersonalComment from "./PersonalComment";
+import { Link } from "react-router-dom";
+import { arrComments } from "../Constants/Objects/Massiv";
 
 function Comments() {
-  const arrComments = [
-    {
-      id: 1,
-      avatar: commentsSmile,
-      name: "Романова Инна",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-    {
-      id: 2,
-      avatar: commentsSmile,
-      name: "Алексеева Елена",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-    {
-      id: 3,
-      avatar: commentsSmile,
-      name: "Малыгина Татьяна",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-    {
-      id: 4,
-      avatar: commentsSmile,
-      name: "Иванова Елена",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-    {
-      id: 5,
-      avatar: commentsSmile,
-      name: "Алексеев Олег",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-    {
-      id: 6,
-      avatar: commentsSmile,
-      name: "Алексеев Олег",
-      text: "Все нравиться! Все супер! Носится!",
-      marka: "жакет для школы",
-    },
-  ];
-
-
+ 
   const comments = [];
 
   arrComments.forEach((comment, index) => {
@@ -83,11 +39,13 @@ function Comments() {
         <div className="comments__block">
           <PersonalComment commentArray={arrComments} />
         </div>
-        <button className="forum__over comments__over">Перейти к комментариям
-          <img
-            src={buttonKatalogSlide}
-            alt="В каталог"
-            className="slide__vector" /></button>
+        <Link to="/comments" className="comments__page">
+          <button className="forum__over comments__over">Перейти к комментариям
+            <img
+              src={buttonKatalogSlide}
+              alt="В каталог"
+              className="slide__vector" /></button></Link>
+
       </div>
     </section>
   );

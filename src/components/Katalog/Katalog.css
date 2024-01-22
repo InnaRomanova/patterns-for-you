@@ -31,6 +31,10 @@
     justify-items: center;
 }
 
+.katalog__block {
+    text-decoration: none;
+}
+
 .katalog-card {
     list-style-type: none;
     margin: 0;

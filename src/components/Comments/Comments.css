@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+.comments__page {
+    text-decoration: none;
+}
+
+
 .comments__content {
     margin: 0 auto;
     padding: 0;

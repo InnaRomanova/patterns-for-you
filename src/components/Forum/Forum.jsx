@@ -2,6 +2,7 @@ import React from "react";
 import "./Forum.css";
 import buttonKatalogSlide from "../../images/buttonKatalogSlide.svg";
 import ForumCard from "./ForumCard";
+import { Link } from "react-router-dom";
 // import arrForum from "../Constants/Objects/Massiv";
 
 function Forum() {
@@ -29,11 +30,11 @@ function Forum() {
       <ForumCard
       // forumArray={forums} 
       />
-      <button className="forum__over">Перейти на фотофорум<img
-        src={buttonKatalogSlide}
-        alt="В каталог"
-        className="slide__vector"
-      /></button>
+      <Link to="/forum" className="forum__block"><button className="forum__over">Перейти на фотофорум
+        <img src={buttonKatalogSlide}
+          alt="В каталог"
+          className="slide__vector"
+        /></button></Link>
     </section>
   );
 }

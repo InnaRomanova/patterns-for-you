@@ -1,49 +1,10 @@
 import React from "react";
 import "./Katalog.css";
-import CardButton from "../Elements/CardButton";
-import katalogImage1 from "../../images/katalogImage1.png";
 import Card from "../Card/Card";
+import { Link } from "react-router-dom";
+import { arrReviews } from "../Constants/Objects/Massiv";
 
 function Katalog() {
-  const arrReviews = [
-    {
-      id: 1,
-      image: katalogImage1,
-      name: "Платья",
-      detailed: "Decor",
-    },
-    {
-      id: 2,
-      image: katalogImage1,
-      name: "Жакеты",
-      detailed: "Decor",
-    },
-    {
-      id: 3,
-      image: katalogImage1,
-      name: "Юбки",
-      detailed: "Decor",
-    },
-    {
-      id: 4,
-      image: katalogImage1,
-      name: "Блузки",
-      detailed: "Decor",
-    },
-    {
-      id: 5,
-      image: katalogImage1,
-      name: "Блузки",
-      detailed: "Decor",
-    },
-    {
-      id: 6,
-      image: katalogImage1,
-      name: "Блузки",
-      detailed: "Decor",
-    },
-  ];
-
   return (
     <section className="katalog">
       <div className="katalog__container">
@@ -54,7 +15,9 @@ function Katalog() {
         <ul className="katalog-cards">
           <Card swiperArray={arrReviews} />
         </ul>
-        <button className="katalog__button-over">Перейти в каталог</button>
+        <Link to="/katalog" className="katalog__block">
+          <button className="katalog__button-over">Перейти в каталог</button></Link>
+
       </div>
     </section>
   );

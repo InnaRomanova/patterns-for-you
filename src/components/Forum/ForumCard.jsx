@@ -6,6 +6,7 @@ import { register } from "swiper/element/bundle";
 import CardButton from "../Elements/CardButton";
 import CardButtonLeft from "../Elements/CardButtonLeft";
 import { arrForum } from "../Constants/Objects/Massiv";
+import { Link } from "react-router-dom";
 
 register();
 
@@ -57,16 +58,17 @@ function ForumCard() {
           <swiper-slide key={index}>
             <ul className="forum__cards">
               <li className="forum__card">
-                <a href="#" className="forum__link">
-
-                  <img src={arrPatterns.image[0]} alt="картинка пользователя" className="forum__link-image" />
-                </a>
+                {/* <a href="#" className="forum__link"> */}
+<Link to="/details" className="forum__link">
+  <img src={arrPatterns.image[0]} alt="картинка пользователя" className="forum__link-image" /></Link>
+                  
+                {/* </a> */}
               </li> </ul>
           </swiper-slide>
         ))}
 
-
       </swiper-container >
+
       <div className="forum__buttons">
         <button onClick={handlePrev} className="forum__left">
           <CardButtonLeft />

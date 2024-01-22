@@ -32,6 +32,10 @@
     max-width: 452px;
 }
 
+.forum__block {
+    text-decoration: none;
+}
+
 .forum__cards {
     display: flex;
     margin: 0;

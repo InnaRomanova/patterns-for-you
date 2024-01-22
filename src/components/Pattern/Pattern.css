@@ -12,6 +12,10 @@
     padding: 33px 78px 0;
 }
 
+.pattern__link {
+    text-decoration: none;
+}
+
 .pattern__list {
     list-style-type: none;
     margin: 38px 0 30px;

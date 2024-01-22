@@ -4,6 +4,7 @@ import { useRef, useEffect, useCallback, useState } from "react";
 import { register } from "swiper/element/bundle";
 import ButtonVectorLeft from "../Elements/ButtonVectorLeft";
 import ButtonVectorRight from "../Elements/ButtonVectorRight";
+import { Link } from "react-router-dom";
 
 
 register();
@@ -55,7 +56,8 @@ function PatternCard({ patternArray }) {
           <swiper-slide key={index}>
             <ul className="pattern__list">
               <li className="pattern__list-item" key={index}>
-                <img src={arrPatterns.image} alt="платье" className="pattern__image" />
+                <Link to="/author" className="patterns__block">
+                  <img src={arrPatterns.image} alt="платье" className="pattern__image" /></Link>
                 <div className="pattern__inform">
                   <h3 className="card__inform-name">{arrPatterns.name}</h3>
                   <p className="card__inform-katalog">{arrPatterns.text}</p>

@@ -24,14 +24,45 @@
     row-gap: 38px;
 }
 
+.model__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* max-width: 800px; */
+    width: 100%;
+    align-items: flex-start;
+    column-gap: 21px;
+    row-gap: 38px;
+}
+
 .details__list-item {
     margin: 0;
     padding: 0;
+    /* width: 381px; */
+}
+
+.model__list-item {
+    margin: 0;
+    padding: 0;
+    /* width: 381px; */
 }
 
 .details__image {
     margin: 0;
     padding: 0;
+    /* width: 100%; */
+    max-width: 381px;
+    height: 509px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.model__image {
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
     max-width: 381px;
     height: 509px;
     border-radius: 40px;
@@ -250,8 +281,20 @@
     opacity: 0.5;
 }
 
+.details__description {
+    width: 100%;
+}
+
+.model__description {
+    width: 100%;
+}
+
 @media screen and (max-width: 2307px) {
     .details__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .model__list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -280,12 +323,29 @@
         column-gap: 20px;
     }
 
+    .model__description {
+        width: 62%;
+        text-align: center;
+        column-gap: 20px;
+    }
+
     .details__list {
         display: flex;
         max-width: 400px;
     }
 
+    .model__list {
+        display: flex;
+        max-width: 400px;
+    }
+
     .details__list-item {
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .model__list-item {
         margin: 0;
         padding: 0;
         gap: 20px;
@@ -303,6 +363,13 @@
     }
 
     .details__description {
+        margin: 0;
+        display: flow;
+        max-width: 824px;
+        width: 100%;
+    }
+
+    .model__description {
         margin: 0;
         display: flow;
         max-width: 824px;
@@ -362,6 +429,12 @@
         position: relative;
     }
 
+    .model__description {
+        max-width: 380px;
+        width: 100%;
+        position: relative;
+    }
+
     .details__text {
         margin-top: 0;
         margin-bottom: 20px;
@@ -372,7 +445,15 @@
         justify-content: center;
     }
 
+    .model__list {
+        justify-content: center;
+    }
+
     .details__list-item {
+        position: relative;
+    }
+
+    .model__list-item {
         position: relative;
     }
 

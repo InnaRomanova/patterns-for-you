@@ -67,19 +67,19 @@ function DetailsSlide() {
                         pagination="false"
                         onSlideChange={handleSlideChange}>
 
+                        <swiper-slide className="details__swiperSlide" >
+                            {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                            {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
 
-                        {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
-                        {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
-                            <swiper-slide key={index} className="details__swiperSlide" >
-                                <ul className="details__list">
+                                <ul className="details__list" key={index}>
                                     {teacher.image.map((image, i) => (
                                         <li key={i} className="details__list-item">
                                             <img src={image} alt="картинка" className="details__image" />
                                         </li>
                                     ))}</ul>
 
-                            </swiper-slide>
-                        ))}
+
+                            ))}</swiper-slide>
 
 
                     </swiper-container>
@@ -98,7 +98,7 @@ function DetailsSlide() {
                     {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
                     {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
                         <swiper-slide key={index} className="details__swiperSlide" >
-                            <ul className="details__list">
+                            <ul className="details__list" key={index}>
                                 {teacher.image.map((image, i) => (
                                     <li key={i} className="details__list-item">
                                         <img src={image} alt="картинка" className="details__image" />
@@ -108,6 +108,22 @@ function DetailsSlide() {
                         </swiper-slide>
                     ))}
 
+
+
+                    {/* <swiper-slide className="details__swiperSlide" > */}
+                    {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                    {/* {arrForum.filter((item) => item.id === 1).map((teacher, index) => (
+
+                        <ul className="details__list" key={index}>
+                            {teacher.image.map((image, i) => (
+                                <li key={i} className="details__list-item">
+                                    <img src={image} alt="картинка" className="details__image" />
+                                </li>
+                            ))}</ul>
+
+
+                    ))} */}
+                    {/* </swiper-slide> */}
 
 
                     {/* <ul className="details__list">

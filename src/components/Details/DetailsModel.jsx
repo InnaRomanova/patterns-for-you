@@ -74,7 +74,7 @@ function DetailsModel() {
         <>
 
             {matchesMobile ? (<>
-                <div className="details__description">
+                <div className="model__description">
                     <swiper-container
                         ref={swiperElRef}
                         slides-per-view={slidesPerView}
@@ -82,30 +82,25 @@ function DetailsModel() {
                         pagination="false"
                         onSlideChange={handleSlideChange}>
 
-                        {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
-                            <swiper-slide key={index} className="details__swiperSlide">
-                                {teacher.image.map((image, i) => (
-                                    <ul key={i} className="details__list">
-                                        <li className="details__list-item">
-                                            <img src={image} alt="картинка" className="details__image" />
+
+
+
+                        <swiper-slide className="details__swiperSlide">
+                            {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                            {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
+                                <ul className="model__list" key={index}>
+                                    {teacher.image.map((image, i) => (
+
+                                        <li key={i} className="model__list-item">
+                                            <img src={image} alt="картинка" className="model__image" />
                                         </li>
-                                    </ul>
-                                ))}
+
+                                    ))}
 
 
-                            </swiper-slide>
-                        ))}
-
-                        {/* {arrDetails.map((teacher, index) => (
-                            <swiper-slide key={index} className="details__swiperSlide">
-                                <ul className="details__list">
-                                    <li className="details__list-item">
-                                        <img src={teacher.image} alt="картинка" className="details__image" />
-                                    </li>
                                 </ul>
+                            ))}  </swiper-slide>
 
-                            </swiper-slide>
-                        ))} */}
 
                     </swiper-container>
                     {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")}
@@ -118,18 +113,23 @@ function DetailsModel() {
                 </div>
             </>
             ) : (<>
-                <div className="details__description">
-                    <ul className="details__list">
-                        {map(arrDetails, (teacher, index) => (
-                            <swiper-slide key={index}>
+                <div className="model__description">
+                    <swiper-slide className="details__swiperSlide">
+                        {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
+                            <ul className="model__list" key={index}>
 
-                                <li className="details__list-item">
-                                    <img src={teacher.image} alt="картинка" className="details__image" />
-                                </li>
+                                {teacher.image.map((image, i) => (
 
-                            </swiper-slide>
-                        ))}
-                    </ul>
+                                    <li key={i} className="model__list-item">
+                                        <img src={image} alt="картинка" className="model__image" />
+                                    </li>
+
+                                ))}
+
+
+                            </ul>
+                        ))}</swiper-slide>
+
                     <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p></div>
             </>)}
         </>

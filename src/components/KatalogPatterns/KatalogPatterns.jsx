@@ -6,60 +6,13 @@ import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
 import CardKatalog from "../Card/CardKatalog";
-import Photo1 from "../../images/Photo.png";
-import Photo2 from "../../images/Photo (1).png";
-import Photo3 from "../../images/Photo (2).png";
-import Photo4 from "../../images/Photo (3).png";
+import { arrKatalogs } from "../Constants/Objects/Massiv";
 
 //главный компонент отображения каталога выкроек
 function KatalogPatterns() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
 
-  const arrKatalogs = [
-    {
-      id: 1,
-      image: Photo1,
-      name: "Платья",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 2,
-      image: Photo2,
-      name: "Жакеты",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 3,
-      image: Photo3,
-      name: "Юбки",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 4,
-      image: Photo4,
-      name: "Блузки",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 5,
-      image: Photo4,
-      name: "Блузки",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 6,
-      image: Photo3,
-      name: "Блузки",
-      text: "женское платье",
-      price: 135.0,
-    },
-  ];
-
+ 
   return (
     <>
       <Header />

@@ -6,6 +6,10 @@ import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
 import { arrForum } from "../Constants/Objects/Massiv";
+import Like from "../Elements/Like";
+import Comment from "../Elements/Comment";
+import WorkCards from "../Work/WorkCards";
+
 
 register();
 
@@ -90,6 +94,22 @@ function DetailsSlide() {
                     </div>
 
                     {mobile ? ("") : (<><p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p></>)}
+
+                    {mobile ? ("") : (<><button className="author__add">Показать еще фото</button></>)}
+
+
+                    
+                                <div className="author__icons">
+                                    <div className="author__icon author__like">
+                                        <div className="author__icon-number"><Like /> 26</div>
+                                        <p className="author__text">Понравилось? Жми лайк!</p>
+                                    </div>
+                                    <div className="author__icon author__coments">
+                                        <div className="author__icon-number"><Comment /> 26</div>
+                                        {mobile ? ("") : (<><p className="author__text">Комментарии</p></>)}
+                                        
+                                    </div>
+                                </div>
                 </div>
             </>
             ) : (<>
@@ -108,36 +128,22 @@ function DetailsSlide() {
                         </swiper-slide>
                     ))}
 
+                    <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
+                    
+                    <button className="author__add">Показать еще фото</button>
+                                <div className="author__icons">
+                                    <div className="author__icon author__like">
+                                        <div className="author__icon-number"><Like /> 26</div>
+                                        <p className="author__text">Понравилось? Жми лайк!</p>
+                                    </div>
+                                    <div className="author__icon author__coments">
+                                        <div className="author__icon-number"><Comment /> 26</div>
+                                        <p className="author__text">Комментарии</p>
+                                    </div>
+                                </div>
+                    </div>
 
-
-                    {/* <swiper-slide className="details__swiperSlide" > */}
-                    {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
-                    {/* {arrForum.filter((item) => item.id === 1).map((teacher, index) => (
-
-                        <ul className="details__list" key={index}>
-                            {teacher.image.map((image, i) => (
-                                <li key={i} className="details__list-item">
-                                    <img src={image} alt="картинка" className="details__image" />
-                                </li>
-                            ))}</ul>
-
-
-                    ))} */}
-                    {/* </swiper-slide> */}
-
-
-                    {/* <ul className="details__list">
-                        {map(arrForum, (teacher, index) => (
-                            <swiper-slide key={index}>
-
-                                <li className="details__list-item">
-                                    <img src={teacher.image} alt="картинка" className="details__image" />
-                                </li>
-
-                            </swiper-slide>
-                        ))}
-                    </ul> */}
-                    <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p></div>
+                    <WorkCards />
             </>)
             }
         </>

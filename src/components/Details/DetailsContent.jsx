@@ -5,6 +5,8 @@ import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import Shoppings from "../Elements/Shopping";
 import Favourites from "../Elements/Favourites";
 import DetailsModel from "../Details/DetailsModel";
+// import Like from "../Elements/Like";
+// import Comment from "../Elements/Comment";
 
 function DetailsContent() {
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
@@ -116,7 +118,6 @@ function DetailsContent() {
                                 <button className="details__sidmaster-shopping">Купить <Shoppings />
                                 </button><Favourites /></li>
                         </ul>
-
                     </div>
                 </>)}
             </div>

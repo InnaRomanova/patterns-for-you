@@ -10,6 +10,9 @@ import Favourites from "../Elements/Favourites";
 import DetailsSlide from "../Details/DetailsSlide";
 import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import ModelImage from "../../images/model1.png";
+import Like from "../Elements/Like";
+import Comment from "../Elements/Comment";
+
 
 function Author() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
@@ -112,9 +115,14 @@ function Author() {
                                         </button><Favourites /></li>
                                 </ul>
 
+                                
+                     
+                               
                             </article>
+                           
                         </>)}
                     </article>
+
                 </div>
             </section>
         </>

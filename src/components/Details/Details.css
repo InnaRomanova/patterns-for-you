@@ -364,6 +364,7 @@
 
     .details__description {
         margin: 0;
+        padding: 0 0 50px;
         display: flow;
         max-width: 824px;
         width: 100%;
@@ -464,8 +465,9 @@
     .details__button {
         bottom: 71px;
         left: 125px;
-        position: absolute;
+        /* position: absolute; */
         z-index: 1;
+        margin: 0 0 20px;
     }
 
     .details__sidebar-item:last-child {

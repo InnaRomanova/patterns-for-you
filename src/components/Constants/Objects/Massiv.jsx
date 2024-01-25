@@ -116,6 +116,48 @@ export const arrPatterns = [
     name: "Блузка",
     text: "женская повседневная блузка",
     price: 135.00,
+  },  
+  {
+    id: 5,
+    image: Photo1,
+    name: "Белое платье",
+    text: "женское платье",
+    price: 135.0,
+  },
+  {
+    id: 6,
+    image: Photo2,
+    name: "Желтое платье",
+    text: "женское платье",
+    price: 135.0,
+  },
+  {
+    id: 7,
+    image: Photo3,
+    name: "Платье-сарафан",
+    text: "платье",
+    price: 135.0,
+  },
+  {
+    id: 8,
+    image: Photo4,
+    name: "Комплект",
+    text: "женское платье",
+    price: 135.0,
+  },
+  {
+    id: 9,
+    image: Photo4,
+    name: "Комплект",
+    text: "женское платье",
+    price: 135.0,
+  },
+  {
+    id: 10,
+    image: Photo3,
+    name: "Синее платье-сарафан",
+    text: "женское платье",
+    price: 135.0,
   },
 ];
 
@@ -205,47 +247,47 @@ export const arrReviews = [
 
 
 //для компонента KatalogPetterns
-export const arrKatalogs = [
-  {
-    id: 1,
-    image: Photo1,
-    name: "Платья",
-    text: "женское платье",
-    price: 135.0,
-  },
-  {
-    id: 2,
-    image: Photo2,
-    name: "Жакеты",
-    text: "женское платье",
-    price: 135.0,
-  },
-  {
-    id: 3,
-    image: Photo3,
-    name: "Юбки",
-    text: "женское платье",
-    price: 135.0,
-  },
-  {
-    id: 4,
-    image: Photo4,
-    name: "Блузки",
-    text: "женское платье",
-    price: 135.0,
-  },
-  {
-    id: 5,
-    image: Photo4,
-    name: "Блузки",
-    text: "женское платье",
-    price: 135.0,
-  },
-  {
-    id: 6,
-    image: Photo3,
-    name: "Блузки",
-    text: "женское платье",
-    price: 135.0,
-  },
-];
+// export const arrKatalogs = [
+//   {
+//     id: 1,
+//     image: Photo1,
+//     name: "Белое платье",
+//     text: "женское платье",
+//     price: 135.0,
+//   },
+//   {
+//     id: 2,
+//     image: Photo2,
+//     name: "Желтое платье",
+//     text: "женское платье",
+//     price: 135.0,
+//   },
+//   {
+//     id: 3,
+//     image: Photo3,
+//     name: "Платье-сарафан",
+//     text: "платье",
+//     price: 135.0,
+//   },
+//   {
+//     id: 4,
+//     image: Photo4,
+//     name: "Комплект",
+//     text: "женское платье",
+//     price: 135.0,
+//   },
+//   {
+//     id: 5,
+//     image: Photo4,
+//     name: "Комплект",
+//     text: "женское платье",
+//     price: 135.0,
+//   },
+//   {
+//     id: 6,
+//     image: Photo3,
+//     name: "Синее платье-сарафан",
+//     text: "женское платье",
+//     price: 135.0,
+//   },
+// ];

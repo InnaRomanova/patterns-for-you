@@ -57,7 +57,7 @@ function PatternCard({ patternArray }) {
             <ul className="pattern__list">
               <li className="pattern__list-item" key={index}>
                 <Link to="/author" className="patterns__block">
-                  <img src={arrPatterns.image} alt="платье" className="pattern__image" /></Link>
+                  <img src={arrPatterns.image} alt="одежда" className="pattern__image" /></Link>
                 <div className="pattern__inform">
                   <h3 className="card__inform-name">{arrPatterns.name}</h3>
                   <p className="card__inform-katalog">{arrPatterns.text}</p>

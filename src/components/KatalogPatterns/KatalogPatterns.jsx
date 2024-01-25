@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
 import CardKatalog from "../Card/CardKatalog";
-import { arrKatalogs } from "../Constants/Objects/Massiv";
+import { arrPatterns } from "../Constants/Objects/Massiv";
 
 //главный компонент отображения каталога выкроек
 function KatalogPatterns() {
@@ -35,7 +35,7 @@ function KatalogPatterns() {
           </div>
 
           <ul className="katalogPatterns__cards">
-            <CardKatalog swiperKatalog={arrKatalogs} />
+            <CardKatalog swiperKatalog={arrPatterns} />
           </ul>
           <button className="katalogPatterns__show-more">Показать еще</button>
 

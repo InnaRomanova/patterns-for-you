@@ -37,6 +37,9 @@
 .pattern__image {
     margin: 0;
     padding: 0;
+    width: 305px;
+    height: 484px;
+    border-radius: 30px;
 }
 
 .pattern__inform {

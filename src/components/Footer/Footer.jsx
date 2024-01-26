@@ -20,7 +20,7 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/patterns-for-you" className="footer__menu-link">
                       <h5 className="footer__title">Главная</h5>
                     </a>
                   </li>
@@ -30,17 +30,17 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/forum" className="footer__menu-link">
                       <p className="footer__text">Блок фотофорум</p>
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/support" className="footer__menu-link">
                       <p className="footer__text">Как скачать</p>
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/contacts" className="footer__menu-link">
                       <p className="footer__text">Контакты</p>
                     </a>
                   </li>
@@ -50,32 +50,32 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <h5 className="footer__title">Каталог</h5>
                     </a>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <p className="footer__text">Платья</p>
                     </a>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <p className="footer__text">Юбки</p>
                     </a>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <p className="footer__text">Блузки</p>
                     </a>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <p className="footer__text">Женская верхняя одежда</p>
                     </a>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/katalog" className="footer__menu-link">
                       <p className="footer__text">Жакеты</p>
                     </a>
                   </li>
@@ -85,7 +85,7 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <a href="/contacts" className="footer__menu-link">
                       <h5 className="footer__title">Контакты</h5>
                     </a>
                   </li>
@@ -151,7 +151,7 @@ function Footer() {
                 <li className="footer__list-item">
                   <ul className="footer__list-menu">
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/patterns-for-you" className="footer__menu-link">
                         <h5 className="footer__title">Главная</h5>
                       </a>
                     </li>
@@ -161,17 +161,17 @@ function Footer() {
                       </a>
                     </li>
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/forum" className="footer__menu-link">
                         <p className="footer__text">Блок фотофорум</p>
                       </a>
                     </li>
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/support" className="footer__menu-link">
                         <p className="footer__text">Как скачать</p>
                       </a>
                     </li>
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/contacts" className="footer__menu-link">
                         <p className="footer__text">Контакты</p>
                       </a>
                     </li>
@@ -181,32 +181,32 @@ function Footer() {
                 <li className="footer__list-item">
                   <ul className="footer__list-menu">
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <h5 className="footer__title">Каталог</h5>
                       </a>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <p className="footer__text">Платья</p>
                       </a>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <p className="footer__text">Юбки</p>
                       </a>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <p className="footer__text">Блузки</p>
                       </a>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <p className="footer__text">Женская верхняя одежда</p>
                       </a>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/katalog" className="footer__menu-link">
                         <p className="footer__text">Жакеты</p>
                       </a>
                     </li>
@@ -216,7 +216,7 @@ function Footer() {
                 <li className="footer__list-item">
                   <ul className="footer__list-menu">
                     <li className="footer__menu">
-                      <a href="#" className="footer__menu-link">
+                      <a href="/contacts" className="footer__menu-link">
                         <h5 className="footer__title">Контакты</h5>
                       </a>
                     </li>

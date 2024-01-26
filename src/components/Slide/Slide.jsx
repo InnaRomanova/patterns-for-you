@@ -1,6 +1,7 @@
 import React from "react";
 import "./Slide.css";
 import buttonKatalogSlide from "../../images/buttonKatalogSlide.svg";
+import { Link } from "react-router-dom";
 
 function Slide() {
   return (
@@ -11,14 +12,15 @@ function Slide() {
           There are many variations of the passages of lorem Ipsum
           fromavailable,variations of the passages.
         </p>
+      <Link to="/katalog" className="slide__button-link">
         <button className="slide__button-katalog">
-          В магазин
+           В магазин
           <img
             src={buttonKatalogSlide}
             alt="В каталог"
             className="slide__vector"
           />
-        </button>
+        </button></Link>
       </div>
     </section>
   );

@@ -16,23 +16,26 @@ function Details() {
     return (
         <>
             <Header />
-            <section className="details">
-                <div className="katalogPatterns__img">
-                    {matchesMobile ? (<img src={KatalogImageMobile} className="katalogPatterns__image" />) :
-                        (<img src={KatalogImage} className="katalogPatterns__image" />)}
-                </div>
-                <div className="details__container">
-                    <div className="katalogPatterns__block">
-                        <span className="katalogPatterns__navigate">Главная/Каталог выроек/Выкройка изделия/Платье/</span>
-                        <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
+            <section className="details__wrapper">
+                <article className="details">
+                    <div className="katalogPatterns__img">
+                        {matchesMobile ? (<img src={KatalogImageMobile} className="katalogPatterns__image" />) :
+                            (<img src={KatalogImage} className="katalogPatterns__image" />)}
                     </div>
+                    <div className="details__container">
+                        <div className="katalogPatterns__block">
+                            <span className="katalogPatterns__navigate">Главная/Каталог выроек/Выкройка изделия/Платье/</span>
+                            <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
+                        </div>
 
-                    <DetailsContent />
-                </div>
+                        <DetailsContent />
+                    </div>
+                </article>
 
                 {/* Работы по выкройке */}
                 <Work />
             </section>
+
             <Footer />
         </>
     )

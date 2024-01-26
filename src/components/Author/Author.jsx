@@ -12,9 +12,12 @@ import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import ModelImage from "../../images/model1.png";
 import Like from "../Elements/Like";
 import Comment from "../Elements/Comment";
+import WorkCards from "../Work/WorkCards";
+import Work from "../Work/Work";
+import CommentsModel from "../Comments/CommentsModel";
 
 
-function Author() {
+function Author({arrWorks}) {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
 
@@ -87,11 +90,12 @@ function Author() {
                                         </button><Favourites /></li>
                                 </ul>
                             </div>
+                     
                         </>) : (<>
                             <DetailsSlide />
 
                             {/* Сайт-бар */}
-                            <article className="details__sidebar">
+                            <div className="details__sidebar">
                                 <ul className="details__sidmaster">
                                     <li className="details__sidmaster-item">
                                         <img src={ModelImage} alt="модель" className="" /></li>
@@ -113,18 +117,18 @@ function Author() {
                                     <li className="details__sidebar-item">
                                         <button className="details__sidmaster-shopping">Купить <Shoppings />
                                         </button><Favourites /></li>
-                                </ul>
-
-                                
-                     
+                                </ul> 
                                
-                            </article>
+                            </div>
                            
-                        </>)}
+                         
+                        </>)}    
                     </article>
 
                 </div>
             </section>
+            <Work />
+            <CommentsModel />
         </>
     );
 }

@@ -73,6 +73,10 @@
     background: rgba(41, 47, 54, 0.70);
 }
 
+.slide__button-link {
+    text-decoration: none;
+}
+
 .slide__vector {
     width: 15.141px;
     height: 13.177px;

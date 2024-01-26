@@ -266,10 +266,13 @@
         /* grid-template-columns: repeat(1, 1fr); */
     }
 
+    .katalogPatterns__card {
+        min-height: 417px;
+    }
+
     .katalogPatterns__card-image {
         border-radius: 8px;
-        max-height: 399px;
-        min-height: 228px;
+        max-height: 237px;
         width: 100%;
     }
 

@@ -8,6 +8,7 @@ import menuMobile from "../../images/menuMobile.svg";
 import Navigation from "../Navigation/Navigation";
 import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
 
+
 function Header() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -41,29 +42,28 @@ function Header() {
             <li className="header__link">
               <a
                 className="header__link-item header__link-item_active"
-                href="#"
-                target="_blank"
+                href="/patterns-for-you"
               >
                 Главная
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="#" target="_blank">
+              <a className="header__link-item" href="/katalog" target="_blank">
                 Каталог выкроек
-              </a>
+                </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="#" target="_blank">
+              <a className="header__link-item" href="/support" target="_blank">
                 Как скачать
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="#" target="_blank">
+              <a className="header__link-item" href="/block" target="_blank">
                 Блок
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="#" target="_blank">
+              <a className="header__link-item" href="/contacts" target="_blank">
                 Контакты
               </a>
             </li>

@@ -48,22 +48,22 @@ function Header() {
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/katalog" target="_blank">
+              <a className="header__link-item" href="/katalog">
                 Каталог выкроек
-                </a>
+              </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/support" target="_blank">
+              <a className="header__link-item" href="/support">
                 Как скачать
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/block" target="_blank">
+              <a className="header__link-item" href="/block">
                 Блок
               </a>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/contacts" target="_blank">
+              <a className="header__link-item" href="/contacts">
                 Контакты
               </a>
             </li>

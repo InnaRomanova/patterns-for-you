@@ -155,10 +155,10 @@
     background-image: url(../../images/card__more-button-katalog.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    border: none;
     width: 52px;
     height: 52px;
     border-radius: 50px;
+    border: none;
 }
 
 .card__more-katalog:hover, .card__more-button-katalog:hover {

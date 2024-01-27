@@ -4,6 +4,7 @@ import { useRef, useEffect, useCallback } from "react";
 import { register } from "swiper/element/bundle";
 import smileAvatar from "../../images/smile-avatar.png";
 import CommentSend from "../Elements/CommentSend";
+import CommentAnswer from "../Elements/CommentAnswer";
 
 register();
 
@@ -43,15 +44,54 @@ function CommentsModel() {
     return (
         <>
             <section className="details__container">
+
                 <button className="com-model__name">Добавить комментарий</button>
                 <form className="com-model__form">
                     <img className="com-model__avatar" alt="аватарка" src={smileAvatar} />
 
-                    <textarea className="com-model__comment" id="comment" name="story" rows="5" cols="33">
-                        Добавить комментарий ...</textarea>
-                        <CommentSend />
+                    <textarea className="com-model__comment" defaultValue="Добавить комментарий ..." id="comment" name="story" rows="5" cols="33">
+                    </textarea>
+
+                    <CommentSend />
+
 
                 </form>
+
+
+                <div className="com-model__add-personal">
+                    <img src={smileAvatar} alt="аватарка" className="com-model__avatar" />
+                    <div className="com-model__add-container">
+                        <div className="com-model__add-info">
+                            <h4 className="com-model__add-name">Алексеева Елена</h4>
+                            <p className="com-model__add-text">Очень хорошее платье. Ношу с удовольствием.
+                                Сшито качественно!</p>
+                        </div>
+                        <div className="com-model__add-answer">
+                            <CommentAnswer /><p className="com-model__answer">Ответить</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="com-model__add-personal com-model__add-personal_active">
+                    <img src={smileAvatar} alt="аватарка" className="com-model__avatar" />
+                    <div className="com-model__add-container">
+                        <div className="com-model__add-info">
+                            <h4 className="com-model__add-name">Алексеева Елена</h4>
+                            <p className="com-model__add-text">Очень хорошее платье.
+                                Разрабатывать сайт на реакте не так-то просто!
+                                Сшито качественно!</p>
+                        </div>
+                        <div className="com-model__add-answer">
+                            <CommentAnswer /><p className="com-model__answer">Ответить</p>
+                        </div>
+                    </div>
+                </div>
+                <div className=" com-model__block">
+                    <button className="com-model__button-add">
+                        Добавить комментарий
+                    </button>
+                </div>
+
             </section>
         </>
     )

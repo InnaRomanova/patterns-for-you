@@ -390,6 +390,7 @@
 
     .details__sidmaster-item {
         text-align: center;
+        width: 80%;
     }
 
     .details__sidmaster {
@@ -398,7 +399,7 @@
     }
 
     .details__sidebar-item {
-        max-width: 100%;
+        max-width: 80%;
     }
 
     .details__sidebar-list {
@@ -419,7 +420,7 @@
     }
 
     .details__sidmaster-price {
-        width: 100%;
+        width: 50%;
     }
 }
 
@@ -477,9 +478,19 @@
         margin: 0 0 20px;
     }
 
+    .details__sidebar-item {
+        max-width: 100%;
+    }
+
     .details__sidebar-item:last-child {
         gap: 0;
     }
 
+    .details__sidmaster-shopping {
+        width: 150px;
+    }
 
+    .details__sidmaster-price {
+        width: 227px;
+    }
 }

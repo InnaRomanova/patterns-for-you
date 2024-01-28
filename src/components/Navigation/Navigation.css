@@ -31,7 +31,12 @@
     letter-spacing: 0.2px;
 }
 
-.navigation__text:hover {
+.navigation__link {
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation__text:hover, .navigation__link:hover {
     cursor: pointer;
     color: #925514;
 }

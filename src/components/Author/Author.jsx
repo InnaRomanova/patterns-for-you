@@ -15,9 +15,10 @@ import Comment from "../Elements/Comment";
 import WorkCards from "../Work/WorkCards";
 import Work from "../Work/Work";
 import CommentsModel from "../Comments/CommentsModel";
+import Footer from "../Footer/Footer";
 
 
-function Author({arrWorks}) {
+function Author({ arrWorks }) {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
 
@@ -90,7 +91,7 @@ function Author({arrWorks}) {
                                         </button><Favourites /></li>
                                 </ul>
                             </div>
-                     
+
                         </>) : (<>
                             <DetailsSlide />
 
@@ -117,18 +118,19 @@ function Author({arrWorks}) {
                                     <li className="details__sidebar-item">
                                         <button className="details__sidmaster-shopping">Купить <Shoppings />
                                         </button><Favourites /></li>
-                                </ul> 
-                               
+                                </ul>
+
                             </div>
-                           
-                         
-                        </>)}    
+
+
+                        </>)}
                     </article>
 
                 </div>
             </section>
             <Work />
             <CommentsModel />
+            <Footer />
         </>
     );
 }

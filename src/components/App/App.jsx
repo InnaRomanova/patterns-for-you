@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route
               exac
-              path="/patterns-for-you"
+              path="/"
               element={
                 <>
                   <Header />

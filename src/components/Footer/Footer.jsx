@@ -90,7 +90,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                      <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
+                    <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
                   </li>
                   <li className="footer__menu">
                     <a href="#" className="footer__menu-link">
@@ -98,7 +98,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                      <p className="footer__text">(123) 456 - 7890</p>
+                    <p className="footer__text">(123) 456 - 7890</p>
                   </li>
                 </ul>
               </li>
@@ -151,7 +151,7 @@ function Footer() {
                 <li className="footer__list-item">
                   <ul className="footer__list-menu">
                     <li className="footer__menu">
-                      <a href="/patterns-for-you" className="footer__menu-link">
+                      <a href="/" className="footer__menu-link">
                         <h5 className="footer__title">Главная</h5>
                       </a>
                     </li>
@@ -221,7 +221,7 @@ function Footer() {
                       </a>
                     </li>
                     <li className="footer__menu">
-                        <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
+                      <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
                     </li>
                     <li className="footer__menu">
                       <a href="#" className="footer__menu-link">
@@ -229,15 +229,15 @@ function Footer() {
                       </a>
                     </li>
                     <li className="footer__menu">
-                        <p className="footer__text">(123) 456 - 7890</p>
+                      <p className="footer__text">(123) 456 - 7890</p>
                     </li>
                   </ul>
                 </li></>
             )}
           </ul>
-          <div className="footer__line">            
-          <a href="#" className="footer__line-link">
-            <p className="footer__line-text">Политика проекта</p></a>
+          <div className="footer__line">
+            <a href="#" className="footer__line-link">
+              <p className="footer__line-text">Политика проекта</p></a>
           </div>
         </div>
       </footer>

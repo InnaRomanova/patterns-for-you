@@ -42,7 +42,7 @@ function Header() {
             <li className="header__link">
               <a
                 className="header__link-item header__link-item_active"
-                href="/patterns-for-you"
+                href="/"
               >
                 Главная
               </a>

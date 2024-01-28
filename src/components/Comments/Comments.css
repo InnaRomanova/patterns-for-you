@@ -175,6 +175,7 @@
     background: #F4F0EC;
     max-width: 760px;
     display: flex;
+    position: relative;
 }
 
 .com-model__avatar {
@@ -196,16 +197,21 @@
     border: none;
     border-left: 1px solid var(--style-orange-comments-like, #F2E4CF);
     background: transparent;
-    width: 700px;
-    height: 208px;
+    width: 70%;
     margin: 0;
     padding: 20px 0 0 30px;
     outline-color: #A86E30;
 }
 
 .commentSend {
-    margin: 148px 0 0;
+    height: 90px;
+    content: "";
+    right: -3px;
+    margin: 0;
     padding: 0;
+    position: absolute;
+    bottom: -7px;
+    width: 90px;
 }
 
 .commentSend:hover {
@@ -340,10 +346,107 @@
         margin-left: 20px;
         margin-right: 20px;
     }
+
+
 }
+
 
 @media screen and (max-width: 879px) {
     .comments__content {
         border-radius: 0;
+    }
+
+    .com-model__form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .com-model__comment {
+        width: 60%;
+    }
+
+    .com-model__add-name {
+        font-size: 20px;
+    }
+
+    .com-model__add-text {
+        font-size: 16px;
+        margin-top: 15px;
+        letter-spacing: 0.32px;
+        color: #4D5053;
+    }
+
+    .commentSend {
+        width: 70px;
+        height: 70px;
+    }
+
+    .com-model__add-personal {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .com-model__add-personal_active {
+        margin-top: 20px;
+        margin-left: 63px;
+    }
+
+    .com-model__avatar {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .com-model__add-text {
+        margin-left: 0;
+    }
+
+    .com-model__answer {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .com-model__form {
+        height: 150px;
+    }
+
+    .com-model__comment {
+        padding-left: 15px;
+    }
+
+
+    .com-model__avatar {
+        margin-left: 0;
+        margin-right: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .commentAnswer {
+        width: 35px;
+        height: 35px;
+    }
+
+    .commentSend {
+        width: 60px;
+        width: 60px;
+    }
+
+    .com-model__add-personal {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .com-model__add-personal_active {
+        margin-left: 15px;
+    }
+
+    .com-model__add-info {
+        margin-left: 10px;
+    }
+
+    .com-model__add-name {
+        font-size: 15px;
+        letter-spacing: 0.3px;
     }
 }

@@ -8,6 +8,7 @@ import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
 import Details from "../Details/Details";
 import { CurrentUserContext } from "../contexts/CurrentContexts";
 import Author from "../Author/Author";
+import ForumPage from "../Forum/ForumPage";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -40,6 +41,10 @@ function App() {
             </Route>
             <Route path="/author" element={<>
               <Details />
+            </>} >
+            </Route>
+            <Route path="/forum" element={<>
+              <ForumPage />
             </>} >
             </Route>
           </Routes>

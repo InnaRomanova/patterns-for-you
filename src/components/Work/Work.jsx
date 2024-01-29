@@ -1,53 +1,13 @@
 import React from "react";
 import "./Work.css";
 import WorkCards from "./WorkCards";
-// import WorkFoto1 from "../../images/workFoto1.png";
 import PaginationLeft from "../Elements/PaginationLeft";
 import PaginationRight from "../Elements/PaginationRight";
 import {arrWorks} from "../Constants/Objects/WorkMassiv";
 
 // Компонент: работы по выкройке
 function Work() {
-    // const arrWorks = [
-    //     {
-    //       id: 1,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //     {
-    //       id: 2,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //     {
-    //       id: 3,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //     {
-    //       id: 4,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //     {
-    //       id: 4,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //     {
-    //       id: 4,
-    //       image: WorkFoto1,
-    //       name: "Modern Kitchen",
-    //       comment: "Все супер! Сшила! Носиться! Буду еще покупать выкройки!",
-    //     },
-    //   ];
-    
-      // const works = [];
+          // const works = [];
     
       // arrWorks.forEach((work, index) => {
       //   works.push(

@@ -41,9 +41,9 @@ function Work() {
             <h2 className="news__title katalogPatterns__title-text">Работы по выкройке</h2>
             <p className="details__text">Поделитесь фотографиями и мнением.</p>
             </div>
-            <div className="works__container-cards">
+        
             <WorkCards swiperArray={arrWorks}/>
-            </div>
+      
             <div className="work__pagination">
               <div className="work__pagination-container">
                <PaginationLeft />

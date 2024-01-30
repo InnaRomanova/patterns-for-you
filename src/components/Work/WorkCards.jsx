@@ -31,6 +31,7 @@ function WorkCards({ swiperArray }) {
 
   return (
     <>
+     <div className="works__container-cards">
       <swiper-container
         ref={swiperElRef}
         slides-per-view={slidesPerView}
@@ -91,7 +92,7 @@ function WorkCards({ swiperArray }) {
             </li>
           ))}
         </ul></swiper-container>
-
+        </div>
     </>
   );
 };

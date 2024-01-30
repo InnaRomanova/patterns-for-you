@@ -34,9 +34,9 @@ function WorkPopulation({ swiperPopulation }) {
                 setSlidesPerView(4)
             } else if (display > 883) {
                 setSlidesPerView(3);
-            } else if (display > 433) {
+            } else if (display > 618) {
                 setSlidesPerView(2);
-            } else if (display < 433) {
+            } else if (display < 618) {
                 setSlidesPerView(1)
             }
         }
@@ -115,8 +115,8 @@ function WorkPopulation({ swiperPopulation }) {
                     ))}
                 </swiper-container>
             </div>
-            <div className="work__pagination">
-                <div className="work__pagination-container">
+            <div className="work__pagination  work__pagination-pad">
+                <div className="work__pagination-container work-population__container">
                     <button onClick={handlePrev} className="work-population__button-prev"><PaginationLeft /></button>
                     <button onClick={handleNext} className="work-population__button-next"><PaginationRight /></button>
                 </div>

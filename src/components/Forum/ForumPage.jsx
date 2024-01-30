@@ -8,6 +8,9 @@ import PaginationLeft from "../Elements/PaginationLeft";
 import PaginationRight from "../Elements/PaginationRight";
 import WorkPopulation from "../Work/WorkPopulation";
 import { arrPopulation } from "../Constants/Objects/WorkMassiv";
+import {arrWorks} from "../Constants/Objects/WorkMassiv";
+import WorkCards from "../Work/WorkCards";
+import Footer from "../Footer/Footer";
 
 function ForumPage() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
@@ -31,14 +34,33 @@ function ForumPage() {
                     <span className="katalogPatterns__navigate">Главная/Каталог/Выкройки/Женская одежда/</span>
                 </div>
                 {/* Популярные работы за неделю */}
-                    <div className="work__container">
-                        <h2 className="news__title katalogPatterns__title-text">Популярные работы по выкройке</h2>
-                        <p className="details__text">Поделитесь фотографиями и мнением.</p>
-                    </div>
+                <div className="work__container">
+                    <h2 className="news__title katalogPatterns__title-text">Популярные работы по выкройке</h2>
+                    <p className="details__text">Поделитесь фотографиями и мнением.</p>
+                </div>
 
-                        <WorkPopulation swiperPopulation={arrPopulation} />
+                <WorkPopulation swiperPopulation={arrPopulation} />
 
+                <div className="work__container">
+                    <h2 className="news__title katalogPatterns__title-text">Работы с фотографиями и комментариями</h2>
+                </div>
+                <WorkCards swiperArray={arrWorks}/>
+
+                <div className="work__pagination">
+              <div className="work__pagination-container">
+               <PaginationLeft />
+              <button className="work__number">1</button>
+              <button className="work__number work__number_active">2</button>
+              <PaginationRight /> 
+              </div>
+              <button className="work__add-entry">Добавить запись</button>
+              <div className="work__download">
+                <button className="work__download-button">Загрузить еще</button>
+              </div>
             </div>
+            </div>
+
+            <Footer />
         </>
     );
 }

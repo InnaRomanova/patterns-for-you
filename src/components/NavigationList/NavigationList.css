@@ -1,3 +1,19 @@
+.navigationList__container-menu-desktop {
+    top: 49px;
+    left: -95px;
+    background: #F3ECE2;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 185px;
+    border-radius: 8%;
+    gap: 10px;
+    text-align: center;
+    height: 245px;
+}
+
+
 .navigationList__container {
     margin: 0 0 0 52px;
     padding: 0;

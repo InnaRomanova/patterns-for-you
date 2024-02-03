@@ -4,7 +4,7 @@ import "./Navigation.css";
 import OpenVector from "../Elements/OpenVector";
 import NavigationList from "../NavigationList/NavigationList";
 
-function Navigation({ }) {
+function Navigation() {
   const [openList, setOpenList] = useState(false);
 
   function handleOpen() {

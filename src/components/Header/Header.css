@@ -43,6 +43,10 @@
     padding: 0;
 }
 
+.header__link-hover {
+    position: relative;
+}
+
 .header__link:last-child {
     margin-right: 19px;
 }

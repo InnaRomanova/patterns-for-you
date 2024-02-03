@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+
 import "./Comments";
-import { useRef, useEffect, useCallback } from "react";
 import { register } from "swiper/element/bundle";
 import smileAvatar from "../../images/smile-avatar.png";
 import CommentSend from "../Elements/CommentSend";
 import CommentAnswer from "../Elements/CommentAnswer";
+import { Link } from 'react-router-dom';
 
 register();
 
@@ -41,11 +41,13 @@ function CommentsModel() {
     // }, []);
 
 
+
+
     return (
         <>
             <section className="details__container">
 
-                <button className="com-model__name">Добавить комментарий</button>
+                <button className="com-model__name" id="section-comment">Добавить комментарий</button>
 
                 <form className="com-model__form">
                     <img className="com-model__avatar" alt="аватарка" src={smileAvatar} />
@@ -85,9 +87,12 @@ function CommentsModel() {
                     </div>
                 </div>
                 <div className=" com-model__block">
-                    <button className="com-model__button-add">
-                        Добавить комментарий
-                    </button>
+                    <a href="#section-comment" className="com-model__button">
+                        <button className="com-model__button-add">
+                            Добавить комментарий
+                        </button>
+                    </a>
+
                 </div>
 
             </section>

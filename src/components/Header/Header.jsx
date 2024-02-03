@@ -7,18 +7,30 @@ import SignInUp from "../../images/signInUp.svg";
 import menuMobile from "../../images/menuMobile.svg";
 import Navigation from "../Navigation/Navigation";
 import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
+import NavigationList from "../NavigationList/NavigationList";
 
 
 function Header() {
   const [openModal, setOpenModal] = useState(false);
+  const [showNavigationList, setShowNavigationList] = useState(false);
 
   function handleOpen() {
     setOpenModal(true);
+    setShowNavigationList(true);
   }
 
   function handleClose() {
     setOpenModal(false);
+    setShowNavigationList(false);
   }
+
+  // function handleMouseEnter() {
+  //   setShowNavigationList(true);
+  // }
+
+  // function handleMouseLeave() {
+  //   setShowNavigationList(false);
+  // }
 
   return (
     <header className="header">
@@ -47,10 +59,17 @@ function Header() {
                 Главная
               </a>
             </li>
-            <li className="header__link">
+            <li
+              className="header__link header__link-hover"
+              onMouseEnter={handleOpen}
+              onMouseLeave={handleClose}
+            >
               <a className="header__link-item" href="/katalog">
-                Каталог выкроек
-              </a>
+                Каталог выкроек   </a>
+              {showNavigationList &&
+                <NavigationList />
+              }
+
             </li>
             <li className="header__link">
               <a className="header__link-item" href="/support">

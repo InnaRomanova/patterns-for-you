@@ -1,6 +1,5 @@
-import React from "react";
 import "./Header.css";
-import { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Logo from "../../images/Logo.svg";
 import Seach from "../../images/search.svg";
 import SignInUp from "../../images/signInUp.svg";
@@ -8,6 +7,7 @@ import menuMobile from "../../images/menuMobile.svg";
 import Navigation from "../Navigation/Navigation";
 import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
 import NavigationList from "../NavigationList/NavigationList";
+import { Link, NavLink } from "react-router-dom";
 
 
 function Header() {
@@ -24,13 +24,9 @@ function Header() {
     setShowNavigationList(false);
   }
 
-  // function handleMouseEnter() {
-  //   setShowNavigationList(true);
-  // }
-
-  // function handleMouseLeave() {
-  //   setShowNavigationList(false);
-  // }
+  function handleActiveClass() {
+    return showNavigationList ? "header__link_active" : "header__linkitem"
+  }
 
   return (
     <header className="header">
@@ -52,39 +48,46 @@ function Header() {
         <div className="header__menu">
           <ul className="header__lists">
             <li className="header__link">
-              <a
-                className="header__link-item header__link-item_active"
-                href="/"
-              >
+              <NavLink
+                // className="header__link-item 
+                // header__link-item_active"
+                to="/" className={
+                  showNavigationList ? "header__linkitem_activat" : "header__linkitem"}>
                 Главная
-              </a>
+              </NavLink>
             </li>
             <li
               className="header__link header__link-hover"
               onMouseEnter={handleOpen}
               onMouseLeave={handleClose}
             >
-              <a className="header__link-item" href="/katalog">
-                Каталог выкроек   </a>
+              <NavLink className={
+                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/katalog"
+
+              >
+                Каталог выкроек</NavLink>
               {showNavigationList &&
                 <NavigationList />
               }
 
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/support">
+              <NavLink className={
+                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/support">
                 Как скачать
-              </a>
+              </NavLink>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/block">
+              <NavLink className={
+                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/block">
                 Блок
-              </a>
+              </NavLink>
             </li>
             <li className="header__link">
-              <a className="header__link-item" href="/contacts">
+              <NavLink className={
+                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/contacts">
                 Контакты
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

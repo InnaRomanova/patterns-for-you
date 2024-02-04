@@ -1,6 +1,6 @@
 import React from "react";
 import "./Katalog.css";
-import Card from "../Card/Card";
+import Card from "./Card";
 import { Link } from "react-router-dom";
 import { arrReviews } from "../Constants/Objects/Massiv";
 

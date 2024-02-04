@@ -3,6 +3,7 @@ import "./Comments";
 import map from "lodash/map";
 import { useRef, useEffect, useCallback } from "react";
 import { register } from "swiper/element/bundle";
+import { Link } from "react-router-dom";
 import CardButton from "../Elements/CardButton";
 import CardButtonLeft from "../Elements/CardButtonLeft";
 
@@ -56,14 +57,14 @@ function ForumCard({ commentArray }) {
                         <ul className="commets__cards">
                             <li className="comment__card">
                                 <div className="comment__personal">
-                                    <a href="#" className="comment__link">
+                                    <a href="/details" className="comment__link">
                                         <img className="comment__link-avatar" alt="аватарка" src={arrComments.avatar} />
                                     </a>
-                                    <h4 className="comment__name">{arrComments.name}</h4>
+                                    <Link to="/details" className="new__more-link"><h4 className="comment__name">{arrComments.name}</h4></Link>
                                 </div>
                                 <div className="comment__info">
                                     <p className="comment__info-text">{arrComments.text}</p>
-                                    <p className="comment__info-marka">{arrComments.marka}</p>
+                                    <Link to="/author" className="new__more-link"><p className="comment__info-marka">{arrComments.marka}</p></Link>
                                 </div>
                             </li>
                         </ul>

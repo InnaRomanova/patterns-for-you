@@ -1,9 +1,10 @@
 import { useRef, useEffect, useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import { register } from "swiper/element/bundle";
 import map from "lodash/map";
 import "../News/News.css";
 import ButtonVectorLeft from "./ButtonVectorLeft";
-import ButtonVectorRight from "../Elements/ButtonVectorRight";
+import ButtonVectorRight from "./ButtonVectorRight";
 
 register();
 
@@ -52,11 +53,11 @@ function SwiperSliderNews({ swiperArray }) {
             <div className="news__cards-list">
               <div className="news__cards">
                 <div className="news__card">
-                  <img
-                    src={teacher.image}
-                    alt="картинка выкройки"
-                    className="card__image"
-                  />
+                  <Link to="/author">
+                    <img
+                      src={teacher.image}
+                      alt="картинка выкройки"
+                      className="card__image" /></Link>
                   <div className="card__inform">
                     <h3 className="card__inform-name">{teacher.name}</h3>
                     <p className="card__inform-katalog">{teacher.text}</p>
@@ -65,8 +66,10 @@ function SwiperSliderNews({ swiperArray }) {
                     </span>
                   </div>
                   <div className="card__more">
-                    <p className="card__more-katalog">Подробнее</p>
-                    <button className="card__more-button-katalog"></button>
+                    <Link to="/author" className="new__more-link">
+                      <p className="card__more-katalog">Подробнее</p> </Link>
+                    <Link to="/author" className="new__more-link"><button className="card__more-button-katalog"></button></Link>
+
                   </div>
                 </div>
               </div>

@@ -5,14 +5,14 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
-import CardKatalog from "../Card/CardKatalog";
+import CardKatalog from "./CardKatalog";
 import { arrPatterns } from "../Constants/Objects/Massiv";
 
 //главный компонент отображения каталога выкроек
 function KatalogPatterns() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
 
- 
+
   return (
     <>
       <Header />

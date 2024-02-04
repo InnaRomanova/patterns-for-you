@@ -26,9 +26,6 @@ import Photo2 from "../../../images/Photo (1).png";
 import Photo3 from "../../../images/Photo (2).png";
 import Photo4 from "../../../images/Photo (3).png";
 
-
-
-
 //массив с объектами, в которых имеются изображения пользователей(их сшитые изделия по выкройке)(от пользователей)
 export const arrForum = [
   {
@@ -92,7 +89,7 @@ export const arrPatterns = [
   {
     id: 2,
     image: coat,
-    name: "Пальто осень-весная 2023",
+    name: "Пальто осень-весна 2023",
     text: "женское осенне-весеннее пальто",
     price: 135.00,
   },
@@ -116,7 +113,7 @@ export const arrPatterns = [
     name: "Блузка",
     text: "женская повседневная блузка",
     price: 135.00,
-  },  
+  },
   {
     id: 5,
     image: Photo1,

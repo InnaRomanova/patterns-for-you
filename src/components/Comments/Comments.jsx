@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { arrComments } from "../Constants/Objects/Massiv";
 
 function Comments() {
- 
+
   const comments = [];
 
   arrComments.forEach((comment, index) => {

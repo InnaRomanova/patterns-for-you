@@ -1,53 +1,9 @@
 import React from "react";
 import "./News.css";
-import NewsCard from "../../images/NewsCard.png";
-import SwiperSliderNews from "../Elements/CustomSliderNews";
+import SwiperSliderNews from "../Elements/SwiperSliderNews";
+import { arrReviews } from "../Constants/Objects/NewMassiv";
 
 function News() {
-  const arrReviews = [
-    {
-      id: 1,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 2,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 3,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 4,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 4,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-    {
-      id: 4,
-      image: NewsCard,
-      name: "Modern Kitchen",
-      text: "женское платье",
-      price: 135.0,
-    },
-  ];
 
   const reviews = [];
 

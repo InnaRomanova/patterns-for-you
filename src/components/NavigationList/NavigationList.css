@@ -1,6 +1,24 @@
+.navigationList__span {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    top: 52px;
+    left: -62px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 204px;
+    border-radius: 8%;
+    gap: 10px;
+    text-align: center;
+    height: 263px;
+}
+
+
 .navigationList__container-menu-desktop {
-    top: 49px;
-    left: -95px;
+    top: 19px;
+    left: -40px;
     background: #F3ECE2;
     position: absolute;
     z-index: 1;

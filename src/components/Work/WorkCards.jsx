@@ -6,6 +6,7 @@ import LikesImage from "../Elements/LikesImage";
 import ComentsImage from "../Elements/CommentsImage";
 import WorkButtonMore from "../Elements/WorkButtonMore";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 register();
 
@@ -31,68 +32,69 @@ function WorkCards({ swiperArray }) {
 
   return (
     <>
-     <div className="works__container-cards">
-      <swiper-container
-        ref={swiperElRef}
-        slides-per-view={slidesPerView}
-        navigation="false"
-        pagination="false">
-        <ul className="works__cards">
+      <div className="works__container-cards">
+        <swiper-container
+          ref={swiperElRef}
+          slides-per-view={slidesPerView}
+          navigation="false"
+          pagination="false">
+          <ul className="works__cards">
 
-          {map(swiperArray, (work, index) => (
-            <li className="works__card" key={index}>
-              <div className="work__image-block">
-                <img
-                  src={work.image}
-                  alt="картинка"
-                  className="work__image"
-                />
-                <button className="work__nic">Авток НИК</button>
-              </div>
-
-
-              <div className="work__inform">
-                <h3 className="card__inform-name work__inform-name">{work.name}</h3>
-                <p className="card__inform-katalog">Комментарий: {work.comment}</p>
-              </div>
-              {matchesMobile ? (<>
-                <div className="work__icons">
-                  <div className="work__icon-block">
-                    <button className="work__icon-likes"><LikesImage /></button>
-                    <span className="work__likes-number">3</span>
-                  </div>
-
-                  <div className="work__icon-block">
-                    <button className="work__icons-comments"><ComentsImage /></button>
-                    <span className="work__comments-number">3</span>
-                  </div>
+            {map(swiperArray, (work, index) => (
+              <li className="works__card" key={index}>
+                <div className="work__image-block">
+                  <Link to="/details" className="katalog__block">
+                    <img
+                      src={work.image}
+                      alt="картинка"
+                      className="work__image"
+                    /></Link>
+                  <Link to="/details" className="katalog__block"><button className="work__nic">Авток НИК</button></Link>
                 </div>
-                <div className="work__more">
-                  <p className="card__more-katalog">Подробнее</p>
-                  <button className="forum__right"><WorkButtonMore /></button>
-                </div>
-              </>) : (<>
-                <div className="work__more">
-                  <p className="card__more-katalog">Подробнее</p>
-                  <button className="forum__right"><WorkButtonMore /></button>
-                </div>
-                <div className="work__icons">
-                  <div className="work__icon-block">
-                    <button className="work__icon-likes"><LikesImage /></button>
-                    <span className="work__likes-number">3</span>
-                  </div>
 
-                  <div className="work__icon-block">
-                    <button className="work__icons-comments"><ComentsImage /></button>
-                    <span className="work__comments-number">3</span>
-                  </div>
-                </div>
-              </>)}
 
-            </li>
-          ))}
-        </ul></swiper-container>
-        </div>
+                <div className="work__inform">
+                  <h3 className="card__inform-name work__inform-name">{work.name}</h3>
+                  <p className="card__inform-katalog">Комментарий: {work.comment}</p>
+                </div>
+                {matchesMobile ? (<>
+                  <div className="work__icons">
+                    <div className="work__icon-block">
+                      <button className="work__icon-likes"><LikesImage /></button>
+                      <span className="work__likes-number">3</span>
+                    </div>
+
+                    <div className="work__icon-block">
+                      <button className="work__icons-comments"><ComentsImage /></button>
+                      <span className="work__comments-number">3</span>
+                    </div>
+                  </div>
+                  <div className="work__more">
+                    <Link to="/details" className="katalog__block"><p className="card__more-katalog">Подробнее</p></Link>
+                    <Link to="/details" className="katalog__block"><button className="forum__right"><WorkButtonMore /></button></Link>
+                  </div>
+                </>) : (<>
+                  <div className="work__more">
+                    <p className="card__more-katalog">Подробнее</p>
+                    <button className="forum__right"><WorkButtonMore /></button>
+                  </div>
+                  <div className="work__icons">
+                    <div className="work__icon-block">
+                      <button className="work__icon-likes"><LikesImage /></button>
+                      <span className="work__likes-number">3</span>
+                    </div>
+
+                    <div className="work__icon-block">
+                      <button className="work__icons-comments"><ComentsImage /></button>
+                      <span className="work__comments-number">3</span>
+                    </div>
+                  </div>
+                </>)}
+
+              </li>
+            ))}
+          </ul></swiper-container>
+      </div>
     </>
   );
 };

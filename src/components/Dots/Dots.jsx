@@ -26,7 +26,7 @@ function Dots({ currentIndex, setCurrentIndex, onSlideChange }) {
         <div
           key={index}
           onClick={() => moveDot(index + 1)}
-          className={currentIndex === index + 1 ? "active" : "dots"}
+          className={currentIndex === index + 1 ? "disable" : "dots"}
         ></div>
       ))}
     </div>

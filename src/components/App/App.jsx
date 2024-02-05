@@ -9,6 +9,8 @@ import Details from "../Details/Details";
 import { CurrentUserContext } from "../contexts/CurrentContexts";
 import Author from "../Author/Author";
 import ForumPage from "../Forum/ForumPage";
+import Support from "../Support/Support";
+import Contacts from "../Contacts/Contacts";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -43,8 +45,16 @@ function App() {
               <Details />
             </>} >
             </Route>
+            <Route path="/support" element={<>
+              <Support />
+            </>} >
+            </Route>
             <Route path="/forum" element={<>
               <ForumPage />
+            </>} >
+            </Route>
+            <Route path="/contacts" element={<>
+              <Contacts />
             </>} >
             </Route>
           </Routes>

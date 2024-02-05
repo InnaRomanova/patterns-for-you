@@ -7,12 +7,15 @@ import menuMobile from "../../images/menuMobile.svg";
 import Navigation from "../Navigation/Navigation";
 import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
 import NavigationList from "../NavigationList/NavigationList";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 function Header() {
   const [openModal, setOpenModal] = useState(false);
   const [showNavigationList, setShowNavigationList] = useState(false);
+
+  const location = useLocation();
 
   function handleOpen() {
     setOpenModal(true);
@@ -24,9 +27,9 @@ function Header() {
     setShowNavigationList(false);
   }
 
-  function handleActiveClass() {
-    return showNavigationList ? "header__link_active" : "header__linkitem"
-  }
+  // function handleActiveClass() {
+  //   return showNavigationList ? "header__link_active" : "header__linkitem"
+  // }
 
   return (
     <header className="header">
@@ -49,10 +52,8 @@ function Header() {
           <ul className="header__lists">
             <li className="header__link">
               <NavLink
-                // className="header__link-item 
-                // header__link-item_active"
                 to="/" className={
-                  showNavigationList ? "header__linkitem_activat" : "header__linkitem"}>
+                  location.pathname === "/" ? "header__linkitem_active" : "header__linkitem"}>
                 Главная
               </NavLink>
             </li>
@@ -62,30 +63,31 @@ function Header() {
               onMouseLeave={handleClose}
             >
               <NavLink className={
-                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/katalog"
-
+                location.pathname === "/katalog" ? "header__linkitem_active" : "header__linkitem"} to="/katalog"
               >
                 Каталог выкроек</NavLink>
-              {showNavigationList &&
-                <NavigationList />
+              {
+                showNavigationList &&
+                <NavigationList
+                />
               }
 
             </li>
             <li className="header__link">
               <NavLink className={
-                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/support">
+                location.pathname === "/support" ? "header__linkitem_active" : "header__linkitem"} to="/support">
                 Как скачать
               </NavLink>
             </li>
             <li className="header__link">
               <NavLink className={
-                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/block">
+                location.pathname === "/forum" ? "header__linkitem_active" : "header__linkitem"} to="/forum">
                 Блок
               </NavLink>
             </li>
             <li className="header__link">
               <NavLink className={
-                showNavigationList ? "header__linkitem_activat" : "header__linkitem"} to="/contacts">
+                location.pathname === "/contacts" ? "header__linkitem_active" : "header__linkitem"} to="/contacts">
                 Контакты
               </NavLink>
             </li>

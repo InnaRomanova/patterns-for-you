@@ -8,7 +8,7 @@ export default function Dot({ number }) {
 
   return (
     <div
-      className={`dot ${slideNumber === number ? "active" : ""}`}
+      className={`dot ${slideNumber === number ? "disable" : ""}`}
       onClick={() => goToSlide(number)}
     />
   );

@@ -7,7 +7,7 @@ import menuMobile from "../../images/menuMobile.svg";
 import Navigation from "../Navigation/Navigation";
 import CloseButtonMenu from "../../images/closeButton-menuMobile.svg";
 import NavigationList from "../NavigationList/NavigationList";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 
@@ -103,13 +103,15 @@ function Header() {
             alt="авторизация/регистрация"
           />
           <div className="header__sign-container">
-            <button className="header__sign-button header__sign-in">
-              Вход
-            </button>
+            <Link to="/signin">
+              <button className="header__sign-button header__sign-in">
+                Вход
+              </button>
+            </Link>
             <span className="header__slesh">/</span>
-            <button className="header__sign-button header__sign-up">
+            <Link to="/signup"><button className="header__sign-button header__sign-up">
               Регистрация
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

@@ -16,4 +16,7 @@
 
 * HTML, CSS, Java Script.
 * Flexbox-верстка, Grid-Layout.
-* React.
+* React (Create React App).
+* Type Script.
+* useState, useEffect, Link (react-router-dom), NavLink, useMediaQuery (react-responsive).
+* и т.д.

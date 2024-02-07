@@ -10,7 +10,7 @@ import { isEmailValid, isNameValid, isPasswordValid, isEpmtyValid } from '../uti
 import { Link } from 'react-router-dom';
 
 
-function SignUp() {
+function SignUp({ onRegister }) {
     const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -27,6 +27,11 @@ function SignUp() {
         isPasswordValid(password) ? setIsValidPassword(true) : setIsValidPassword(false);
         isEpmtyValid({ email, name, password }) ? setIsEpmty(true) : setIsEpmty(false);
     }, [email, name, password])
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        onRegister({ name, email, password })
+    }
 
     return (
         <>
@@ -45,37 +50,36 @@ function SignUp() {
                     <img className="register__logo" src={Logo} alt="Логотип" /></Link> */}
                 <h2 className="register__title">Добро пожаловать!</h2>
 
-                <form className="register__form">
+                <form className="register__form" onSubmit={handleSubmit}>
                     <input className="register__form-input"
-                        placeholder="Ваше Имя"
+                        placeholder="Ваше имя"
                         value={name || ''}
                         onChange={((event) => { setName(event.target.value) })}
                         required />
-                    <span className={isValidName ? "form__span_hidden" : "form__span"}>Что-то пошло не так ...</span>
+                    <span className={isValidName ? "register__span_hidden" : "register__span"}>Что-то пошло не так ...</span>
 
-                    <label className="form__label">E-mail
-                        <input className="form__input"
-                            value={email || ''}
-                            onChange={((event) => { setEmail(event.target.value) })}
-                            required />
-                        <span className={isValidEmail ? "form__span_hidden" : "form__span"}>Что-то пошло не так ...</span>
-                    </label>
 
-                    <label className="form__label">Пароль
-                        <input className="form__input"
-                            type="password"
-                            value={password || ''}
-                            onChange={((event) => { setPassword(event.target.value) })}
-                            required />
-                        <span className={isValidPassword ? "form__span_hidden" : "form__span"}>Что-то пошло не так ...</span>
-                    </label>
+                    <input className="register__form-input"
+                        placeholder="Почта"
+                        value={email || ''}
+                        onChange={((event) => { setEmail(event.target.value) })}
+                        required />
+                    <span className={isValidEmail ? "register__span_hidden" : "register__span"}>Что-то пошло не так ...</span>
 
-                    {(isValidEmail && isValidName && isValidPassword && isEpmty) ? (<button className="form__button-submit"
-                        type="submit">Зарегистрироваться</button>) : (<button className="form__button-submit_inactive" disabled>Зарегистрироваться</button>)}
-                    <div className="form__text">Уже зарегистрированы? <Link to="/signin" className="form__enter">Войти</Link></div>
+                    <input className="register__form-input"
+                        placeholder="Пароль"
+                        type="password"
+                        value={password || ''}
+                        onChange={((event) => { setPassword(event.target.value) })}
+                        required />
+                    <span className={isValidPassword ? "register__span_hidden" : "register__span"}>Что-то пошло не так ...</span>
+
+                    {(isValidEmail && isValidName && isValidPassword && isEpmty) ? (<button className="register__button-submit"
+                        type="submit">Зарегистрироваться</button>) : (<button className="register__button-submit_inactive" disabled>Зарегистрироваться</button>)}
+                    <div className="register__text">Если вы уже зарегистрированы на сайте PFU Patterns ForYou <Link to="/signin" className="register__enter">Войти</Link></div>
 
                 </form>
-            </div>
+            </div >
             <Footer />
         </>
     );

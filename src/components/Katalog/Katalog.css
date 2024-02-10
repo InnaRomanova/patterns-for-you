@@ -56,11 +56,17 @@
     border-radius: 0 15% 0 0;
     max-width: 548px;
     min-width: 500px;
+    transition: 1s;
+    /* Время эффекта */
+    display: block;
+    /* Убираем небольшой отступ снизу */
 }
 
 
 .katalog-card__image:hover {
     cursor: pointer;
+    transform: scale(1.2);
+    /* Увеличиваем масштаб */
 }
 
 .katalog-card__info {

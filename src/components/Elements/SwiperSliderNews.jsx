@@ -67,7 +67,7 @@ function SwiperSliderNews({ swiperArray }) {
                   </div>
                   <div className="card__more">
                     <Link to="/author" className="new__more-link">
-                      <p className="card__more-katalog">Подробнее</p> </Link>
+                      <p className="card__more-katalog">Подробнее</p></Link>
                     <Link to="/author" className="new__more-link"><button className="card__more-button-katalog"></button></Link>
 
                   </div>

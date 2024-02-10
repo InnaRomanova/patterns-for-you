@@ -13,6 +13,7 @@ import Model3 from "../../../images/ModelImage3.png";
 import dress from "../../../images/pattern-dress.png";
 import coat from "../../../images/pattern-coat.png";
 import blouse from "../../../images/pattern-blouse.png";
+import techpic from "../../../images/techpic.jpg";
 
 //данные для комментарий
 import commentsSmile from "../../../images/comments-smile.png";
@@ -85,6 +86,7 @@ export const arrPatterns = [
     name: "Платье Очарованье",
     text: "женское платье",
     price: 135.00,
+    hoveredImage: techpic,
   },
   {
     id: 2,
@@ -92,6 +94,7 @@ export const arrPatterns = [
     name: "Пальто осень-весна 2023",
     text: "женское осенне-весеннее пальто",
     price: 135.00,
+    hoveredImage: techpic,
   },
   {
     id: 3,
@@ -99,6 +102,7 @@ export const arrPatterns = [
     name: "Платье Романтика",
     text: "женское платье",
     price: 135.00,
+    hoveredImage: techpic,
   },
   {
     id: 4,
@@ -106,41 +110,39 @@ export const arrPatterns = [
     name: "Блузка",
     text: "женская повседневная блузка",
     price: 135.00,
-  },
-  {
-    id: 4,
-    image: blouse,
-    name: "Блузка",
-    text: "женская повседневная блузка",
-    price: 135.00,
+    hoveredImage: techpic,
   },
   {
     id: 5,
+    image: blouse,
+    name: "Блузка",
+    text: "женская повседневная блузка",
+    price: 135.00,
+    hoveredImage: techpic,
+  },
+  {
+    id: 6,
     image: Photo1,
     name: "Белое платье",
     text: "женское платье",
     price: 135.0,
+    hoveredImage: techpic,
   },
   {
-    id: 6,
+    id: 7,
     image: Photo2,
     name: "Желтое платье",
     text: "женское платье",
     price: 135.0,
+    hoveredImage: techpic,
   },
   {
-    id: 7,
+    id: 8,
     image: Photo3,
     name: "Платье-сарафан",
     text: "платье",
     price: 135.0,
-  },
-  {
-    id: 8,
-    image: Photo4,
-    name: "Комплект",
-    text: "женское платье",
-    price: 135.0,
+    hoveredImage: techpic,
   },
   {
     id: 9,
@@ -148,13 +150,23 @@ export const arrPatterns = [
     name: "Комплект",
     text: "женское платье",
     price: 135.0,
+    hoveredImage: techpic,
   },
   {
     id: 10,
+    image: Photo4,
+    name: "Комплект",
+    text: "женское платье",
+    price: 135.0,
+    hoveredImage: techpic,
+  },
+  {
+    id: 11,
     image: Photo3,
     name: "Синее платье-сарафан",
     text: "женское платье",
     price: 135.0,
+    hoveredImage: techpic,
   },
 ];
 

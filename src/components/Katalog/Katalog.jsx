@@ -12,9 +12,9 @@ function Katalog() {
           <h2 className="news__title ">Выкройки по категориям</h2>
           <h3 className="katalog__subtitle">Женская одежда</h3>
         </div>
-        <ul className="katalog-cards">
-          <Card swiperArray={arrReviews} />
-        </ul>
+
+        <Card swiperArray={arrReviews} />
+
         <Link to="/katalog" className="katalog__block">
           <button className="katalog__button-over">Перейти в каталог</button></Link>
 

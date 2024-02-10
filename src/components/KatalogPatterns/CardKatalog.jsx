@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "../KatalogPatterns/KatalogPatterns.css";
 import map from "lodash/map";
 import { Link } from "react-router-dom";
 
 
 function CardKatalog({ swiperKatalog }) {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    const handleMouseOver = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleMouseOut = () => {
+        setHoveredIndex(null);
+    };
 
     return (
         <>
             {map(swiperKatalog, (arrCards, index) => (
                 <li className="katalogPatterns__card" key={index}>
                     <div className="katalogPatterns__image-container">
-                        <Link to="/author">
+                        {/* <Link to="/author">
                             <img className="katalogPatterns__card-image" src={arrCards.image} alt="карточка-картинка товара-выкройки" />
+                        </Link> */}
+
+                        <Link to="/author">
+                            <img
+                                className="katalogPatterns__card-image"
+                                src={hoveredIndex === index ? arrCards.hoveredImage : arrCards.image}
+                                alt="карточка-картинка товара-выкройки"
+                                onMouseOver={() => handleMouseOver(index)}
+                                onMouseOut={handleMouseOut} />
                         </Link>
                     </div>
                     <div className="katalogPatterns__info">

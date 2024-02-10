@@ -90,7 +90,11 @@
 .katalogPatterns__image-container {
     margin: 0;
     padding: 0;
-
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    overflow: hidden;
+    /* Скрываем всё за контуром */
+    border-radius: 30px;
 }
 
 .katalogPatterns__card-image {
@@ -100,6 +104,16 @@
     background-size: cover;
     border-radius: 30px;
     width: 300px;
+    transition: 1s;
+    /* Время эффекта */
+    display: block;
+    /* Убираем небольшой отступ снизу */
+}
+
+.katalogPatterns__card-image:hover {
+    background-image: url(../../images/techpic.jpg);
+    transform: scale(1.2);
+    /* Увеличиваем масштаб */
 }
 
 .katalogPatterns__info {

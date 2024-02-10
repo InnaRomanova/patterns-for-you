@@ -34,12 +34,29 @@
     opacity: 0.8;
 }
 
+.patterns__block {
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    overflow: hidden;
+    /* Скрываем всё за контуром */
+    border-radius: 30px;
+}
+
 .pattern__image {
     margin: 0;
     padding: 0;
     width: 305px;
     height: 484px;
     border-radius: 30px;
+    transition: 1s;
+    /* Время эффекта */
+    display: block;
+    /* Убираем небольшой отступ снизу */
+}
+
+.pattern__image:hover {
+    transform: scale(1.1);
+    /* Увеличиваем масштаб */
 }
 
 .pattern__inform {

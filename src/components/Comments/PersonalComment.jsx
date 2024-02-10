@@ -60,7 +60,7 @@ function ForumCard({ commentArray }) {
                                     <a href="/details" className="comment__link">
                                         <img className="comment__link-avatar" alt="аватарка" src={arrComments.avatar} />
                                     </a>
-                                    <Link to="/details" className="new__more-link"><h4 className="comment__name">{arrComments.name}</h4></Link>
+                                    <Link to="/details" className="comment__more-link"><h4 className="comment__name">{arrComments.name}</h4></Link>
                                 </div>
                                 <div className="comment__info">
                                     <p className="comment__info-text">{arrComments.text}</p>

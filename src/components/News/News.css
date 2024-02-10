@@ -92,7 +92,7 @@
 }
 
 .card__inform {
-    margin: 0;
+    margin: 15px 0 0;
     padding: 0;
     width: 100%;
     text-align: center;
@@ -185,6 +185,7 @@
 
 .card__more-katalog:hover {
     color: #824504;
+    border: none;
 }
 
 .card__more-button-katalog:hover {
@@ -192,7 +193,7 @@
 }
 
 .news__button {
-    margin: 0;
+    margin: 55px 0 0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -246,9 +247,6 @@
         width: 100%;
     }
 
-    .news__button {
-        margin-top: 55px;
-    }
 }
 
 @media screen and (max-width: 1570px) {

@@ -59,6 +59,15 @@
     margin: 0;
     padding: 0;
     border-radius: 40px 40px 0 0;
+    display: block;
+    /* Время эффекта */
+    transition: 1s;
+    /* Убираем небольшой отступ снизу */
+}
+
+.forum__link-image:hover {
+    transform: scale(1.1);
+    /*увеличиваем масштаб*/
 }
 
 .forum__over {

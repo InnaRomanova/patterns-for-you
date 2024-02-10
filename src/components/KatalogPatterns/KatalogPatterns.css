@@ -104,16 +104,17 @@
     background-size: cover;
     border-radius: 30px;
     width: 300px;
-    transition: 1s;
+    transition: 2s;
     /* Время эффекта */
     display: block;
     /* Убираем небольшой отступ снизу */
+    height: 480px;
 }
 
 .katalogPatterns__card-image:hover {
-    background-image: url(../../images/techpic.jpg);
-    transform: scale(1.2);
+    /*  transform: scale(1.2);*/
     /* Увеличиваем масштаб */
+    transition: opacity 0.8s;
 }
 
 .katalogPatterns__info {

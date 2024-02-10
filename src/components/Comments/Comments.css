@@ -72,6 +72,10 @@
     border-radius: 50%;
 }
 
+.comment__more-link {
+    text-decoration: none;
+}
+
 .comment__name {
     margin: 0;
     padding: 0;

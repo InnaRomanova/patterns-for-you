@@ -30,7 +30,9 @@ function CardKatalog({ swiperKatalog }) {
                                 src={hoveredIndex === index ? arrCards.hoveredImage : arrCards.image}
                                 alt="карточка-картинка товара-выкройки"
                                 onMouseOver={() => handleMouseOver(index)}
-                                onMouseOut={handleMouseOut} />
+                                onMouseOut={handleMouseOut}
+                                style={{ opacity: hoveredIndex === index ? 0.8 : 1 }} // Добавляем стиль для управления прозрачностью
+                            />
                         </Link>
                     </div>
                     <div className="katalogPatterns__info">

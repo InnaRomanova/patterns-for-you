@@ -1,4 +1,5 @@
 import { useRef, useEffect, useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import { register } from "swiper/element/bundle";
 import LikesImage from "../Elements/LikesImage";
 import ComentsImage from "../Elements/CommentsImage";
@@ -61,16 +62,15 @@ function WorkPopulation({ swiperPopulation }) {
 
 
                     {map(swiperPopulation, (work, index) => (
-                         <swiper-slide key={index}>
-                           <ul className="works-populations">
-                                <li  className="works-populations__cards">
+                        <swiper-slide key={index}>
+                            <ul className="works-populations">
+                                <li className="works-populations__cards">
                                     <div className="work__image-block">
-                                        <img
+                                        <Link to="/details"><img
                                             src={work.image}
                                             alt="картинка"
                                             className="work__image"
-                                        />
-                                        <button className="work__nic">Авток НИК</button>
+                                        /> <button className="work__nic">Анастасия НИК</button></Link>
                                     </div>
 
 
@@ -90,13 +90,13 @@ function WorkPopulation({ swiperPopulation }) {
                                             </div>
                                         </div>
                                         <div className="work__more">
-                                            <p className="card__more-katalog">Подробнее</p>
-                                            <button className="forum__right"><WorkButtonMore /></button>
+                                            <Link to="/details" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
+                                                <button className="forum__right"><WorkButtonMore /></button></Link>
                                         </div>
                                     </>) : (<>
                                         <div className="work__more">
-                                            <p className="card__more-katalog">Подробнее</p>
-                                            <button className="forum__right"><WorkButtonMore /></button>
+                                            <Link to="/details" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
+                                                <button className="forum__right"><WorkButtonMore /></button></Link>
                                         </div>
                                         <div className="work__icons">
                                             <div className="work__icon-block">

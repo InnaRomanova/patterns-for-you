@@ -1,6 +1,7 @@
 import React from "react";
 import "./KatalogPatterns.css";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
@@ -31,7 +32,10 @@ function KatalogPatterns() {
         <div className="katalogPatterns__container">
           <div className="katalogPatterns__block">
             <h2 className="news__title katalogPatterns__title-text">Женская одежда</h2>
-            <span className="katalogPatterns__navigate">Главная/Каталог/Выкройки/Женская одежда/</span>
+            <span className="katalogPatterns__navigate">
+              <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
+              <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выкроек/</Link>
+              <Link to="/katalog" className="katalogPatterns__navigate-link">Женская одежда/</Link></span>
           </div>
 
           <ul className="katalogPatterns__cards">

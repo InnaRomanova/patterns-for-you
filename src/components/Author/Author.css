@@ -97,6 +97,10 @@
     background-position: 50%;
 }
 
+.author__name-edit:hover {
+    cursor: pointer;
+}
+
 .author__works {
     margin: 26px 0 0 53px;
     padding: 0;

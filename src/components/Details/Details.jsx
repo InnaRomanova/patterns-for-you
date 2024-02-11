@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 import "./Details.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -24,7 +25,10 @@ function Details() {
                     </div>
                     <div className="details__container">
                         <div className="katalogPatterns__block">
-                            <span className="katalogPatterns__navigate">Главная/Каталог выроек/Выкройка изделия/Платье/</span>
+                            <span className="katalogPatterns__navigate">
+                                <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
+                                <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
+                                <Link to="/author" className="katalogPatterns__navigate-link">Выкройка изделия-Платье</Link></span>
                             <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                         </div>
 

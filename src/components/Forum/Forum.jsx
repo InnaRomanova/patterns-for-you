@@ -28,7 +28,6 @@ function Forum() {
           вещи по нашей выкройке и получите бонусы</p>
       </div>
       <ForumCard
-      // forumArray={forums} 
       />
       <Link to="/forum" className="forum__block"><button className="forum__over">Перейти на фотофорум
         <img src={buttonKatalogSlide}

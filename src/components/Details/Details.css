@@ -59,21 +59,34 @@
 .details__image {
     margin: 0;
     padding: 0;
-    /* width: 100%; */
     max-width: 381px;
     height: 509px;
     border-radius: 40px;
     object-fit: cover;
+    transition: 1s;
+    /* Время эффекта */
+}
+
+.details__image:hover {
+    transform: scale(1.12);
+    /* Увеличиваем масштаб */
 }
 
 .model__image {
     margin: 0;
     padding: 0;
-    /* width: 100%; */
     max-width: 381px;
     height: 509px;
     border-radius: 40px;
     object-fit: cover;
+    transition: 1s;
+    /* Время эффекта */
+}
+
+.model__image:hover {
+    cursor: pointer;
+    transform: scale(1.12);
+    /* Увеличиваем масштаб */
 }
 
 .details__text {

@@ -56,8 +56,19 @@
     letter-spacing: 0.22px;
     text-transform: capitalize;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column;
+    justify-content: center; */
+}
+
+.katalogPatterns__navigate-link {
+    text-decoration: none;
+    color: #4D5053;
+}
+
+.katalogPatterns__navigate-link:hover {
+    cursor: pointer;
+    /* opacity: 0.5; */
+    color: black;
 }
 
 .katalogPatterns__cards {

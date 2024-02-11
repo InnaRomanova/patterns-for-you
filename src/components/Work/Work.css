@@ -63,12 +63,26 @@
 .work__image-block {
     position: relative;
     border: none;
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    overflow: hidden;
+    /* Скрываем всё за контуром */
+    border-radius: 45px 45px 0px 0px;
 }
 
 .work__image {
     width: 100%;
     border-radius: 45px 45px 0px 0px;
     background: #EAEAEA;
+    transition: 1s;
+    /* Время эффекта */
+    display: block;
+    /* Убираем небольшой отступ снизу */
+}
+
+.work__image:hover {
+    transform: scale(1.1);
+    /* Увеличиваем масштаб */
 }
 
 .work__nic {
@@ -120,6 +134,15 @@
     line-height: 150%;
     letter-spacing: 0.16px;
     text-transform: capitalize;
+}
+
+.works-populations__link {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
 }
 
 .work__icons {

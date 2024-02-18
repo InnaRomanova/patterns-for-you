@@ -343,6 +343,7 @@
     .work__image-block {
         display: flex;
         justify-content: center;
+        position: none;
     }
 
     .work__image {
@@ -352,6 +353,7 @@
 
     .work__nic {
         height: 39px;
+        left: 96px;
     }
 
     .work__download-button {
@@ -398,16 +400,20 @@
 
     .work__more {
         justify-content: space-around;
+        gap: 14px;
     }
-
-    /* .work-right {
-        width: 30px;
-        height: 30px;
-    } */
 }
 
-@media screen and (max-width: 433px) {
+@media screen and (max-width: 560px) {
     .works__cards {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .works__card {
+        min-height: 588px;
+    }
+
+    .work__nic {
+        left: -166px;
     }
 }

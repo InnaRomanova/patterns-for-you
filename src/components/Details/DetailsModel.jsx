@@ -17,10 +17,10 @@ function DetailsModel() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: mobile ? 1 : 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 100000,
+        autoplaySpeed: 3000,
     };
 
     const handlePrev = useCallback(() => {

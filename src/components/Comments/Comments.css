@@ -458,8 +458,30 @@
         margin-left: 10px;
     }
 
+    .com-model__name {
+        width: 100%;
+        min-height: 34px;
+        height: auto;
+    }
+
     .com-model__add-name {
         font-size: 15px;
         letter-spacing: 0.3px;
     }
+
+    .com-model__button-add {
+        max-width: 320px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .comment__card {
+        width: 100%;
+    }
+
+    .comments__over {
+        width: 100%;
+    }
+
 }

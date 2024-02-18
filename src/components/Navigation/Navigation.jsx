@@ -18,7 +18,7 @@ function Navigation() {
         <li className="navigation__list-item navigation__text" onClick={handleOpen}>Каталог выкроек
           <OpenVector onOpen={openList} /></li>
         {openList && <NavigationList />}
-        <li className="navigation__list-item navigation__text"><Link to="/block" className="navigation__link">Блок форум</Link></li>
+        <li className="navigation__list-item navigation__text"><Link to="/forum" className="navigation__link">Блок форум</Link></li>
         <li className="navigation__list-item navigation__text"><Link to="/support" className="navigation__link">Как скачать</Link></li>
         <li className="navigation__list-item navigation__text"><Link to="/contacts" className="navigation__link">Контакты</Link></li>
       </ul>

@@ -45,9 +45,10 @@ function Header() {
           {openModal ? (<Navigation handleClose={handleClose} />) : ""}
 
         </div>
-        <div className="header__logo">
-          <img className="header__logo-image" src={Logo} alt="логотип" />
-        </div>
+        <Link to="/">
+          <div className="header__logo">
+            <img className="header__logo-image" src={Logo} alt="логотип" />
+          </div></Link>
         <div className="header__menu">
           <ul className="header__lists">
             <li className="header__link">

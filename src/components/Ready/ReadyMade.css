@@ -116,5 +116,10 @@
     .ready__image {
         min-width: 320px;
     }
+}
 
+@media screen and (max-width: 375px) {
+    .ready__image {
+        min-width: 100%;
+    }
 }

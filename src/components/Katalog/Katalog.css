@@ -221,14 +221,24 @@
     }
 }
 
+@media screen and (max-width: 560px) {
+    .katalog__block {
+        position: relative;
+    }
+}
+
 
 @media screen and (max-width: 375px) {
     .katalog-card__image {
         height: 320px;
-        min-width: 320px;
+        min-width: 100%;
     }
 
     .katalog-card__info {
         justify-content: space-evenly;
+    }
+
+    .katalog__button-over {
+        width: 100%;
     }
 }

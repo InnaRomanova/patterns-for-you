@@ -14,12 +14,15 @@ import Contacts from "../Contacts/Contacts";
 import SignUp from "../Register/SignUp";
 import SignIn from "../Login/SignIn";
 import { api } from "../utils/MainApi";
+import ImagePopup from "../Popup/ImagePopup";
 
 function App() {
   const [cards, setCards] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
   const [isloggedIn, setIsLoggedIn] = useState(false);
   const history = useNavigate();
+  const [isImagePopupOpened, setIsImagePopupOpened] = useState(false);
+  const [selectCard, setSelectCard] = useState({});
 
 
   //регистрация пользователя
@@ -46,6 +49,17 @@ function App() {
       .catch((err) => {
         console.log(`Ошибка при авторизации: ${err}`);
       })
+  }
+
+  //функция при клике на картинку открывается попап картинки
+  const handleCardClick = (card) => {
+    setSelectCard(card);
+    setIsImagePopupOpened(true);
+  }
+
+  //функция закрытия попапа картинки
+  const closeAllPopups = () => {
+    setIsImagePopupOpened(false);
   }
 
   return (
@@ -84,6 +98,12 @@ function App() {
             <Route path="/author" element={<>
               <Details />
             </>} >
+              {/* <Route>
+                <ImagePopup
+                  card={selectCard}
+                  onClose={closeAllPopups}
+                />
+              </Route> */}
             </Route>
             <Route path="/support" element={<>
               <Support />
@@ -97,6 +117,9 @@ function App() {
               <Contacts />
             </>} >
             </Route>
+
+
+
           </Routes>
         </div>
       </CurrentUserContext.Provider>

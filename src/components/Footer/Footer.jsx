@@ -20,7 +20,7 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="/patterns-for-you" className="footer__menu-link">
+                    <a href="/" className="footer__menu-link">
                       <h5 className="footer__title">Главная</h5>
                     </a>
                   </li>

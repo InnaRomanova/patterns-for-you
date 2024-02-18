@@ -83,7 +83,7 @@ function DetailsContent() {
                                         Расход материала
                                         <DetailsVectorSidbar /></li>
                                     <li className="details__sidebar-item">
-                                        Рекомендации по материалам
+                                        Рекомендации по&nbsp;материалам
                                         <DetailsVectorSidbar /></li>
                                     <li className="details__sidebar-item">
                                         Как купить выкройку

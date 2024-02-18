@@ -1,93 +1,73 @@
 import { useRef, useEffect, useCallback, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { useMediaQuery } from "react-responsive";
-import map from "lodash/map";
 import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
 import { arrForum } from "../Constants/Objects/Massiv";
 import Like from "../Elements/Like";
 import Comment from "../Elements/Comment";
-import WorkCards from "../Work/WorkCards";
+import Slider from 'react-slick';
 
 
 register();
 
 function DetailsSlide() {
-    const swiperElRef = useRef(null);
-    const [slidesPerView, setSlidesPerView] = useState(3);
+    const sliderRef = useRef(null);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [isImagePopupOpened, setIsImagePopupOpened] = useState(false);
+    const [selectCard, setSelectCard] = useState({});
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: mobile ? 1 : 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+    };
 
+    const handleCardClick = (image) => {
+        setSelectCard(image);
+        setIsImagePopupOpened(true);
+    }
+
+    const closeAllPopups = () => {
+        setIsImagePopupOpened(false);
+    }
 
     const handlePrev = useCallback(() => {
-        if (!swiperElRef.current) return;
-        swiperElRef.current.swiper.slidePrev();
+        if (sliderRef.current) {
+            sliderRef.current.slickPrev();
+        }
     }, []);
 
     const handleNext = useCallback(() => {
-        if (!swiperElRef.current) return;
-        swiperElRef.current.swiper.slideNext();
-    }, []);
-
-    useEffect(() => {
-        function handleResize() {
-            const display = window.innerWidth;
-            if (display >= 1500) {
-                setSlidesPerView(3);
-            } else if (display >= 883) {
-                setSlidesPerView(2);
-            } else if (display < 883) {
-                setSlidesPerView(1);
-            }
+        if (sliderRef.current) {
+            sliderRef.current.slickNext();
         }
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => window.removeEventListener("resize", handleResize);
     }, []);
-
-    const handleSlideChange = useCallback((swiper) => {
-        setCurrentIndex(swiper.realIndex + 1);
-    }, []);
-
-
-    //useEffect, который следит за изменением currentIndex 
-    //и переключает слайды в соответствии с этим значением.
-    useEffect(() => {
-        if (!swiperElRef.current) return;
-        swiperElRef.current.swiper.slideTo(currentIndex - 1);
-    }, [currentIndex]);
 
     return (
         <>
 
             {matchesMobile ? (<>
                 <div className="details__description">
-                    <swiper-container
-                        ref={swiperElRef}
-                        slides-per-view={slidesPerView}
-                        navigation="false"
-                        pagination="false"
-                        onSlideChange={handleSlideChange}>
 
-                        <swiper-slide className="details__swiperSlide" >
-                            {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
-                            {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
+                    {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
+                    {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
 
-                                <ul className="details__list" key={index}>
-                                    {teacher.image.map((image, i) => (
-                                        <li key={i} className="details__list-item">
-                                            <img src={image} alt="картинка" className="details__image" />
-                                        </li>
-                                    ))}</ul>
+                        <ul className="details__list" key={index}>
+                            <Slider ref={sliderRef} {...settings}>
+                                {teacher.image.map((image, i) => (
+                                    <li key={i} className="details__list-item" onClick={handleCardClick}>
+                                        <img src={image} alt="картинка" className="details__image" />
+                                    </li>
+                                ))}</Slider></ul>
+                    ))}
 
-
-                            ))}</swiper-slide>
-
-
-                    </swiper-container>
-                    {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")}
+                    {/* {mobile ? (<Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} onSlideChange={handleSlideChange} />) : ("")} */}
                     <div className="news__button details__button">
                         <button onClick={handlePrev} className="details__more-button-katalog"><DetailsButtonLeft /></button>
                         <button onClick={handleNext} className="details__more-button-katalog"><DetailsButtonRight /></button>
@@ -98,18 +78,18 @@ function DetailsSlide() {
                     {mobile ? ("") : (<><button className="author__add">Показать еще фото</button></>)}
 
 
-                    
-                                <div className="author__icons">
-                                    <div className="author__icon author__like">
-                                        <div className="author__icon-number"><Like /> 26</div>
-                                        <p className="author__text">Понравилось? Жми лайк!</p>
-                                    </div>
-                                    <div className="author__icon author__coments">
-                                        <div className="author__icon-number"><Comment /> 26</div>
-                                        {mobile ? ("") : (<><p className="author__text">Комментарии</p></>)}
-                                        
-                                    </div>
-                                </div>
+
+                    <div className="author__icons">
+                        <div className="author__icon author__like">
+                            <div className="author__icon-number"><Like /> 26</div>
+                            <p className="author__text">Понравилось? Жми лайк!</p>
+                        </div>
+                        <div className="author__icon author__coments">
+                            <div className="author__icon-number"><Comment /> 26</div>
+                            {mobile ? ("") : (<><p className="author__text">Комментарии</p></>)}
+
+                        </div>
+                    </div>
                 </div>
             </>
             ) : (<>
@@ -117,7 +97,7 @@ function DetailsSlide() {
 
                     {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
                     {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
-                        <swiper-slide key={index} className="details__swiperSlide" >
+                        <Slider key={index} className="details__swiperSlide" >
                             <ul className="details__list" key={index}>
                                 {teacher.image.map((image, i) => (
                                     <li key={i} className="details__list-item">
@@ -125,27 +105,27 @@ function DetailsSlide() {
                                     </li>
                                 ))}
                             </ul>
-                        </swiper-slide>
+                        </Slider>
                     ))}
 
                     <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
-                    
+
                     <button className="author__add">Показать еще фото</button>
-                                <div className="author__icons">
-                                    <div className="author__icon author__like">
-                                        <div className="author__icon-number"><Like /> 26</div>
-                                        <p className="author__text">Понравилось? Жми лайк!</p>
-                                    </div>
-                                    <div className="author__icon author__coments">
-                                        <div className="author__icon-number"><Comment /> 26</div>
-                                        <p className="author__text">Комментарии</p>
-                                    </div>
-                                </div>
+                    <div className="author__icons">
+                        <div className="author__icon author__like">
+                            <div className="author__icon-number"><Like /> 26</div>
+                            <p className="author__text">Понравилось? Жми лайк!</p>
+                        </div>
+                        <div className="author__icon author__coments">
+                            <div className="author__icon-number"><Comment /> 26</div>
+                            <p className="author__text">Комментарии</p>
+                        </div>
                     </div>
+                </div>
 
             </>)
             }
-          
+
         </>
     );
 };

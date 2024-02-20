@@ -1,13 +1,13 @@
-import { useRef, useEffect, useCallback, useState } from "react";
+import { useRef, useCallback, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { useMediaQuery } from "react-responsive";
-import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
 import { arrForum } from "../Constants/Objects/Massiv";
 import Like from "../Elements/Like";
 import Comment from "../Elements/Comment";
 import Slider from 'react-slick';
+import ImagePopup from "../Popup/ImagePopup";
 
 
 register();
@@ -16,8 +16,9 @@ function DetailsSlide() {
     const sliderRef = useRef(null);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
-    const [isImagePopupOpened, setIsImagePopupOpened] = useState(false);
-    const [selectCard, setSelectCard] = useState({});
+    const [openModal, setOpenModal] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -28,14 +29,16 @@ function DetailsSlide() {
         autoplaySpeed: 10000,
     };
 
-    const handleCardClick = (image) => {
-        setSelectCard(image);
-        setIsImagePopupOpened(true);
+    function handleOpen(image) {
+        setSelectedImage(image);
+        setOpenModal(true);
     }
 
-    const closeAllPopups = () => {
-        setIsImagePopupOpened(false);
+    function handleClose() {
+        setSelectedImage(null);
+        setOpenModal(false);
     }
+
 
     const handlePrev = useCallback(() => {
         if (sliderRef.current) {
@@ -51,6 +54,9 @@ function DetailsSlide() {
 
     return (
         <>
+            {/* Render the ImagePopup component with selectedImage and handleClose as props */}
+            {openModal && <ImagePopup image={selectedImage} onClose={handleClose} />}
+
 
             {matchesMobile ? (<>
                 <div className="details__description">
@@ -61,8 +67,10 @@ function DetailsSlide() {
                         <ul className="details__list" key={index}>
                             <Slider ref={sliderRef} {...settings}>
                                 {teacher.image.map((image, i) => (
-                                    <li key={i} className="details__list-item" onClick={handleCardClick}>
-                                        <img src={image} alt="картинка" className="details__image" />
+                                    <li key={i} className="details__list-item" >
+                                        <img src={image} alt="картинка"
+                                            className="details__image"
+                                        />
                                     </li>
                                 ))}</Slider></ul>
                     ))}
@@ -101,7 +109,11 @@ function DetailsSlide() {
                             <ul className="details__list" key={index}>
                                 {teacher.image.map((image, i) => (
                                     <li key={i} className="details__list-item">
-                                        <img src={image} alt="картинка" className="details__image" />
+                                        <img src={image} alt="картинка" className="details__image"
+                                            onClick={handleOpen}
+                                        />
+                                        {/* {openModal ? (<ImagePopup handleClose={handleClose} />) : ""} */}
+
                                     </li>
                                 ))}
                             </ul>
@@ -131,16 +143,3 @@ function DetailsSlide() {
 };
 
 export default DetailsSlide;
-
-{/* В этом коде мы используем хук useEffect, 
-чтобы добавить слушатель события resize на объект window. 
-Когда событие resize происходит, мы вызываем функцию 
-handleResize, которая определяет количество карточек, 
-которые нужно отображать на основе текущего размера окна 
-браузера, и устанавливает это значение в состояние slidesPerView. 
-Затем мы используем это значение в качестве значения свойства 
-slidesPerView для контейнера Swiper. Кроме того, мы вызываем 
-handleResize один раз при первом рендере компонента, чтобы установить 
-правильное количество карточек. Наконец, мы удаляем слушатель 
-события resize при размонтировании компонента с помощью функции, 
-возвращаемой из хука useEffect.*/}

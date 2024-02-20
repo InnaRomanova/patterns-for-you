@@ -1,5 +1,5 @@
 import "./Header.css";
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import Logo from "../../images/Logo.svg";
 import Seach from "../../images/search.svg";
 import SignInUp from "../../images/signInUp.svg";
@@ -26,10 +26,6 @@ function Header() {
     setOpenModal(false);
     setShowNavigationList(false);
   }
-
-  // function handleActiveClass() {
-  //   return showNavigationList ? "header__link_active" : "header__linkitem"
-  // }
 
   return (
     <header className="header">

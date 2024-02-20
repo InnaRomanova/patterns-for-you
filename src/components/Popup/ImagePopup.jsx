@@ -1,17 +1,22 @@
-function ImagePopup(props) {
+import { useState } from "react";
 
+function ImagePopup() {
+    const [selectedImage, setSelectedImage] = useState(null);
 
+    const closeAllPopups = () => {
+        setSelectedImage(false);
+    }
 
     return (
-        <div className={`popup popup_open-image ${props.card.link && 'popup_opened'}`}>
+        <div className="popup">
             <div className="popup__content">
                 <button
                     className="popup__close-button"
                     id="Close-card"
                     type="button"
-                    onClick={props.onClose}
+                    onClose={closeAllPopups}
                     value="close" />
-                <img src={props.card.link} alt={props.card.name} className="popup__image" />
+                <img src={selectedImage} alt="картинка" className="popup__image" />
             </div>
         </div>
     )

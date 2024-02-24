@@ -98,12 +98,6 @@ function App() {
             <Route path="/author" element={<>
               <Details />
             </>} >
-              {/* <Route>
-                <ImagePopup
-                  card={selectCard}
-                  onClose={closeAllPopups}
-                />
-              </Route> */}
             </Route>
             <Route path="/support" element={<>
               <Support />

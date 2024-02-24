@@ -60,12 +60,12 @@
     height: 509px;
     border-radius: 40px;
     object-fit: cover;
-    transition: 1s;
+    transition: 0.5s;
     /* Время эффекта */
 }
 
 .details__image:hover {
-    transform: scale(1.12);
+    transform: scale(1.08);
     /* Увеличиваем масштаб */
 }
 
@@ -255,7 +255,6 @@
     letter-spacing: 0.62px;
 }
 
-
 .details__sidmaster-shopping {
     display: flex;
     width: 227px;
@@ -277,7 +276,6 @@
     line-height: 125%;
     letter-spacing: 0.62px;
 }
-
 
 .details__sidmaster-price:hover, .details__sidmaster-shopping:hover {
     background: rgba(215, 196, 176, 0.62);
@@ -488,9 +486,6 @@
         margin-top: 0;
     }
 
-    /* .slick-next .slick-prev {
-        display: none;
-    } */
     .slick-prev {
         left: 2px !important;
         z-index: 1;
@@ -499,7 +494,6 @@
     .slick-next {
         right: 2px !important;
     }
-
 
 
     .details__button {

@@ -9,7 +9,6 @@ import Comment from "../Elements/Comment";
 import Slider from 'react-slick';
 import ImagePopup from "../Popup/ImagePopup";
 
-
 register();
 
 function DetailsSlide() {
@@ -39,7 +38,6 @@ function DetailsSlide() {
         setOpenModal(false);
     }
 
-
     const handlePrev = useCallback(() => {
         if (sliderRef.current) {
             sliderRef.current.slickPrev();
@@ -55,8 +53,7 @@ function DetailsSlide() {
     return (
         <>
             {/* Render the ImagePopup component with selectedImage and handleClose as props */}
-            {openModal && <ImagePopup image={selectedImage} onClose={handleClose} />}
-
+            {openModal ? (<ImagePopup selectedImage={selectedImage} handleClose={handleClose} />) : ""}
 
             {matchesMobile ? (<>
                 <div className="details__description">
@@ -86,7 +83,6 @@ function DetailsSlide() {
                     {mobile ? ("") : (<><button className="author__add">Показать еще фото</button></>)}
 
 
-
                     <div className="author__icons">
                         <div className="author__icon author__like">
                             <div className="author__icon-number"><Like /> 26</div>
@@ -105,19 +101,16 @@ function DetailsSlide() {
 
                     {/* {arrForum.filter((item) => item.id === currentIndex).map((teacher, index) => ( */}
                     {arrForum.filter((item) => item.id === 2).map((teacher, index) => (
-                        <Slider key={index} className="details__swiperSlide" >
-                            <ul className="details__list" key={index}>
-                                {teacher.image.map((image, i) => (
-                                    <li key={i} className="details__list-item">
-                                        <img src={image} alt="картинка" className="details__image"
-                                            onClick={handleOpen}
-                                        />
-                                        {/* {openModal ? (<ImagePopup handleClose={handleClose} />) : ""} */}
+                        <ul className="details__list" key={index}>
+                            {teacher.image.map((image, i) => (
+                                <li key={i} className="details__list-item">
+                                    <img src={image} alt="картинка" className="details__image"
+                                        onClick={() => handleOpen(image)}
+                                    />
 
-                                    </li>
-                                ))}
-                            </ul>
-                        </Slider>
+                                </li>
+                            ))}
+                        </ul>
                     ))}
 
                     <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>

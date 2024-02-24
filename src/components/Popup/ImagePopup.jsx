@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React from "react";
+import "./ImagePopup.css";
 
-function ImagePopup() {
-    const [selectedImage, setSelectedImage] = useState(null);
+function ImagePopup({ selectedImage, handleClose }) {
 
     const closeAllPopups = () => {
-        setSelectedImage(false);
+        handleClose();
     }
 
     return (
@@ -14,7 +14,7 @@ function ImagePopup() {
                     className="popup__close-button"
                     id="Close-card"
                     type="button"
-                    onClose={closeAllPopups}
+                    onClick={closeAllPopups}
                     value="close" />
                 <img src={selectedImage} alt="картинка" className="popup__image" />
             </div>

@@ -12,15 +12,15 @@ function Slide() {
           There are many variations of the passages of lorem Ipsum
           fromavailable,variations of the passages.
         </p>
-      <Link to="/katalog" className="slide__button-link">
-        <button className="slide__button-katalog">
-           В магазин
-          <img
-            src={buttonKatalogSlide}
-            alt="В каталог"
-            className="slide__vector"
-          />
-        </button></Link>
+        <Link to="/katalog" className="slide__button-link">
+          <button className="slide__button-katalog">
+            В каталог
+            <img
+              src={buttonKatalogSlide}
+              alt="В каталог"
+              className="slide__vector"
+            />
+          </button></Link>
       </div>
     </section>
   );

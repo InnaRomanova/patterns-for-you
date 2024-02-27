@@ -67,6 +67,7 @@ function DetailsSlide() {
                                     <li key={i} className="details__list-item" >
                                         <img src={image} alt="картинка"
                                             className="details__image"
+                                            onClick={() => handleOpen(image)}
                                         />
                                     </li>
                                 ))}</Slider></ul>

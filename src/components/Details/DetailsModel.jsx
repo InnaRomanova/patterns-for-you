@@ -8,11 +8,14 @@ import { arrDetails } from "../Constants/Objects/Massiv";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ImagePopup from "../Popup/ImagePopup";
 
 function DetailsModel() {
     const sliderRef = useRef(null);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+    const [openModal, setOpenModal] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
     const settings = {
         dots: true,
         infinite: true,
@@ -35,8 +38,21 @@ function DetailsModel() {
         }
     }, []);
 
+    function handleOpen(image) {
+        setSelectedImage(image);
+        setOpenModal(true);
+    }
+
+    function handleClose() {
+        setSelectedImage(null);
+        setOpenModal(false);
+    }
+
     return (
         <>
+            {/* открытие модального окна картинки */}
+            {openModal ? (<ImagePopup selectedImage={selectedImage} handleClose={handleClose} />) : ""}
+
             {matchesMobile ? (
                 <>
                     <div className="model__description">
@@ -45,7 +61,8 @@ function DetailsModel() {
                                 <Slider ref={sliderRef} {...settings}>
                                     {teacher.image.map((image, i) => (
                                         <li key={i} className="model__list-item">
-                                            <img src={image} alt="картинка" className="model__image" />
+                                            <img src={image} alt="картинка" className="model__image"
+                                                onClick={() => handleOpen(image)} />
                                         </li>
                                     ))}
                                 </Slider>
@@ -71,7 +88,8 @@ function DetailsModel() {
                             <ul className="model__list" key={index}>
                                 {teacher.image.map((image, i) => (
                                     <li key={i} className="model__list-item">
-                                        <img src={image} alt="картинка" className="model__image" />
+                                        <img src={image} alt="картинка" className="model__image"
+                                            onClick={() => handleOpen(image)} />
                                     </li>
                                 ))}
                             </ul>

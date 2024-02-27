@@ -9,6 +9,7 @@
     bottom: 0;
     display: flex;
     visibility: visible;
+    z-index: 2;
 }
 
 .popup_opened {
@@ -19,7 +20,6 @@
 
 .popup__content {
     position: relative;
-    /* max-width: 75vw; */
 }
 
 .popup__close-button {
@@ -41,8 +41,22 @@
 }
 
 .popup__image {
-    width: 770px;
     margin: 0;
     padding: 0;
     border-radius: 20px;
+    height: 90%;
+    width: 100%;
+}
+
+/* .slick-prev, .slick-next {
+    width: 31px;
+    height: 31px;
+    background: burlywood;
+    border-radius: 50px;
+} */
+
+@media screen and (max-width: 460px) {
+    .popup__close-button {
+        right: 7px;
+    }
 }

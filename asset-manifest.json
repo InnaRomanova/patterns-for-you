@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/patterns-for-you/static/css/main.73b152ca.css",
-    "main.js": "/patterns-for-you/static/js/main.f53759c0.js",
+    "main.css": "/patterns-for-you/static/css/main.3ff8aa17.css",
+    "main.js": "/patterns-for-you/static/js/main.e679a8cb.js",
     "static/media/slide1.png": "/patterns-for-you/static/media/slide1.ae36322cafd96ca62fa3.png",
     "static/media/AuthorImage.png": "/patterns-for-you/static/media/AuthorImage.253de564f2bacf0f6623.png",
     "static/media/Image-patterns.png": "/patterns-for-you/static/media/Image-patterns.0931b6235832dc724f68.png",
@@ -47,11 +47,11 @@
     "static/media/closeButton-menuMobile.svg": "/patterns-for-you/static/media/closeButton-menuMobile.ffff9840a279b79d52d7f27db1122b36.svg",
     "static/media/Close-Icon.svg": "/patterns-for-you/static/media/Close-Icon.973e77374abfb705de40.svg",
     "static/media/buttonKatalogSlide.svg": "/patterns-for-you/static/media/buttonKatalogSlide.1a7b2b816437d352a04e94a4b4cf6311.svg",
-    "main.73b152ca.css.map": "/patterns-for-you/static/css/main.73b152ca.css.map",
-    "main.f53759c0.js.map": "/patterns-for-you/static/js/main.f53759c0.js.map"
+    "main.3ff8aa17.css.map": "/patterns-for-you/static/css/main.3ff8aa17.css.map",
+    "main.e679a8cb.js.map": "/patterns-for-you/static/js/main.e679a8cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.73b152ca.css",
-    "static/js/main.f53759c0.js"
+    "static/css/main.3ff8aa17.css",
+    "static/js/main.e679a8cb.js"
   ]
 }

@@ -10,19 +10,28 @@ import Favourites from "../Elements/Favourites";
 import DetailsSlide from "../Details/DetailsSlide";
 import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import ModelImage from "../../images/model1.png";
-import Like from "../Elements/Like";
-import Comment from "../Elements/Comment";
-import WorkCards from "../Work/WorkCards";
 import Work from "../Work/Work";
 import CommentsModel from "../Comments/CommentsModel";
 import Footer from "../Footer/Footer";
+import { useState } from 'react';
+import ProfilePopup from "./ProfilePopup";
 
 
-function Author({ arrWorks }) {
+function Author({ onClose }) {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+    const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
 
 
+    //функция открытия попапа аватара
+    const handleEditAvatarClick = () => {
+        setIsEditAvatarPopupOpen(true);
+    }
+
+    //функция закрытия попапа картинки
+    const closeAllPopups = () => {
+        setIsEditAvatarPopupOpen(false);
+    }
 
     return (
         <>
@@ -34,9 +43,11 @@ function Author({ arrWorks }) {
             <section className="author">
                 <div className="details__container">
                     <article className="author__container">
-                        <button className="author__avatar">
+                        <button className="author__avatar" onClick={handleEditAvatarClick} >
                             <img className="author__avatar-image" alt="аватарка" src={AuthorImage} />
                         </button>
+
+                        {isEditAvatarPopupOpen && <ProfilePopup onClose={closeAllPopups} />}
 
                         <div className="author__info">
                             <div className="author__data">

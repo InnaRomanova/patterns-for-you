@@ -23,6 +23,8 @@ function App() {
   const history = useNavigate();
   const [isImagePopupOpened, setIsImagePopupOpened] = useState(false);
   const [selectCard, setSelectCard] = useState({});
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+
 
 
   //регистрация пользователя
@@ -50,6 +52,7 @@ function App() {
         console.log(`Ошибка при авторизации: ${err}`);
       })
   }
+
 
   //функция при клике на картинку открывается попап картинки
   const handleCardClick = (card) => {

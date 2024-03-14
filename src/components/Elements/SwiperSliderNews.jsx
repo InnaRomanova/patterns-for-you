@@ -29,9 +29,9 @@ function SwiperSliderNews({ swiperArray }) {
         setSlidesPerView(4);
       } else if (display > 810) {
         setSlidesPerView(3);
-      } else if (display > 750) {
+      } else if (display > 635) {
         setSlidesPerView(2);
-      } else if (display < 750) {
+      } else if (display < 635) {
         setSlidesPerView(1);
       }
     }

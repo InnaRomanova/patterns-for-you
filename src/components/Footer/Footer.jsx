@@ -7,6 +7,7 @@ import whatssApp from "../../images/whatsapp-icon.png";
 import telegramm from "../../images/telegramm-icon.png";
 import viber from "../../images/viber-icon.png";
 import vk from "../../images/vk-icon.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 427px)" });
@@ -25,9 +26,9 @@ function Footer() {
                     </a>
                   </li>
                   <li className="footer__menu">
-                    <a href="#" className="footer__menu-link">
+                    <NavLink to="/about" className="footer__menu-link">
                       <p className="footer__text">О проекте</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu">
                     <a href="/forum" className="footer__menu-link">

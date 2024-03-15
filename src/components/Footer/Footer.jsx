@@ -7,7 +7,7 @@ import whatssApp from "../../images/whatsapp-icon.png";
 import telegramm from "../../images/telegramm-icon.png";
 import viber from "../../images/viber-icon.png";
 import vk from "../../images/vk-icon.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Footer() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 427px)" });
@@ -21,9 +21,9 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="/" className="footer__menu-link">
+                    <NavLink to="/" className="footer__menu-link">
                       <h5 className="footer__title">Главная</h5>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu">
                     <NavLink to="/about" className="footer__menu-link">
@@ -31,19 +31,19 @@ function Footer() {
                     </NavLink>
                   </li>
                   <li className="footer__menu">
-                    <a href="/forum" className="footer__menu-link">
+                    <NavLink to="/forum" className="footer__menu-link">
                       <p className="footer__text">Блок фотофорум</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu">
-                    <a href="/support" className="footer__menu-link">
+                    <NavLink to="/support" className="footer__menu-link">
                       <p className="footer__text">Как скачать</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu">
-                    <a href="/contacts" className="footer__menu-link">
+                    <NavLink to="/contacts" className="footer__menu-link">
                       <p className="footer__text">Контакты</p>
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
@@ -51,34 +51,34 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <h5 className="footer__title">Каталог</h5>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Платья</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Юбки</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Блузки</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Женская верхняя одежда</p>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <a href="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Жакеты</p>
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
@@ -86,9 +86,9 @@ function Footer() {
               <li className="footer__list-item">
                 <ul className="footer__list-menu">
                   <li className="footer__menu">
-                    <a href="/contacts" className="footer__menu-link">
+                    <NavLink to="/contacts" className="footer__menu-link">
                       <h5 className="footer__title">Контакты</h5>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer__menu">
                     <p className="footer__text">Россия, Чувашская Республика, г. Чебоксары</p>
@@ -109,21 +109,21 @@ function Footer() {
                 <p className="footer__text">Мы в социальных сетях</p>
                 <ul className="footer__list-icon">
                   <li className="footer__icon">
-                    <a href="#" className="footer__icon-link" >
+                    <Link to="#" className="footer__icon-link" >
                       <img className="footer__icon-image" alt="whatssApp" src={whatssApp} />
-                    </a></li>
+                    </Link></li>
                   <li className="footer__icon">
-                    <a href="#" className="footer__icon-link" >
+                    <Link to="#" className="footer__icon-link" >
                       <img className="footer__icon-image" alt="telegramm" src={telegramm} />
-                    </a></li>
+                    </Link></li>
                   <li className="footer__icon">
-                    <a href="#" className="footer__icon-link" >
+                    <Link to="#" className="footer__icon-link" >
                       <img className="footer__icon-image" alt="viber" src={viber} />
-                    </a></li>
+                    </Link></li>
                   <li className="footer__icon">
-                    <a href="#" className="footer__icon-link" >
+                    <Link to="#" className="footer__icon-link" >
                       <img className="footer__icon-image" alt="vk" src={vk} />
-                    </a></li>
+                    </Link></li>
                 </ul>
               </li></>) : (<>
                 <li className="footer__list-item footer__list-block">
@@ -131,9 +131,9 @@ function Footer() {
                   <p className="footer__text">Мы в социальных сетях</p>
                   <ul className="footer__list-icon">
                     <li className="footer__icon">
-                      <a href="#" className="footer__icon-link" >
+                      <Link to="#" className="footer__icon-link" >
                         <img className="footer__icon-image" alt="whatssApp" src={whatssApp} />
-                      </a></li>
+                      </Link></li>
                     <li className="footer__icon">
                       <a href="#" className="footer__icon-link" >
                         <img className="footer__icon-image" alt="telegramm" src={telegramm} />

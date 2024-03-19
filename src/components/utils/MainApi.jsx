@@ -1,137 +1,64 @@
-class MainApi {
-    constructor({ baseUrl, headers }) {
-        this._baseUrl = baseUrl;
-        this._headers = headers;
-        // this._getResponse = getResponse;
+class Api {
+    constructor({ 
+        // baseUrl, 
+        token }) {
+    //   this._baseUrl = baseUrl;
+      this._token = `Bearer ${token}`;
     }
-
-    //Отправка запроса
-    _getResponse(path, parameters) {
-        return fetch(`${this._baseUrl}${path}`, parameters)
-            .then((res) => {
-                return (res.ok) ? res.json() : Promise.reject(res.status);
-            });
+  
+    _request(path, method, info) {
+      const pattern = {
+        method: method,
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": this._token,
+        },
+        credentials: "include",
+      };
+  
+      return fetch(
+        `${this._token}/${path}`,
+        info ? { ...pattern, body: JSON.stringify(info) } : pattern
+      ).then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          Promise.reject(`ошибка: ${res.status}`);
+        }
+      });
     }
-
-    //регистрация
-    signUp({ name, email, password }) {
-        return this._getResponse('/signup', {
-            method: 'POST',
-            headers: {
-                ...this._headers,
-            },
-            body: JSON.stringify({ name, email, password }),
-        });
+  
+    getUserInfo() {
+      return this._request("users/me", "GET");
     }
-
-    //авторизация
-    signIn({ email, password }) {
-        return this._getResponse('/signin', {
-            method: 'POST',
-            headers: {
-                ...this._headers,
-            },
-            body: JSON.stringify({ email, password }),
-        });
+  
+    editUserInfo(userInfo) {
+      return this._request("details/profile", "PATCH", userInfo);
     }
-
-    //выход
-    logout() {
-        return this._getResponse('/signout', {
-            method: 'GET',
-            headers: {
-                ...this._headers,
-            },
-        });
+  
+    editAvatar(avatarInfo) {
+      return this._request("details/avatar", "PATCH", avatarInfo);
     }
-
-    // метод делает запрос серверу и получает данные профиля
-    getProfile = () => {
-        return this._getResponse('/users/me', {
-            method: 'GET',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`,
-            },
-        });
-    };
-
-    //редактирование профиля
-    updateProfile(name, email) {
-        return this._getResponse('/users/me', {
-            method: 'PATCH',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`,
-            },
-            body: JSON.stringify({ name, email }),
-        });
+  
+    getCards() {
+      return this._request("cards", "GET");
     }
-
-    //получение сохраненных фильмов из сервера
-    getMovies() {
-        return this._getResponse('/movies', {
-            method: 'GET',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`,
-            }
-        });
+  
+    setNewCard(data) {
+      return this._request("cards", "POST", data);
     }
-
-    //сохранение фильмов в список пользователя
-    savedMovies(movie) {
-        return this._getResponse('/movies', {
-            method: 'POST',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`,
-            },
-            body: JSON.stringify({
-                country: movie.country,
-                director: movie.director,
-                duration: movie.duration,
-                year: movie.year,
-                description: movie.description,
-                image: `https://api.nomoreparties.co${movie.image.url}`,
-                trailerLink: movie.trailerLink,
-                movieId: movie.id,
-                nameRU: movie.nameRU,
-                nameEN: movie.nameEN,
-                thumbnail: `https://api.nomoreparties.co${movie.image.formats.thumbnail.url}`,
-            }),
-        });
+  
+    changeLikeCardStatus(cardId, isLiked) {
+      return this._request(`cards/${cardId}/likes`, isLiked ? "DELETE" : "PUT");
     }
-
-    //проверка токена
-    checkToken() {
-        return this._getResponse('/users/me', {
-            method: 'GET',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`
-            }
-        });
+  
+    changeDeleteCardStatus(id) {
+      return this._request(`cards/${id}`, "DELETE");
     }
-
-    removeMovie(movieId) {
-        return this._getResponse(`/movies/${movieId}`, {
-            method: 'DELETE',
-            headers: {
-                ...this._headers,
-                'authorization': `Bearer ${localStorage.getItem('jwt')}`,
-            },
-        });
-    }
-}
-
-const api = new MainApi({
-    baseUrl: 'https://api.romanova.nomoredomains.club',
-    headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-    },
-    credentials: 'include',
-})
-
-export { api }
+  }
+  const newApi = new Api({
+    // baseUrl: "https://mesto-travel-backend.ru",
+     token: "6317d273-77cd-40e4-acd5-6cbb113af6b1",
+  });
+  
+  export default newApi;

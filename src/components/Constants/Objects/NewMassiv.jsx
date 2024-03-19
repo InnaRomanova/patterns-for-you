@@ -1,4 +1,5 @@
-//для массива arrReviews - новинки, компонент News
+//для массива arrReviews - новинки выкройки, компонент News - 
+//для слайдера на главной странице
 import NewsCard from "../../../images/NewsCard.png";
 
 

@@ -14,24 +14,34 @@ import Work from "../Work/Work";
 import CommentsModel from "../Comments/CommentsModel";
 import Footer from "../Footer/Footer";
 import { useState } from 'react';
+import AvatarPopup from "./AvatarPopup";
 import ProfilePopup from "./ProfilePopup";
+import { CurrentUserContext } from "../contexts/CurrentContexts";
 
 
 function Author({ onClose }) {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-
+    const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
 
     //функция открытия попапа аватара
     const handleEditAvatarClick = () => {
         setIsEditAvatarPopupOpen(true);
     }
 
+    //функция открытия попапа редактирования профиля
+    const handleEditProfileClick = () => {
+        setIsEditProfilePopupOpen(true)
+    }
+
     //функция закрытия попапа картинки
     const closeAllPopups = () => {
         setIsEditAvatarPopupOpen(false);
+        setIsEditProfilePopupOpen(false);
     }
+
+    const currentUser = React.useContext(CurrentUserContext);
 
     return (
         <>
@@ -44,19 +54,20 @@ function Author({ onClose }) {
                 <div className="details__container">
                     <article className="author__container">
                         <button className="author__avatar" onClick={handleEditAvatarClick} >
-                            <img className="author__avatar-image" alt="аватарка" src={AuthorImage} />
+                            <img className="author__avatar-image" alt="аватарка" src={currentUser.avatar} />
                         </button>
 
-                        {isEditAvatarPopupOpen && <ProfilePopup onClose={closeAllPopups} />}
+                        {isEditAvatarPopupOpen && <AvatarPopup onClose={closeAllPopups} />}
 
                         <div className="author__info">
                             <div className="author__data">
 
-                                <h3 className="author__name">Романова Алина Сидоровна</h3>
-                                <button className="author__name-edit"></button>
+                                <h3 className="author__name">{currentUser.name}</h3>
+                                <button className="author__name-edit" onClick={handleEditProfileClick}></button>
+                                {isEditProfilePopupOpen && <ProfilePopup onClose={closeAllPopups} />}
                             </div>
                             <button className="author__works">
-                                <TailorImage /> 3 работы автора
+                                <TailorImage /> работы автора
                             </button>
                         </div>
                     </article>

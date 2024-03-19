@@ -19,7 +19,7 @@ function Card({ swiperArray }) {
               /></Link>
             <div className="katalog-card__info">
               <div className="katalog-card__info-text">
-                <Link to="/katalog" className="new__more-link"><h4 className="katalog-card__name">{arrCards.name}</h4>
+                <Link to="/katalog" className="new__more-link"><h4 className="katalog-card__name">{arrCards.titles}</h4>
                   <p className="katalog-card__detailed">{arrCards.detailed} / Подробнее</p></Link>
               </div>
               <Link to="/katalog" className="new__more-link"><CardButton /></Link>

@@ -58,11 +58,9 @@ function ForumCard() {
           <swiper-slide key={index}>
             <ul className="forum__cards">
               <li className="forum__card">
-                {/* <a href="#" className="forum__link"> */}
                 <Link to="/details" className="forum__link">
                   <img src={arrPatterns.image[0]} alt="картинка пользователя" className="forum__link-image" /></Link>
 
-                {/* </a> */}
               </li> </ul>
           </swiper-slide>
         ))}

@@ -2,7 +2,7 @@ import React from "react";
 import "./Katalog.css";
 import Card from "./Card";
 import { Link } from "react-router-dom";
-import { arrReviews } from "../Constants/Objects/Massiv";
+import { arrClothes } from "../Constants/Objects/Massiv";
 
 function Katalog() {
   return (
@@ -13,7 +13,7 @@ function Katalog() {
           <h3 className="katalog__subtitle">Женская одежда</h3>
         </div>
 
-        <Card swiperArray={arrReviews} />
+        <Card swiperArray={arrClothes} />
 
         <Link to="/katalog" className="katalog__block">
           <button className="katalog__button-over">Перейти в каталог</button></Link>

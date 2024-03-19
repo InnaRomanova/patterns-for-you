@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
@@ -13,8 +13,8 @@ import Support from "../Support/Support";
 import Contacts from "../Contacts/Contacts";
 import SignUp from "../Register/SignUp";
 import SignIn from "../Login/SignIn";
-import { api } from "../utils/MainApi";
-import ImagePopup from "../Popup/ImagePopup";
+import newApi from "../utils/MainApi";
+import { restContent } from "../utils/auth";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -23,47 +23,50 @@ function App() {
   const history = useNavigate();
   const [isImagePopupOpened, setIsImagePopupOpened] = useState(false);
   const [selectCard, setSelectCard] = useState({});
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-
+  const [userEmail, setUserEmail] = useState('');
+  const [isLogged, setIsLogged] = useState(false);
 
 
   //регистрация пользователя
-  function handleRegister({ name, email, password }) {
-    api.signUp({ name, email, password })
-      .then(() => {
-        handleLogin({ email, password })
-      })
-      .catch((err) => {
-        console.log(`Ошибка при регистрации: ${err}`);
-      });
-  }
+  // function handleRegister({ name, email, password }) {
+  //   newApi.signUp({ name, email, password })
+  //     .then(() => {
+  //       handleLogin({ email, password })
+  //     })
+  //     .catch((err) => {
+  //       console.log(`Ошибка при регистрации: ${err}`);
+  //     });
+  // }
 
 
   //авторизация пользователя
-  function handleLogin({ email, password }) {
-    api.
-      signIn({ email, password })
-      .then((res) => {
-        localStorage.setItem('jwt', res.token);
-        setIsLoggedIn(true);
-        history('/katalog');
-      })
-      .catch((err) => {
-        console.log(`Ошибка при авторизации: ${err}`);
-      })
-  }
+  // function handleLogin({ email, password }) {
+  //   newApi.
+  //     signIn({ email, password })
+  //     .then((res) => {
+  //       localStorage.setItem('jwt', res.token);
+  //       setIsLoggedIn(true);
+  //       history('/katalog');
+  //     })
+  //     .catch((err) => {
+  //       console.log(`Ошибка при авторизации: ${err}`);
+  //     })
+  // }
 
-
-  //функция при клике на картинку открывается попап картинки
-  const handleCardClick = (card) => {
-    setSelectCard(card);
-    setIsImagePopupOpened(true);
-  }
-
-  //функция закрытия попапа картинки
-  const closeAllPopups = () => {
-    setIsImagePopupOpened(false);
-  }
+  useEffect(() => {
+    if (localStorage.getItem("jwt")) {
+      const jwt = localStorage.getItem("jwt");
+      const dataEmail = localStorage.getItem("email");
+      restContent(jwt)
+        .then(() => {
+          setUserEmail(dataEmail);
+          setIsLogged(true);
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+    }
+  }, [])
 
   return (
     <div className="page">
@@ -84,10 +87,14 @@ function App() {
 
 
             <Route path="/signup" element={
-              <SignUp onRegister={handleRegister} />} >
+              <SignUp
+              // onRegister={handleRegister} 
+              />} >
             </Route>
             <Route path="/signin" element={
-              <SignIn onLogin={handleLogin} />} >
+              <SignIn
+              // onLogin={handleLogin} 
+              />} >
             </Route>
 
             <Route path="/katalog" element={<>
@@ -114,9 +121,6 @@ function App() {
               <Contacts />
             </>} >
             </Route>
-
-
-
           </Routes>
         </div>
       </CurrentUserContext.Provider>

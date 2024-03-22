@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "./KatalogPatterns.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
@@ -7,12 +8,20 @@ import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
 import CardKatalog from "./CardKatalog";
-import { arrPatterns } from "../Constants/Objects/Massiv";
+import { arrClothes } from "../Constants/Objects/Massiv";
 
 //главный компонент отображения каталога выкроек
 function KatalogPatterns() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
+  const [selectedValues, setSelectedValues] = useState([]);
 
+  function handleClick(id) {
+    const selectedClothes = arrClothes.values.find((item) =>
+      item.id === id);
+    if (selectedClothes) {
+      setSelectedValues(selectedClothes.values);
+    }
+  }
 
   return (
     <>
@@ -39,7 +48,7 @@ function KatalogPatterns() {
           </div>
 
           <ul className="katalogPatterns__cards">
-            <CardKatalog swiperKatalog={arrPatterns} />
+            <CardKatalog swiperKatalog={arrClothes} handleClick={() => handleClick()} />
           </ul>
           <button className="katalogPatterns__show-more">Показать еще</button>
 

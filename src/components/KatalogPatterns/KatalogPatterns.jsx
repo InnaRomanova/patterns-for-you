@@ -9,19 +9,39 @@ import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
 import CardKatalog from "./CardKatalog";
 import { arrClothes } from "../Constants/Objects/Massiv";
+import { useNavigate } from "react-router-dom";
+import get from "lodash";
 
 //главный компонент отображения каталога выкроек
-function KatalogPatterns() {
+function KatalogPatterns({ selectedKey }) {
   const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
-  const [selectedValues, setSelectedValues] = useState([]);
+  // const [selectedValues, setSelectedValues] = useState([]);
+  // const [selectedCategory, setSelectedCategory] = useState[null];
+  const selectedTypeOfClothes = arrClothes.find(item => item.key === selectedKey);
 
-  function handleClick(id) {
-    const selectedClothes = arrClothes.values.find((item) =>
-      item.id === id);
-    if (selectedClothes) {
-      setSelectedValues(selectedClothes.values);
-    }
-  }
+  //извлекает values безопасным путем
+  // const selectedPatterns = get(selectedTypeOfClothes, "values", []);
+  const selectedPatterns = selectedTypeOfClothes.values;
+
+  console.log(selectedTypeOfClothes)
+
+
+
+
+  // function handleClick(key) {
+
+  //   if (selectedClothes) {
+  //     console.log("Найден объект с ключом", key);
+  //     setSelectedValues(selectedClothes.values);
+  //   } else {
+  //     console.log("Не найден объект с ключом", key);
+  //   }
+  // }
+
+
+  // const handleCategoryClick = (category) => {
+  //   setSelectedCategory(category);
+  // }
 
   return (
     <>
@@ -36,7 +56,6 @@ function KatalogPatterns() {
             <p className="news__subtitle katalogPatterns__subtitle">Выкройки с фотографиями для всех</p>
           </div>
         </div>
-
         {/* блок отображения всех карточек с фотографиями */}
         <div className="katalogPatterns__container">
           <div className="katalogPatterns__block">
@@ -46,16 +65,14 @@ function KatalogPatterns() {
               <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выкроек/</Link>
               <Link to="/katalog" className="katalogPatterns__navigate-link">Женская одежда/</Link></span>
           </div>
-
           <ul className="katalogPatterns__cards">
-            <CardKatalog swiperKatalog={arrClothes} handleClick={() => handleClick()} />
+            {/* переименовать CardKatalog в SelectedPettrnList */}
+            <CardKatalog selectedPatterns={selectedPatterns} />
           </ul>
           <button className="katalogPatterns__show-more">Показать еще</button>
-
         </div>
       </section>
       <Footer />
-
     </>
   )
 }

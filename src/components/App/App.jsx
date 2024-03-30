@@ -97,8 +97,8 @@ function App() {
               />} >
             </Route>
 
-            <Route path="/katalog" element={<>
-              <KatalogPatterns />
+            <Route path="/katalog/Outerwear" element={<>
+              <KatalogPatterns selectedKey={"Outerwear"} />
             </>} >
             </Route>
             <Route path="/details" element={<>

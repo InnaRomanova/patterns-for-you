@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "../KatalogPatterns/KatalogPatterns.css";
 import map from "lodash/map";
-import { Link } from "react-router-dom";
-import { arrClothes } from "../Constants/Objects/Massiv";
+import { Link, useNavigate } from "react-router-dom";
+import { arrClothes2, arrClothes } from "../Constants/Objects/Massiv";
 
-
-function CardKatalog({ swiperKatalog, handleClick }) {
+function CardKatalog({ selectedPatterns }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    // const [selectedCategory, setSelectedCategory] = useNavigate[null];
+    // const history = useNavigate();
 
     const handleMouseOver = (index) => {
         setHoveredIndex(index);
@@ -16,38 +17,52 @@ function CardKatalog({ swiperKatalog, handleClick }) {
         setHoveredIndex(null);
     };
 
+    console.log(selectedPatterns)
+
+    // const handleCardClick = (key) => {
+    //     history.push(/author/`${key}`);
+    // };
+
+
+    // const filterAndSortedCards = swiperKatalog
+    //     .filter(card => card.category === selectedCategory)
+    //     .sort((a, b) => a.key - b.key);
+
     return (
         <>
-            {swiperKatalog.map((arrCards, index) => (
-                <li className="katalogPatterns__card" key={index} >
+            {selectedPatterns.map((card, index) => (
+                < li className="katalogPatterns__card" key={index} >
                     <div className="katalogPatterns__image-container">
-                        {/* <Link to="/author">
-                            <img className="katalogPatterns__card-image" src={arrCards.image} alt="карточка-картинка товара-выкройки" />
-                        </Link> */}
-
                         <Link to="/author">
                             <img
                                 className="katalogPatterns__card-image"
-                                src={hoveredIndex === index ? arrCards.hoveredImage : arrCards.image}
+                                src={hoveredIndex === index ? card.hoveredImage : card.image}
                                 alt="карточка-картинка товара-выкройки"
                                 onMouseOver={() => handleMouseOver(index)}
                                 onMouseOut={handleMouseOut}
-                                style={{ opacity: hoveredIndex === index ? 0.8 : 1 }} // Добавляем стиль для управления прозрачностью
-                                onClick={() => handleClick(arrCards.id)} />
+                                style={{ opacity: hoveredIndex === index ? 0.8 : 1 }}
+                            />
                         </Link>
                     </div>
                     <div className="katalogPatterns__info">
-                        <h4 className="katalogPatterns__info-name">{arrCards.name}</h4>
-                        <p className="card__inform-katalog katalogPatterns__text">{arrCards.text}</p>
-                        <span className="card__inform-price katalogPatterns__price">{arrCards.price} Руб.</span>
+                        <h4 className="katalogPatterns__info-name">{card.name}</h4>
+                        <p className="card__inform-katalog katalogPatterns__text">{card.text}</p>
+                        <span className="card__inform-price katalogPatterns__price">{card.price} Руб.</span>
                     </div>
                     <div className="katalogPatterns__more">
-                        <Link to="/author" className="new__more-link"><p className="card__more-katalog">Подробнее</p></Link>
-                        <Link to="/author" className="new__more-link"><button className="card__more-button-katalog katalogPatterns__button"></button></Link>
+                        <Link to="/author" className="new__more-link">
+                            <p className="card__more-katalog">Подробнее</p>
+                        </Link>
+                        <Link to="/author" className="new__more-link">
+                            <button className="card__more-button-katalog katalogPatterns__button"></button>
+                        </Link>
                     </div>
-                </li>
-            ))}
+                </li >
+            ))
+            }
         </>
     );
 }
+
+
 export default CardKatalog;

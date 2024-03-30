@@ -170,11 +170,110 @@ export const arrPatterns = [
   },
 ];
 
+export const arrClothes2 = {
+  dresses: {
+    id: 0,
+    key: "Outerwear",
+    titles: "Верхняя одежда",//Верхняя одежда/Пальтишки
+    image: coat,
+    detailed: "Decor",
+    values: [{
+      id: 0,
+      image: coat,
+      name: "Пальто осень-весна 2023",
+      text: "женское осенне-весеннее пальто",
+      price: 135.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 1,
+      image: dress,
+      name: "Пусть будет пальто",
+      text: "женское пальто",
+      price: 131.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 2,
+      image: coat,
+      name: "Пальто осень-весна 2023",
+      text: "женское осенне-весеннее пальто",
+      price: 135.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 3,
+      image: dress,
+      name: "Пусть будет пальто",
+      text: "женское пальто",
+      price: 131.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 4,
+      image: coat,
+      name: "Пальто осень-весна 2023",
+      text: "женское осенне-весеннее пальто",
+      price: 135.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 5,
+      image: dress,
+      name: "Пусть будет пальто",
+      text: "женское пальто",
+      price: 131.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 5,
+      image: coat,
+      name: "Пальто осень-весна 2023",
+      text: "женское осенне-весеннее пальто",
+      price: 135.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 7,
+      image: dress,
+      name: "Пусть будет пальто",
+      text: "женское пальто",
+      price: 131.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 8,
+      image: coat,
+      name: "Пальто осень-весна 2023",
+      text: "женское осенне-весеннее пальто",
+      price: 135.00,
+      hoveredImage: techpic,
+    },
+    {
+      id: 9,
+      image: dress,
+      name: "Пусть будет пальто",
+      text: "женское пальто",
+      price: 131.00,
+      hoveredImage: techpic,
+    }]
+  },
+  // outerwear: {
+  //   values: [{
+  //     id: 1
+  //   },
+  //   {
+  //     id: 2
+  //   }]
+  // },
+  // blusses: { values: [{ id: 1 }, { id: 2 }] },
+};
+
 export const arrClothes = [
   {
     id: 0,
     key: "Outerwear",
-    titles: "Верхняя одежда/Outerwear",//Верхняя одежда/Пальтишки
+    titles: "Верхняя одежда",//Верхняя одежда/Пальтишки
     image: coat,
     detailed: "Decor",
     values: [{

@@ -2,7 +2,7 @@ import React from "react";
 import "./Katalog.css";
 import CardList from "./CardList";
 import { Link } from "react-router-dom";
-import { arrClothes2, arrClothes } from "../Constants/Objects/Massiv";
+import { arrClothes } from "../Constants/Objects/Massiv";
 
 
 function Katalog() {

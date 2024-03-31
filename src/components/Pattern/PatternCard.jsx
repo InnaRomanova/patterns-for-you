@@ -56,7 +56,7 @@ function PatternCard({ patternArray }) {
           <swiper-slide key={index}>
             <ul className="pattern__list">
               <li className="pattern__list-item" key={index}>
-                <Link to="/author" className="patterns__block">
+                <Link to="/details" className="patterns__block">
                   <img src={arrPatterns.image} alt="одежда" className="pattern__image" /></Link>
                 <div className="pattern__inform">
                   <h3 className="card__inform-name">{arrPatterns.name}</h3>

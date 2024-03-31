@@ -28,7 +28,7 @@ function Details() {
                             <span className="katalogPatterns__navigate">
                                 <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
                                 <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
-                                <Link to="/author" className="katalogPatterns__navigate-link">Выкройка изделия-Платье</Link></span>
+                                <Link to="/details" className="katalogPatterns__navigate-link">Выкройка изделия-Платье</Link></span>
                             <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                         </div>
 

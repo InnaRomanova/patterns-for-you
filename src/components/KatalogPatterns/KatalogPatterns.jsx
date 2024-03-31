@@ -7,7 +7,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
-import CardKatalog from "./CardKatalog";
+import PatternList from "./PatternList";
 import { arrClothes } from "../Constants/Objects/Massiv";
 import { useNavigate } from "react-router-dom";
 import get from "lodash";
@@ -24,9 +24,6 @@ function KatalogPatterns({ selectedKey }) {
   const selectedPatterns = selectedTypeOfClothes.values;
 
   console.log(selectedTypeOfClothes)
-
-
-
 
   // function handleClick(key) {
 
@@ -66,8 +63,8 @@ function KatalogPatterns({ selectedKey }) {
               <Link to="/katalog" className="katalogPatterns__navigate-link">Женская одежда/</Link></span>
           </div>
           <ul className="katalogPatterns__cards">
-            {/* переименовать CardKatalog в SelectedPettrnList */}
-            <CardKatalog selectedPatterns={selectedPatterns} />
+
+            <PatternList selectedPatterns={selectedPatterns} />
           </ul>
           <button className="katalogPatterns__show-more">Показать еще</button>
         </div>

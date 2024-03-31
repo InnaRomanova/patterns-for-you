@@ -43,13 +43,13 @@ function WorkCards({ swiperArray }) {
             {map(swiperArray, (work, index) => (
               <li className="works__card" key={index}>
                 <div className="work__image-block">
-                  <Link to="/details" className="katalog__block">
+                  <Link to="/author" className="katalog__block">
                     <img
                       src={work.image}
                       alt="картинка"
                       className="work__image"
                     /></Link>
-                  <Link to="/details" className="katalog__block"><button className="work__nic">Авток НИК</button></Link>
+                  <Link to="/author" className="katalog__block"><button className="work__nic">Авток НИК</button></Link>
                 </div>
 
 
@@ -70,8 +70,8 @@ function WorkCards({ swiperArray }) {
                     </div>
                   </div>
                   <div className="work__more">
-                    <Link to="/details" className="katalog__block"><p className="card__more-katalog">Подробнее</p></Link>
-                    <Link to="/details" className="katalog__block"><button className="forum__right"><WorkButtonMore /></button></Link>
+                    <Link to="/author" className="katalog__block"><p className="card__more-katalog">Подробнее</p></Link>
+                    <Link to="/author" className="katalog__block"><button className="forum__right"><WorkButtonMore /></button></Link>
                   </div>
                 </>) : (<>
                   <div className="work__more">

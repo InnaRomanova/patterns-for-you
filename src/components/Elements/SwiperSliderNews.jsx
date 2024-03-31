@@ -53,7 +53,7 @@ function SwiperSliderNews({ swiperArray }) {
             <div className="news__cards-list">
               <div className="news__cards">
                 <div className="news__card">
-                  <Link to="/author">
+                  <Link to="/details">
                     <img
                       src={teacher.image}
                       alt="картинка выкройки"
@@ -66,9 +66,9 @@ function SwiperSliderNews({ swiperArray }) {
                     </span>
                   </div>
                   <div className="card__more">
-                    <Link to="/author" className="new__more-link">
+                    <Link to="/details" className="new__more-link">
                       <p className="card__more-katalog">Подробнее</p></Link>
-                    <Link to="/author" className="new__more-link"><button className="card__more-button-katalog"></button></Link>
+                    <Link to="/details" className="new__more-link"><button className="card__more-button-katalog"></button></Link>
 
                   </div>
                 </div>

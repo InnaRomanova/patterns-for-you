@@ -85,7 +85,6 @@ function App() {
               }
             ></Route>
 
-
             <Route path="/signup" element={
               <SignUp
               // onRegister={handleRegister} 
@@ -97,15 +96,36 @@ function App() {
               />} >
             </Route>
 
+            <Route path="/katalog" element={<>
+              <KatalogPatterns />
+            </>} >
+            </Route>
+
             <Route path="/katalog/Outerwear" element={<>
               <KatalogPatterns selectedKey={"Outerwear"} />
             </>} >
             </Route>
-            <Route path="/details" element={<>
-              <Author />
+            <Route path="/katalog/Dresses" element={<>
+              <KatalogPatterns selectedKey={"Dresses"} />
+            </>} >
+            </Route>
+            <Route path="/katalog/Вlouses" element={<>
+              <KatalogPatterns selectedKey={"Вlouses"} />
+            </>} >
+            </Route>
+            <Route path="/katalog/Skirts" element={<>
+              <KatalogPatterns selectedKey={"Skirts"} />
+            </>} >
+            </Route>
+            <Route path="/katalog/Jackets" element={<>
+              <KatalogPatterns selectedKey={"Jackets"} />
             </>} >
             </Route>
             <Route path="/author" element={<>
+              <Author />
+            </>} >
+            </Route>
+            <Route path="/details" element={<>
               <Details />
             </>} >
             </Route>

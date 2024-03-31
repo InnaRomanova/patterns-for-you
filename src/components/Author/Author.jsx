@@ -19,7 +19,7 @@ import ProfilePopup from "./ProfilePopup";
 import { CurrentUserContext } from "../contexts/CurrentContexts";
 
 
-function Author({ onClose }) {
+function Author() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 599px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);

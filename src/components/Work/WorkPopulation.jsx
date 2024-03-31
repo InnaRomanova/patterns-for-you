@@ -66,7 +66,7 @@ function WorkPopulation({ swiperPopulation }) {
                             <ul className="works-populations">
                                 <li className="works-populations__cards">
                                     <div className="work__image-block">
-                                        <Link to="/details"><img
+                                        <Link to="/author"><img
                                             src={work.image}
                                             alt="картинка"
                                             className="work__image"
@@ -90,12 +90,12 @@ function WorkPopulation({ swiperPopulation }) {
                                             </div>
                                         </div>
                                         <div className="work__more">
-                                            <Link to="/details" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
+                                            <Link to="/author" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
                                                 <button className="forum__right"><WorkButtonMore /></button></Link>
                                         </div>
                                     </>) : (<>
                                         <div className="work__more">
-                                            <Link to="/details" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
+                                            <Link to="/author" className="works-populations__link"><p className="card__more-katalog">Подробнее</p>
                                                 <button className="forum__right"><WorkButtonMore /></button></Link>
                                         </div>
                                         <div className="work__icons">

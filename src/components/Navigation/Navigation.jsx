@@ -14,6 +14,7 @@ function Navigation() {
   return (
     <div className="navigation__container">
       <ul className="navigation__list">
+
         <li className="navigation__list-item navigation__text"><Link to="/" className="navigation__link">Главная</Link></li>
         <li className="navigation__list-item navigation__text" onClick={handleOpen}>Каталог выкроек
           <OpenVector onOpen={openList} /></li>

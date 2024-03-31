@@ -57,10 +57,10 @@ function ForumCard({ commentArray }) {
                         <ul className="commets__cards">
                             <li className="comment__card">
                                 <div className="comment__personal">
-                                    <a href="/details" className="comment__link">
+                                    <a href="/author" className="comment__link">
                                         <img className="comment__link-avatar" alt="аватарка" src={arrComments.avatar} />
                                     </a>
-                                    <Link to="/details" className="comment__more-link"><h4 className="comment__name">{arrComments.name}</h4></Link>
+                                    <Link to="/author" className="comment__more-link"><h4 className="comment__name">{arrComments.name}</h4></Link>
                                 </div>
                                 <div className="comment__info">
                                     <p className="comment__info-text">{arrComments.text}</p>

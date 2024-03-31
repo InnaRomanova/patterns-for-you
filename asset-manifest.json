@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/patterns-for-you/static/css/main.0dd08b5b.css",
-    "main.js": "/patterns-for-you/static/js/main.31d7859f.js",
+    "main.js": "/patterns-for-you/static/js/main.30a790b6.js",
     "static/media/slide1.png": "/patterns-for-you/static/media/slide1.ae36322cafd96ca62fa3.png",
     "static/media/AuthorImage.png": "/patterns-for-you/static/media/AuthorImage.253de564f2bacf0f6623.png",
     "static/media/Image-patterns.png": "/patterns-for-you/static/media/Image-patterns.0931b6235832dc724f68.png",
@@ -48,10 +48,10 @@
     "static/media/Close-Icon.svg": "/patterns-for-you/static/media/Close-Icon.973e77374abfb705de40.svg",
     "static/media/buttonKatalogSlide.svg": "/patterns-for-you/static/media/buttonKatalogSlide.1a7b2b816437d352a04e94a4b4cf6311.svg",
     "main.0dd08b5b.css.map": "/patterns-for-you/static/css/main.0dd08b5b.css.map",
-    "main.31d7859f.js.map": "/patterns-for-you/static/js/main.31d7859f.js.map"
+    "main.30a790b6.js.map": "/patterns-for-you/static/js/main.30a790b6.js.map"
   },
   "entrypoints": [
     "static/css/main.0dd08b5b.css",
-    "static/js/main.31d7859f.js"
+    "static/js/main.30a790b6.js"
   ]
 }

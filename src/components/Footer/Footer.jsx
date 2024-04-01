@@ -8,6 +8,7 @@ import telegramm from "../../images/telegramm-icon.png";
 import viber from "../../images/viber-icon.png";
 import vk from "../../images/vk-icon.png";
 import { Link, NavLink } from "react-router-dom";
+import { arrClothes } from "../Constants/Objects/Massiv";
 
 function Footer() {
   const matchesMobile = useMediaQuery({ query: "(max-width: 427px)" });
@@ -55,7 +56,7 @@ function Footer() {
                       <h5 className="footer__title">Каталог</h5>
                     </NavLink>
                   </li>
-                  <li className="footer__menu footer__list-menu_disable">
+                  {/* <li className="footer__menu footer__list-menu_disable">
                     <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Платья</p>
                     </NavLink>
@@ -71,7 +72,7 @@ function Footer() {
                     </NavLink>
                   </li>
                   <li className="footer__menu footer__list-menu_disable">
-                    <NavLink to="/katalog" className="footer__menu-link">
+                    <NavLink to="/katalog/Outerwear" className="footer__menu-link">
                       <p className="footer__text">Женская верхняя одежда</p>
                     </NavLink>
                   </li>
@@ -79,7 +80,7 @@ function Footer() {
                     <NavLink to="/katalog" className="footer__menu-link">
                       <p className="footer__text">Жакеты</p>
                     </NavLink>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
 
@@ -187,27 +188,27 @@ function Footer() {
                       </NavLink>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <NavLink to="/katalog" className="footer__menu-link">
+                      <NavLink to="/katalog/Dresses" className="footer__menu-link">
                         <p className="footer__text">Платья</p>
                       </NavLink>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <NavLink to="/katalog" className="footer__menu-link">
+                      <NavLink to="/katalog/Skirts" className="footer__menu-link">
                         <p className="footer__text">Юбки</p>
                       </NavLink>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <NavLink to="/katalog" className="footer__menu-link">
+                      <NavLink to="/katalog/Вlouses" className="footer__menu-link">
                         <p className="footer__text">Блузки</p>
                       </NavLink>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <NavLink to="/katalog" className="footer__menu-link">
+                      <NavLink to="/katalog/Outerwear" className="footer__menu-link">
                         <p className="footer__text">Женская верхняя одежда</p>
                       </NavLink>
                     </li>
                     <li className="footer__menu footer__list-menu_disable">
-                      <NavLink to="/katalog" className="footer__menu-link">
+                      <NavLink to="/katalog/Jackets" className="footer__menu-link">
                         <p className="footer__text">Жакеты</p>
                       </NavLink>
                     </li>

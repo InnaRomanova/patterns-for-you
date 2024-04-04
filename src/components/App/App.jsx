@@ -120,14 +120,19 @@ function App() {
             <Route path="/katalog/Jackets" element={<>
               <KatalogPatterns selectedKey={"Jackets"} />
             </>} >
+
             </Route>
             <Route path="/author" element={<>
               <Author />
             </>} >
+
             </Route>
             <Route path="/details" element={<>
-              <Details />
+              <Details
+              // selectedKey={"Outerwear"}
+              />
             </>} >
+
             </Route>
             <Route path="/support" element={<>
               <Support />

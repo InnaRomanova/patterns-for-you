@@ -4,13 +4,13 @@ import map from "lodash/map";
 import Dots from "../Dots/Dots";
 import DetailsButtonLeft from "../Elements/DetailsButtonLeft";
 import DetailsButtonRight from "../Elements/DetailsButtonRight";
-import { arrDetails } from "../Constants/Objects/Massiv";
+import { arrDetails, arrClothes } from "../Constants/Objects/Massiv";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePopup from "../Popup/ImagePopup";
 
-function DetailsModel() {
+function DetailsModel({ selectedPatterns }) {
     const sliderRef = useRef(null);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
@@ -94,6 +94,18 @@ function DetailsModel() {
                                 ))}
                             </ul>
                         ))}
+
+                        {/* {selectedPatterns.map((teacher, index) => (
+                            <ul className="model__list" key={index}>
+                                <li className="model__list-item">
+                                    {teacher.imageModel.map((image, b) => (
+                                        <img key={b} src={image} alt="картинка" className="model__image"
+                                            onClick={() => handleOpen(image)} />
+                                    ))}
+
+                                </li>
+                            </ul>
+                        ))} */}
 
                         <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
                     </div>

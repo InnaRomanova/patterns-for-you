@@ -5,11 +5,15 @@ import DetailsVectorSidbar from "../Elements/DetailsVectorSidbar";
 import Shoppings from "../Elements/Shopping";
 import Favourites from "../Elements/Favourites";
 import DetailsModel from "../Details/DetailsModel";
+import { arrClothes } from "../Constants/Objects/Massiv";
 // import Like from "../Elements/Like";
 // import Comment from "../Elements/Comment";
 
-function DetailsContent() {
+function DetailsContent({ selectedKey }) {
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+
+    // const selectedTypeOfClothes = arrClothes.find(item => item.key === selectedKey);
+    // const selectedPattern = selectedTypeOfClothes.values;
 
 
     return (
@@ -69,7 +73,9 @@ function DetailsContent() {
                         </ul>
                     </div>
                 </>) : (<>
-                    <DetailsModel />
+                    <DetailsModel
+                    // selectedPattern={selectedPattern} selectedKey={selectedKey} 
+                    />
 
                     {/* Сайт-бар */}
                     <div className="details__sidebar">

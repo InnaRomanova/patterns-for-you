@@ -9,9 +9,13 @@ import Model1 from "../../../images/model1.png";
 import Model2 from "../../../images/ModelImage2.png";
 import Model3 from "../../../images/ModelImage3.png";
 
-//данные для массива arrPatters
+//данные для массива arrClothes
 import dress from "../../../images/pattern-dress.png";
 import coat from "../../../images/pattern-coat.png";
+import palto2 from "../../../images/palto2.jpg";
+import kurtka1 from "../../../images/kurtka1.jpg";
+import kurtka12 from "../../../images/kurtka12.jpg";
+import kurtka13 from "../../../images/kurtka13.jpg";
 import blouse from "../../../images/pattern-blouse.png";
 import techpic from "../../../images/techpic.jpg";
 
@@ -170,104 +174,104 @@ export const arrPatterns = [
   },
 ];
 
-export const arrClothes2 = {
-  dresses: {
-    id: 0,
-    key: "Outerwear",
-    titles: "Верхняя одежда",//Верхняя одежда/Пальтишки
-    image: coat,
-    detailed: "Decor",
-    values: [{
-      id: 0,
-      image: coat,
-      name: "Пальто осень-весна 2023",
-      text: "женское осенне-весеннее пальто",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 1,
-      image: dress,
-      name: "Пусть будет пальто",
-      text: "женское пальто",
-      price: 131.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 2,
-      image: coat,
-      name: "Пальто осень-весна 2023",
-      text: "женское осенне-весеннее пальто",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 3,
-      image: dress,
-      name: "Пусть будет пальто",
-      text: "женское пальто",
-      price: 131.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 4,
-      image: coat,
-      name: "Пальто осень-весна 2023",
-      text: "женское осенне-весеннее пальто",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 5,
-      image: dress,
-      name: "Пусть будет пальто",
-      text: "женское пальто",
-      price: 131.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 5,
-      image: coat,
-      name: "Пальто осень-весна 2023",
-      text: "женское осенне-весеннее пальто",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 7,
-      image: dress,
-      name: "Пусть будет пальто",
-      text: "женское пальто",
-      price: 131.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 8,
-      image: coat,
-      name: "Пальто осень-весна 2023",
-      text: "женское осенне-весеннее пальто",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 9,
-      image: dress,
-      name: "Пусть будет пальто",
-      text: "женское пальто",
-      price: 131.00,
-      hoveredImage: techpic,
-    }]
-  },
-  // outerwear: {
-  //   values: [{
-  //     id: 1
-  //   },
-  //   {
-  //     id: 2
-  //   }]
-  // },
-  // blusses: { values: [{ id: 1 }, { id: 2 }] },
-};
+// export const arrClothes2 = {
+//   dresses: {
+//     id: 0,
+//     key: "Outerwear",
+//     titles: "Верхняя одежда",//Верхняя одежда/Пальтишки
+//     image: coat,
+//     detailed: "Decor",
+//     values: [{
+//       id: 0,
+//       image: coat,
+//       name: "Пальто осень-весна 2023",
+//       text: "женское осенне-весеннее пальто",
+//       price: 135.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 1,
+//       image: dress,
+//       name: "Пусть будет пальто",
+//       text: "женское пальто",
+//       price: 131.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 2,
+//       image: coat,
+//       name: "Пальто осень-весна 2023",
+//       text: "женское осенне-весеннее пальто",
+//       price: 135.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 3,
+//       image: dress,
+//       name: "Пусть будет пальто",
+//       text: "женское пальто",
+//       price: 131.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 4,
+//       image: coat,
+//       name: "Пальто осень-весна 2023",
+//       text: "женское осенне-весеннее пальто",
+//       price: 135.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 5,
+//       image: dress,
+//       name: "Пусть будет пальто",
+//       text: "женское пальто",
+//       price: 131.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 5,
+//       image: coat,
+//       name: "Пальто осень-весна 2023",
+//       text: "женское осенне-весеннее пальто",
+//       price: 135.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 7,
+//       image: dress,
+//       name: "Пусть будет пальто",
+//       text: "женское пальто",
+//       price: 131.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 8,
+//       image: coat,
+//       name: "Пальто осень-весна 2023",
+//       text: "женское осенне-весеннее пальто",
+//       price: 135.00,
+//       hoveredImage: techpic,
+//     },
+//     {
+//       id: 9,
+//       image: dress,
+//       name: "Пусть будет пальто",
+//       text: "женское пальто",
+//       price: 131.00,
+//       hoveredImage: techpic,
+//     }]
+//   },
+// outerwear: {
+//   values: [{
+//     id: 1
+//   },
+//   {
+//     id: 2
+//   }]
+// },
+// blusses: { values: [{ id: 1 }, { id: 2 }] },
+// };
 
 export const arrClothes = [
   {
@@ -279,6 +283,7 @@ export const arrClothes = [
     values: [{
       id: 0,
       image: coat,
+      imageModel: [Model1, Model2, Model3],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
@@ -286,7 +291,7 @@ export const arrClothes = [
     },
     {
       id: 1,
-      image: dress,
+      image: palto2,
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -294,7 +299,8 @@ export const arrClothes = [
     },
     {
       id: 2,
-      image: coat,
+      image: kurtka1,
+      imageModel: [kurtka1, kurtka12, kurtka13],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
@@ -302,7 +308,7 @@ export const arrClothes = [
     },
     {
       id: 3,
-      image: dress,
+      image: palto2,
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -318,7 +324,7 @@ export const arrClothes = [
     },
     {
       id: 5,
-      image: dress,
+      image: palto2,
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -334,7 +340,7 @@ export const arrClothes = [
     },
     {
       id: 7,
-      image: dress,
+      image: palto2,
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -350,7 +356,7 @@ export const arrClothes = [
     },
     {
       id: 9,
-      image: dress,
+      image: palto2,
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,

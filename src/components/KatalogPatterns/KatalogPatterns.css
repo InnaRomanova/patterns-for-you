@@ -119,7 +119,7 @@
     /* Время эффекта */
     display: block;
     /* Убираем небольшой отступ снизу */
-    height: 480px;
+    height: 600px;
 }
 
 .katalogPatterns__card-image:hover {

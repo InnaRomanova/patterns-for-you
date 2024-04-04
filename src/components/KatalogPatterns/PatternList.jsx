@@ -17,8 +17,6 @@ function PatternList({ selectedPatterns }) {
         setHoveredIndex(null);
     };
 
-    console.log(selectedPatterns)
-
     // const handleCardClick = (key) => {
     //     history.push(/author/`${key}`);
     // };
@@ -33,7 +31,7 @@ function PatternList({ selectedPatterns }) {
             {selectedPatterns.map((card, index) => (
                 < li className="katalogPatterns__card" key={index} >
                     <div className="katalogPatterns__image-container">
-                        <Link to="/details">
+                        <Link to="/details/">
                             <img
                                 className="katalogPatterns__card-image"
                                 src={hoveredIndex === index ? card.hoveredImage : card.image}

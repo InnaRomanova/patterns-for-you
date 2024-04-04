@@ -58,11 +58,22 @@
     padding: 0;
     border-radius: 20px;
     height: 90%;
-    width: 100%;
+    width: 675px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .popup__image {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 460px) {
     .popup__close-button {
         right: 7px;
+    }
+
+    .popup__image {
+        max-width: 100%;
     }
 }

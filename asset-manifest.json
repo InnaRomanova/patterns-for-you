@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/patterns-for-you/static/css/main.0dd08b5b.css",
-    "main.js": "/patterns-for-you/static/js/main.30a790b6.js",
+    "main.css": "/patterns-for-you/static/css/main.b1bb49d0.css",
+    "main.js": "/patterns-for-you/static/js/main.ce2e77d6.js",
     "static/media/slide1.png": "/patterns-for-you/static/media/slide1.ae36322cafd96ca62fa3.png",
     "static/media/AuthorImage.png": "/patterns-for-you/static/media/AuthorImage.253de564f2bacf0f6623.png",
     "static/media/Image-patterns.png": "/patterns-for-you/static/media/Image-patterns.0931b6235832dc724f68.png",
@@ -18,16 +18,24 @@
     "static/media/model1.png": "/patterns-for-you/static/media/model1.69074a1c4cee9f79f85e.png",
     "static/media/AuthorImageMobile.png": "/patterns-for-you/static/media/AuthorImageMobile.7dd2f27b2b05802d5482.png",
     "static/media/detailsImage.png": "/patterns-for-you/static/media/detailsImage.cd4a8193a02af6a829b7.png",
+    "static/media/newdress1.jpg": "/patterns-for-you/static/media/newdress1.006d1b08b1d2ea97064c.jpg",
     "static/media/pattern-blouse.png": "/patterns-for-you/static/media/pattern-blouse.f03f6e78c4114c4ef4b5.png",
     "static/media/NewsCard.png": "/patterns-for-you/static/media/NewsCard.b92672ee26da82b7f8c0.png",
+    "static/media/newdress4.jpg": "/patterns-for-you/static/media/newdress4.a29c7924d426bca34f14.jpg",
     "static/media/ModelImage3.png": "/patterns-for-you/static/media/ModelImage3.bf2330bb859b9a365352.png",
     "static/media/Population2.png": "/patterns-for-you/static/media/Population2.bf9ac6102bde033ec800.png",
     "static/media/pattern-coat.png": "/patterns-for-you/static/media/pattern-coat.99bdec3bf1e87428a5a2.png",
+    "static/media/kurtka13.jpg": "/patterns-for-you/static/media/kurtka13.26913aa4b5a6c7063c55.jpg",
     "static/media/pattern-dress.png": "/patterns-for-you/static/media/pattern-dress.8b8859ad3e17b8b70d4b.png",
+    "static/media/palto2.jpg": "/patterns-for-you/static/media/palto2.03cd00c53abf4fb1ca0e.jpg",
     "static/media/Population1.png": "/patterns-for-you/static/media/Population1.c5766b2a75a8e39dd409.png",
+    "static/media/newdress2.jpg": "/patterns-for-you/static/media/newdress2.cb313b8c5d7f7516606b.jpg",
     "static/media/detailsSlide1.png": "/patterns-for-you/static/media/detailsSlide1.4380d750bad24b269ec4.png",
     "static/media/Katalog-image-mobile.png": "/patterns-for-you/static/media/Katalog-image-mobile.2165300ea8b2fbb6550f.png",
+    "static/media/newdress3.jpg": "/patterns-for-you/static/media/newdress3.2279d1d9b5a8a6ffcc52.jpg",
+    "static/media/kurtka12.jpg": "/patterns-for-you/static/media/kurtka12.b0ece1c89b75020eb082.jpg",
     "static/media/workFoto1.png": "/patterns-for-you/static/media/workFoto1.9bab4ea48ff9e837beef.png",
+    "static/media/kurtka1.jpg": "/patterns-for-you/static/media/kurtka1.6cd323d5283458c7dffa.jpg",
     "static/media/DMSerifDisplay-Regular.ttf": "/patterns-for-you/static/media/DMSerifDisplay-Regular.ca478f5117e07586dd07.ttf",
     "static/media/Jost-SemiBold.ttf": "/patterns-for-you/static/media/Jost-SemiBold.8a41a9f0991a217b59ef.ttf",
     "static/media/Jost-Regular.ttf": "/patterns-for-you/static/media/Jost-Regular.59de2b38b1b77348c048.ttf",
@@ -47,11 +55,11 @@
     "static/media/closeButton-menuMobile.svg": "/patterns-for-you/static/media/closeButton-menuMobile.ffff9840a279b79d52d7f27db1122b36.svg",
     "static/media/Close-Icon.svg": "/patterns-for-you/static/media/Close-Icon.973e77374abfb705de40.svg",
     "static/media/buttonKatalogSlide.svg": "/patterns-for-you/static/media/buttonKatalogSlide.1a7b2b816437d352a04e94a4b4cf6311.svg",
-    "main.0dd08b5b.css.map": "/patterns-for-you/static/css/main.0dd08b5b.css.map",
-    "main.30a790b6.js.map": "/patterns-for-you/static/js/main.30a790b6.js.map"
+    "main.b1bb49d0.css.map": "/patterns-for-you/static/css/main.b1bb49d0.css.map",
+    "main.ce2e77d6.js.map": "/patterns-for-you/static/js/main.ce2e77d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dd08b5b.css",
-    "static/js/main.30a790b6.js"
+    "static/css/main.b1bb49d0.css",
+    "static/js/main.ce2e77d6.js"
   ]
 }

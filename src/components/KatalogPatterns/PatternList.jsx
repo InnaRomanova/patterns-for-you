@@ -3,9 +3,12 @@ import "../KatalogPatterns/KatalogPatterns.css";
 import map from "lodash/map";
 import { Link, useNavigate } from "react-router-dom";
 import { arrClothes2, arrClothes } from "../Constants/Objects/Massiv";
+import Preloader from "../Preloader/Preloader";
 
 function PatternList({ selectedPatterns }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [end, setEnd] = useState(0);
     // const [selectedCategory, setSelectedCategory] = useNavigate[null];
     // const history = useNavigate();
 
@@ -28,7 +31,9 @@ function PatternList({ selectedPatterns }) {
 
     return (
         <>
+            {/* { isLoading && <Preloader />} */}
             {selectedPatterns.map((card, index) => (
+
                 < li className="katalogPatterns__card" key={index} >
                     <div className="katalogPatterns__image-container">
                         <Link to="/details/">

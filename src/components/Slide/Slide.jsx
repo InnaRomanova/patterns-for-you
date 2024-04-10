@@ -9,8 +9,8 @@ function Slide() {
       <div className="slide__container">
         <h1 className="slide__title">Patterns ForYou</h1>
         <p className="slide__subtitle">
-          There are many variations of the passages of lorem Ipsum
-          fromavailable,variations of the passages.
+          В этом сайте представлены выкройки, выполненные на заказ
+          с инструкцией и описаниями для самостоятельного пошива на дому.
         </p>
         <Link to="/katalog" className="slide__button-link">
           <button className="slide__button-katalog">

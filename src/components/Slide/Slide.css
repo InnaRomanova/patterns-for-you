@@ -43,7 +43,7 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.34px;
-    max-width: 426px;
+    max-width: 538px;
 }
 
 .slide__button-katalog {
@@ -87,7 +87,7 @@
 
 @media screen and (max-width: 1919px) {
     .slide {
-        height: 644px;
+        height: 718px;
     }
 
     .slide__container {
@@ -108,7 +108,7 @@
 
 @media screen and (max-width: 1260px) {
     .slide {
-        height: 533px;
+        height: 622px;
     }
 
     .slide__container {

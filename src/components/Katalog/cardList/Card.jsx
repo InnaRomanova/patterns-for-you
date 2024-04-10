@@ -18,10 +18,10 @@ function Card({ pattern }) {
 
                 <div className="katalog-card__info">
                     <div className="katalog-card__info-text">
-                        <Link to="/katalog" className="new__more-link"><h4 className="katalog-card__name">{pattern.titles}</h4>
+                        <Link to={`/katalog/${pattern.key}`} className="new__more-link"><h4 className="katalog-card__name">{pattern.titles}</h4>
                             <p className="katalog-card__detailed">{pattern.detailed} / Подробнее</p></Link>
                     </div>
-                    <Link to="/katalog" className="new__more-link"><CardButton /></Link>
+                    <Link to={`/katalog/${pattern.key}`} className="new__more-link"><CardButton /></Link>
                 </div>
             </li >
         </>

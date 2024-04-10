@@ -300,12 +300,12 @@
     }
 
     .katalogPatterns__card {
-        min-height: 417px;
+        /* min-height: 417px; */
     }
 
     .katalogPatterns__card-image {
         border-radius: 8px;
-        max-height: 237px;
+        max-height: 478px;
         width: 100%;
     }
 

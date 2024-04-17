@@ -127,9 +127,9 @@ function App() {
             </>} >
 
             </Route>
-            <Route path="/details" element={<>
+            <Route path="katalog/:selectedKey/details/:cardId" element={<>
               <Details
-              // selectedKey={"Outerwear"}
+
               />
             </>} >
 

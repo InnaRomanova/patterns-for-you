@@ -8,12 +8,21 @@ import KatalogImage from "../../images/Katalog-image.png";
 import KatalogImageMobile from "../../images/Katalog-image-mobile.png";
 import Work from "../Work/Work";
 import DetailsContent from "./DetailsContent";
+import { useLocation } from 'react-router-dom';
+import get from "lodash/get";
+import { arrClothes } from "../Constants/Objects/Massiv";
 
 function Details() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+    const location = useLocation();
+    const routeSelectedKey = get(location, "pathname").split("/").at(2);
+    const routeValueId = get(location, "pathname").split("/").at(-1);
+    const selectedCard = arrClothes.filter((item) => item.key === routeSelectedKey);
+    const cardValue = selectedCard[0].values.filter((item) => item.id === Number(routeValueId));
+    const cardValuePictures = get(cardValue[0], "imageModel", []);
 
-
+    console.log(cardValuePictures)
     return (
         <>
             <Header />
@@ -32,7 +41,7 @@ function Details() {
                             <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                         </div>
 
-                        <DetailsContent />
+                        <DetailsContent cardValuePictures={cardValuePictures} />
                     </div>
                 </article>
 

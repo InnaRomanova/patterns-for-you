@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CardButton from "../../Elements/CardButton";
 
 function Card({ pattern }) {
-
+    console.log(pattern)
 
     return (
         <>

@@ -283,7 +283,7 @@ export const arrClothes = [
     values: [{
       id: 0,
       image: coat,
-      imageModel: [Model1, Model2, Model3],
+      imageModel: [coat, coat, coat],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
@@ -292,6 +292,7 @@ export const arrClothes = [
     {
       id: 1,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,

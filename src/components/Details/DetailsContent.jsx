@@ -9,7 +9,7 @@ import { arrClothes } from "../Constants/Objects/Massiv";
 // import Like from "../Elements/Like";
 // import Comment from "../Elements/Comment";
 
-function DetailsContent({ selectedKey }) {
+function DetailsContent({ cardValuePictures }) {
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
 
     // const selectedTypeOfClothes = arrClothes.find(item => item.key === selectedKey);
@@ -74,7 +74,7 @@ function DetailsContent({ selectedKey }) {
                     </div>
                 </>) : (<>
                     <DetailsModel
-                    // selectedPattern={selectedPattern} selectedKey={selectedKey} 
+                        cardValuePictures={cardValuePictures}
                     />
 
                     {/* Сайт-бар */}

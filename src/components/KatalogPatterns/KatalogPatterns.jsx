@@ -100,7 +100,7 @@ function KatalogPatterns({ selectedKey }) {
           </div>
           <ul className="katalogPatterns__cards">
             {/* Вывод карточек */}
-            <PatternList selectedPatterns={selectedPatterns} />
+            <PatternList selectedPatterns={selectedPatterns} selectedKey={selectedKey} />
           </ul>
           {selectedKey.length > end ? (<button className="katalogPatterns__show-more"
             onClick={showMore}>Показать еще</button>) : ''}

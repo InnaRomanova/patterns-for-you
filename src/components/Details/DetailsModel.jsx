@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePopup from "../Popup/ImagePopup";
 
-function DetailsModel({ selectedPatterns }) {
+function DetailsModel({ cardValuePictures }) {
     const sliderRef = useRef(null);
     const matchesMobile = useMediaQuery({ query: "(max-width: 1499px)" });
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
@@ -84,7 +84,7 @@ function DetailsModel({ selectedPatterns }) {
             ) : (
                 <>
                     <div className="model__description">
-                        {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
+                        {/* {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
                             <ul className="model__list" key={index}>
                                 {teacher.image.map((image, i) => (
                                     <li key={i} className="model__list-item">
@@ -93,19 +93,15 @@ function DetailsModel({ selectedPatterns }) {
                                     </li>
                                 ))}
                             </ul>
-                        ))}
-
-                        {/* {selectedPatterns.map((teacher, index) => (
-                            <ul className="model__list" key={index}>
-                                <li className="model__list-item">
-                                    {teacher.imageModel.map((image, b) => (
-                                        <img key={b} src={image} alt="картинка" className="model__image"
-                                            onClick={() => handleOpen(image)} />
-                                    ))}
-
-                                </li>
-                            </ul>
                         ))} */}
+                        <ul className="model__list" >
+                            {cardValuePictures.map((image, index) => (
+                                <li key={index} className="model__list-item">
+                                    <img src={image} alt="картинка" className="model__image"
+                                        onClick={() => handleOpen(image)} />
+                                </li>
+                            ))}
+                        </ul>
 
                         <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
                     </div>

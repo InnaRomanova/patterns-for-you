@@ -56,19 +56,16 @@ function DetailsModel({ cardValuePictures }) {
             {matchesMobile ? (
                 <>
                     <div className="model__description">
-                        {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
-                            <ul className="model__list" key={index}>
-                                <Slider ref={sliderRef} {...settings}>
-                                    {teacher.image.map((image, i) => (
-                                        <li key={i} className="model__list-item">
-                                            <img src={image} alt="картинка" className="model__image"
-                                                onClick={() => handleOpen(image)} />
-                                        </li>
-                                    ))}
-                                </Slider>
-                            </ul>
-                        ))}
-
+                        <ul className="model__list">
+                            <Slider ref={sliderRef} {...settings}>
+                                {cardValuePictures.map((image, index) => (
+                                    <li key={index} className="model__list-item">
+                                        <img src={image} alt="картинка" className="model__image"
+                                            onClick={() => handleOpen(image)} />
+                                    </li>
+                                ))}
+                            </Slider>
+                        </ul>
                         <div className="news__button details__button">
                             <button onClick={handlePrev} className="details__more-button-katalog">
                                 <DetailsButtonLeft />
@@ -77,23 +74,12 @@ function DetailsModel({ cardValuePictures }) {
                                 <DetailsButtonRight />
                             </button>
                         </div>
-
                         {mobile ? null : <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>}
                     </div>
                 </>
             ) : (
                 <>
                     <div className="model__description">
-                        {/* {arrDetails.filter((item) => item.id === 1).map((teacher, index) => (
-                            <ul className="model__list" key={index}>
-                                {teacher.image.map((image, i) => (
-                                    <li key={i} className="model__list-item">
-                                        <img src={image} alt="картинка" className="model__image"
-                                            onClick={() => handleOpen(image)} />
-                                    </li>
-                                ))}
-                            </ul>
-                        ))} */}
                         <ul className="model__list" >
                             {cardValuePictures.map((image, index) => (
                                 <li key={index} className="model__list-item">
@@ -102,7 +88,6 @@ function DetailsModel({ cardValuePictures }) {
                                 </li>
                             ))}
                         </ul>
-
                         <p className="details__text">Платье из тонкого шитья на подкладке из батиста.</p>
                     </div>
                 </>

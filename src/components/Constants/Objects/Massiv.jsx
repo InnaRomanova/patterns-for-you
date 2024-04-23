@@ -55,34 +55,6 @@ export const arrForum = [
   },
 ];
 
-//массив содержит объекты с изображениями выкройки на модели (от админа)
-export const arrDetails = [
-  {
-    id: 1,
-    image: [Model1, Model2, Model3]
-  },
-  {
-    id: 2,
-    image: [DetailsSlide1]
-  },
-  {
-    id: 3,
-    image: [Model3, Model2, Model1]
-  },
-  {
-    id: 4,
-    image: [DetailsSlide1]
-  },
-  {
-    id: 5,
-    image: [DetailsImage, Model1]
-  },
-  {
-    id: 6,
-    image: [DetailsSlide1]
-  },
-];
-
 export const arrPatterns = [
   {
     id: 1,
@@ -174,105 +146,6 @@ export const arrPatterns = [
   },
 ];
 
-// export const arrClothes2 = {
-//   dresses: {
-//     id: 0,
-//     key: "Outerwear",
-//     titles: "Верхняя одежда",//Верхняя одежда/Пальтишки
-//     image: coat,
-//     detailed: "Decor",
-//     values: [{
-//       id: 0,
-//       image: coat,
-//       name: "Пальто осень-весна 2023",
-//       text: "женское осенне-весеннее пальто",
-//       price: 135.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 1,
-//       image: dress,
-//       name: "Пусть будет пальто",
-//       text: "женское пальто",
-//       price: 131.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 2,
-//       image: coat,
-//       name: "Пальто осень-весна 2023",
-//       text: "женское осенне-весеннее пальто",
-//       price: 135.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 3,
-//       image: dress,
-//       name: "Пусть будет пальто",
-//       text: "женское пальто",
-//       price: 131.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 4,
-//       image: coat,
-//       name: "Пальто осень-весна 2023",
-//       text: "женское осенне-весеннее пальто",
-//       price: 135.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 5,
-//       image: dress,
-//       name: "Пусть будет пальто",
-//       text: "женское пальто",
-//       price: 131.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 5,
-//       image: coat,
-//       name: "Пальто осень-весна 2023",
-//       text: "женское осенне-весеннее пальто",
-//       price: 135.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 7,
-//       image: dress,
-//       name: "Пусть будет пальто",
-//       text: "женское пальто",
-//       price: 131.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 8,
-//       image: coat,
-//       name: "Пальто осень-весна 2023",
-//       text: "женское осенне-весеннее пальто",
-//       price: 135.00,
-//       hoveredImage: techpic,
-//     },
-//     {
-//       id: 9,
-//       image: dress,
-//       name: "Пусть будет пальто",
-//       text: "женское пальто",
-//       price: 131.00,
-//       hoveredImage: techpic,
-//     }]
-//   },
-// outerwear: {
-//   values: [{
-//     id: 1
-//   },
-//   {
-//     id: 2
-//   }]
-// },
-// blusses: { values: [{ id: 1 }, { id: 2 }] },
-// };
-
 export const arrClothes = [
   {
     id: 0,
@@ -283,57 +156,85 @@ export const arrClothes = [
     values: [{
       id: 0,
       image: coat,
+      number: 11111111, //Выкройка №
       imageModel: [coat, coat, coat],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
-      price: 135.00,
+      price: 135.00,  //цена
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh", //описание
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s", //расход материала
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh", //рекомендации по материалам
     },
     {
       id: 1,
       image: palto2,
+      number: 11111112,
       imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s",
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
     },
     {
       id: 2,
       image: kurtka1,
+      number: 11111113,
       imageModel: [kurtka1, kurtka12, kurtka13],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s",
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
     },
     {
       id: 3,
       image: palto2,
+      number: 11111114,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s",
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
     },
     {
       id: 4,
-      image: coat,
+      image: kurtka1,
+      number: 11111115,
+      imageModel: [kurtka1, kurtka1, kurtka1],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s",
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
     },
     {
       id: 5,
       image: palto2,
+      number: 11111116,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
       hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s",
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh",
     },
     {
       id: 5,
-      image: coat,
+      image: kurtka1,
+      imageModel: [kurtka1, kurtka1, kurtka1],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
@@ -342,6 +243,7 @@ export const arrClothes = [
     {
       id: 7,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -350,6 +252,7 @@ export const arrClothes = [
     {
       id: 8,
       image: coat,
+      imageModel: [coat, coat, coat],
       name: "Пальто осень-весна 2023",
       text: "женское осенне-весеннее пальто",
       price: 135.00,
@@ -358,6 +261,7 @@ export const arrClothes = [
     {
       id: 9,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -366,6 +270,7 @@ export const arrClothes = [
     {
       id: 10,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -374,6 +279,7 @@ export const arrClothes = [
     {
       id: 11,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -382,6 +288,7 @@ export const arrClothes = [
     {
       id: 12,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -390,6 +297,7 @@ export const arrClothes = [
     {
       id: 13,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -398,6 +306,7 @@ export const arrClothes = [
     {
       id: 14,
       image: palto2,
+      imageModel: [palto2, palto2, palto2],
       name: "Пусть будет пальто",
       text: "женское пальто",
       price: 131.00,
@@ -413,6 +322,7 @@ export const arrClothes = [
     values: [{
       id: 0,
       image: dress,
+      imageModel: [dress, dress, dress],
       name: "Платье Романтика",
       text: "женское платье",
       price: 135.00,
@@ -421,6 +331,7 @@ export const arrClothes = [
     {
       id: 2,
       image: Photo1,
+      imageModel: [Photo1, Photo1, Photo1],
       name: "Белое платье",
       text: "женское платье",
       price: 135.0,
@@ -429,6 +340,7 @@ export const arrClothes = [
     {
       id: 3,
       image: Photo2,
+      imageModel: [Photo2, Photo2, Photo2],
       name: "Желтое платье",
       text: "женское платье",
       price: 135.0,
@@ -437,6 +349,7 @@ export const arrClothes = [
     {
       id: 4,
       image: Photo3,
+      imageModel: [Photo3, Photo3, Photo3],
       name: "Платье-сарафан",
       text: "платье",
       price: 135.0,
@@ -445,6 +358,7 @@ export const arrClothes = [
     {
       id: 5,
       image: Photo4,
+      imageModel: [Photo4, Photo4, Photo4],
       name: "Комплект",
       text: "женское платье",
       price: 135.0,
@@ -453,6 +367,7 @@ export const arrClothes = [
     {
       id: 6,
       image: Photo3,
+      imageModel: [Photo3, Photo3, Photo3],
       name: "Синее платье-сарафан",
       text: "женское платье",
       price: 135.0,
@@ -461,6 +376,7 @@ export const arrClothes = [
     {
       id: 7,
       image: dress,
+      imageModel: [dress, dress, dress],
       name: "Платье Романтика",
       text: "женское платье",
       price: 135.00,
@@ -469,6 +385,7 @@ export const arrClothes = [
     {
       id: 8,
       image: Photo1,
+      imageModel: [Photo1, Photo1, Photo1],
       name: "Белое платье",
       text: "женское платье",
       price: 135.0,
@@ -477,6 +394,7 @@ export const arrClothes = [
     {
       id: 9,
       image: Photo2,
+      imageModel: [Photo2, Photo2, Photo2],
       name: "Желтое платье",
       text: "женское платье",
       price: 135.0,
@@ -485,6 +403,7 @@ export const arrClothes = [
     {
       id: 10,
       image: Photo3,
+      imageModel: [Photo3, Photo3, Photo3],
       name: "Платье-сарафан",
       text: "платье",
       price: 135.0,
@@ -493,6 +412,7 @@ export const arrClothes = [
     {
       id: 11,
       image: Photo4,
+      imageModel: [Photo4, Photo4, Photo4],
       name: "Комплект",
       text: "женское платье",
       price: 135.0,
@@ -501,6 +421,7 @@ export const arrClothes = [
     {
       id: 12,
       image: katalogImage1,
+      imageModel: [katalogImage1, katalogImage1, katalogImage1],
       name: "Синее платье-сарафан",
       text: "женское платье",
       price: 135.0,
@@ -516,6 +437,7 @@ export const arrClothes = [
     values: [{
       id: 1,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -524,6 +446,7 @@ export const arrClothes = [
     {
       id: 2,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -532,6 +455,7 @@ export const arrClothes = [
     {
       id: 3,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -540,6 +464,7 @@ export const arrClothes = [
     {
       id: 4,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -548,6 +473,7 @@ export const arrClothes = [
     {
       id: 5,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -556,6 +482,7 @@ export const arrClothes = [
     {
       id: 6,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -564,6 +491,7 @@ export const arrClothes = [
     {
       id: 7,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -572,6 +500,7 @@ export const arrClothes = [
     {
       id: 8,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Блузка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -587,6 +516,7 @@ export const arrClothes = [
     values: [{
       id: 1,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -595,6 +525,7 @@ export const arrClothes = [
     {
       id: 2,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -603,6 +534,7 @@ export const arrClothes = [
     {
       id: 3,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -611,6 +543,7 @@ export const arrClothes = [
     {
       id: 4,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -619,6 +552,7 @@ export const arrClothes = [
     {
       id: 5,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -627,6 +561,7 @@ export const arrClothes = [
     {
       id: 6,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -635,6 +570,7 @@ export const arrClothes = [
     {
       id: 7,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -643,6 +579,7 @@ export const arrClothes = [
     {
       id: 8,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Юбка",
       text: "женская повседневная блузка",
       price: 135.00,
@@ -658,6 +595,7 @@ export const arrClothes = [
     values: [{
       id: 1,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакеты",
       text: "женский жакет",
       price: 135.00,
@@ -666,6 +604,7 @@ export const arrClothes = [
     {
       id: 2,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакеты",
       text: "женский жакет",
       price: 135.00,
@@ -674,6 +613,7 @@ export const arrClothes = [
     {
       id: 3,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакеты",
       text: "женский жакет",
       price: 135.00,
@@ -682,6 +622,7 @@ export const arrClothes = [
     {
       id: 4,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакеты",
       text: "женский жакет",
       price: 135.00,
@@ -690,6 +631,7 @@ export const arrClothes = [
     {
       id: 5,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакеты",
       text: "Жакет",
       price: 135.00,
@@ -698,6 +640,7 @@ export const arrClothes = [
     {
       id: 6,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакет",
       text: "Жакет",
       price: 135.00,
@@ -706,6 +649,7 @@ export const arrClothes = [
     {
       id: 7,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакет",
       text: "женский жакет",
       price: 135.00,
@@ -714,6 +658,7 @@ export const arrClothes = [
     {
       id: 8,
       image: blouse,
+      imageModel: [blouse, blouse, blouse],
       name: "Жакет",
       text: "Жакет",
       price: 135.00,

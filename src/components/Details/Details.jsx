@@ -22,7 +22,7 @@ function Details() {
     const cardValue = selectedCard[0].values.filter((item) => item.id === Number(routeValueId));
     const cardValuePictures = get(cardValue[0], "imageModel", []);
 
-    console.log(cardValuePictures)
+    console.log(cardValue)
     return (
         <>
             <Header />
@@ -41,7 +41,9 @@ function Details() {
                             <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2>
                         </div>
 
-                        <DetailsContent cardValuePictures={cardValuePictures} />
+                        <DetailsContent 
+                        cardValuePictures={cardValuePictures} 
+                        cardValue={cardValue}/>
                     </div>
                 </article>
 

@@ -18,7 +18,8 @@ export default function DetailsVectorSidbar({ onOpen }) {
             width="30"
             height="30"
             viewBox="0 0 30 30"
-            fill="none">
+            fill="none"
+            transform={`rotate(${transform})`}>
             <circle cx="15"
                 cy="15"
                 r="14.5"

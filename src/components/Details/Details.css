@@ -151,6 +151,7 @@
     width: 345px;
     flex-direction: column;
     gap: 34px;
+    position: relative;
 }
 
 .details__sidebar-item {
@@ -178,6 +179,15 @@
 .details__sidebar-item:hover, .details__sidebar-kategories:hover {
     color: rgba(139, 74, 5, 0.70);
     cursor: pointer;
+}
+
+.details__sidebar-item_active {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
 }
 
 .details__sidmaster-title {

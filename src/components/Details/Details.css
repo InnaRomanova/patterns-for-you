@@ -315,6 +315,33 @@
     width: 100%;
 }
 
+.consumption {
+    margin: 0;
+    padding: 0;
+    /* position: absolute; */
+    display: flex;
+    top: 53px;
+    background: #F3ECE2;
+    border-radius: 5%;
+    width: 100%;
+    min-height: 100px;
+    max-height: max-content;
+    z-index: 1;
+}
+
+.consumption__container {
+    margin: 10px;
+    padding: 0;
+    font-family: 'Jost', 'Arial', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.22px;
+    color: black;
+
+}
+
 @media screen and (max-width: 2307px) {
     .details__list {
         grid-template-columns: repeat(2, 1fr);

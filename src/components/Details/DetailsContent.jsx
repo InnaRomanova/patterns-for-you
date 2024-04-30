@@ -9,23 +9,27 @@ import DetailsModel from "../Details/DetailsModel";
 import { arrClothes } from "../Constants/Objects/Massiv";
 import map from "lodash/map";
 import DetailsKategories from "./DelailsKategories";
-import Navigation from "../Navigation/Navigation";
+import DetailsConsumption from "./DetailsConsumption";
 // import Like from "../Elements/Like";
 // import Comment from "../Elements/Comment";
 
 function DetailsContent({ cardValuePictures, cardValue }) {
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+    const [openModal1, setOpenModal1] = useState(false);
     const [openList, setOpenList] = useState(false);
 
     // const selectedTypeOfClothes = arrClothes.find(item => item.key === selectedKey);
     // const selectedPattern = selectedTypeOfClothes.values;
 
+
     const handleOpen = () => {
-        setOpenList(true);
+        setOpenModal1(true);
+        setOpenList(!openList);
     }
 
     const handleClose = () => {
-        setOpenList(false);
+        setOpenModal1(false);
+        setOpenList(openList);
     }
 
     return (
@@ -44,21 +48,32 @@ function DetailsContent({ cardValuePictures, cardValue }) {
 
                             <li className="details__sidmaster-item">
                                 <ul className="details__sidebar-list">
-                                    {openList ? (<li className="details__sidebar-item details__sidebar-item_active" onClick={handleClose}>
-                                        gggggggggggggggggggggggggg
-                                        </li>) : (
-                                        <li className="details__sidebar-item">
+                                    {openModal1 ? (<>
+                                        <li className="details__sidebar-item"
+                                            onClick={handleClose}>
                                             Расход материала
-                                            <DetailsVectorSidbar onClick={handleOpen} /></li>)}
+                                            <DetailsVectorSidbar
+                                                onOpen={openList}
+                                            />
+                                        </li>
+                                        <DetailsConsumption /></>
 
-                                    {/* {openList ? (<Navigation handleClose={handleClose} />) : ""} */}
+                                    ) : (
+                                        <li className="details__sidebar-item"
+                                            onClick={handleOpen}>
+                                            Расход материала
+                                            <DetailsVectorSidbar />
+                                        </li>
+                                    )}
 
                                     <li className="details__sidebar-item">
                                         Рекомендации по материалам
-                                        <DetailsVectorSidbar /></li>
+                                        <DetailsVectorSidbar />
+                                    </li>
                                     <li className="details__sidebar-item">
                                         Как купить выкройку
-                                        <DetailsVectorSidbar /></li>
+                                        <DetailsVectorSidbar />
+                                    </li>
                                 </ul></li>
 
                             <li className="details__sidmaster-title">
@@ -93,9 +108,22 @@ function DetailsContent({ cardValuePictures, cardValue }) {
 
                             <li className="details__sidmaster-item">
                                 <ul className="details__sidebar-list">
-                                    <li className="details__sidebar-item">
-                                        Расход материала
-                                        <DetailsVectorSidbar /></li>
+
+                                    {openModal1 ? (<>
+                                        <li className="details__sidebar-item" onClick={handleClose}>
+                                            Расход материала
+                                            <DetailsVectorSidbar onOpen={openList} />
+                                        </li>
+                                        <DetailsConsumption /></>
+
+                                    ) : (
+                                        <li className="details__sidebar-item"
+                                            onClick={handleOpen}>
+                                            Расход материала
+                                            <DetailsVectorSidbar />
+                                        </li>
+                                    )}
+
                                     <li className="details__sidebar-item">
                                         Рекомендации по&nbsp;материалам
                                         <DetailsVectorSidbar /></li>

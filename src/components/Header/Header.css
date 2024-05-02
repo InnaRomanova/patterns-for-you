@@ -194,6 +194,8 @@
     .header__closeButton-menu {
         border: none;
         background-color: transparent;
+        padding: 0;
+        margin: 0;
     }
 
     .header__menu-image, .header__closeButton-image {

@@ -15,21 +15,45 @@ import DetailsConsumption from "./DetailsConsumption";
 
 function DetailsContent({ cardValuePictures, cardValue }) {
     const mobile = useMediaQuery({ query: "(max-width: 883px)" });
+    const [selectedNumber, setSelectedNumber] = useState(null);
     const [openModal1, setOpenModal1] = useState(false);
+    const [openModal2, setOpenModal2] = useState(false);
+    const [openModal3, setOpenModal3] = useState(false);
     const [openList, setOpenList] = useState(false);
+    const [openList2, setOpenList2] = useState(false);
+    const [openList3, setOpenList3] = useState(false);
 
     // const selectedTypeOfClothes = arrClothes.find(item => item.key === selectedKey);
     // const selectedPattern = selectedTypeOfClothes.values;
 
 
-    const handleOpen = () => {
-        setOpenModal1(true);
-        setOpenList(!openList);
+    //функция открытия списка в сайт-баре
+    const handleOpen = (listNumber) => {
+        setSelectedNumber(listNumber);
+        if (listNumber === 1) {
+            setOpenModal1(true);
+            setOpenList(!openList);
+        } else if (listNumber === 2) {
+            setOpenModal2(true);
+            setOpenList2(!openList2);
+        } else if (listNumber === 3) {
+            setOpenModal3(true);
+            setOpenList3(!openList3);
+        }
     }
 
-    const handleClose = () => {
-        setOpenModal1(false);
-        setOpenList(openList);
+    //функция закрытия списка в сайт-баре
+    const handleClose = (listNumber) => {
+        if (listNumber === 1) {
+            setOpenModal1(false);
+            setOpenList(openList);
+        } else if (listNumber === 2) {
+            setOpenModal2(false);
+            setOpenList2(openList2);
+        } else if (listNumber === 3) {
+            setOpenModal3(false);
+            setOpenList3(openList3);
+        } setSelectedNumber(null);
     }
 
     return (
@@ -48,32 +72,36 @@ function DetailsContent({ cardValuePictures, cardValue }) {
 
                             <li className="details__sidmaster-item">
                                 <ul className="details__sidebar-list">
-                                    {openModal1 ? (<>
-                                        <li className="details__sidebar-item"
-                                            onClick={handleClose}>
+                                {openModal1 ? (<>
+                                        <li className="details__sidebar-item" onClick={() => handleClose(1)}>
                                             Расход материала
-                                            <DetailsVectorSidbar
-                                                onOpen={openList}
-                                            />
+                                            <DetailsVectorSidbar onOpen={openList} />
                                         </li>
                                         <DetailsConsumption /></>
+                                    ) : (<li className="details__sidebar-item"
+                                        onClick={() => handleOpen(1)}>
+                                        Расход материала
+                                        <DetailsVectorSidbar />
+                                    </li>)}
 
-                                    ) : (
+                                    {openModal2 ? (<>
+                                        <li className="details__sidebar-item" onClick={() => handleClose(2)}>
+                                            Рекомендации по&nbsp;материалам
+                                            <DetailsVectorSidbar onOpen={openList2} /></li>
+                                        ghfghfghhgfhf</>) : (
                                         <li className="details__sidebar-item"
-                                            onClick={handleOpen}>
-                                            Расход материала
-                                            <DetailsVectorSidbar />
-                                        </li>
-                                    )}
+                                            onClick={() => handleOpen(2)}>
+                                            Рекомендации по&nbsp;материалам
+                                            <DetailsVectorSidbar /></li>)}
 
-                                    <li className="details__sidebar-item">
-                                        Рекомендации по материалам
-                                        <DetailsVectorSidbar />
-                                    </li>
-                                    <li className="details__sidebar-item">
+                                    {openModal3 ? (<>
+                                    <li className="details__sidebar-item" onClick={() => handleClose(3)}>
                                         Как купить выкройку
-                                        <DetailsVectorSidbar />
-                                    </li>
+                                        <DetailsVectorSidbar onOpen={openList3}/></li>
+                                        fdgdgdwwwwwwwwwwwwwwwwwwwwwwwwww</>) : (<li className="details__sidebar-item"
+                                        onClick={() => handleOpen(3)}>
+                                        Как купить выкройку
+                                        <DetailsVectorSidbar /></li>)}
                                 </ul></li>
 
                             <li className="details__sidmaster-title">
@@ -110,26 +138,35 @@ function DetailsContent({ cardValuePictures, cardValue }) {
                                 <ul className="details__sidebar-list">
 
                                     {openModal1 ? (<>
-                                        <li className="details__sidebar-item" onClick={handleClose}>
+                                        <li className="details__sidebar-item" onClick={() => handleClose(1)}>
                                             Расход материала
                                             <DetailsVectorSidbar onOpen={openList} />
                                         </li>
                                         <DetailsConsumption /></>
+                                    ) : (<li className="details__sidebar-item"
+                                        onClick={() => handleOpen(1)}>
+                                        Расход материала
+                                        <DetailsVectorSidbar />
+                                    </li>)}
 
-                                    ) : (
+                                    {openModal2 ? (<>
+                                        <li className="details__sidebar-item" onClick={() => handleClose(2)}>
+                                            Рекомендации по&nbsp;материалам
+                                            <DetailsVectorSidbar onOpen={openList2} /></li>
+                                        ghfghfghhgfhf</>) : (
                                         <li className="details__sidebar-item"
-                                            onClick={handleOpen}>
-                                            Расход материала
-                                            <DetailsVectorSidbar />
-                                        </li>
-                                    )}
+                                            onClick={() => handleOpen(2)}>
+                                            Рекомендации по&nbsp;материалам
+                                            <DetailsVectorSidbar /></li>)}
 
-                                    <li className="details__sidebar-item">
-                                        Рекомендации по&nbsp;материалам
-                                        <DetailsVectorSidbar /></li>
-                                    <li className="details__sidebar-item">
+                                    {openModal3 ? (<>
+                                    <li className="details__sidebar-item" onClick={() => handleClose(3)}>
                                         Как купить выкройку
-                                        <DetailsVectorSidbar /></li>
+                                        <DetailsVectorSidbar onOpen={openList3}/></li>
+                                        fdgdgdwwwwwwwwwwwwwwwwwwwwwwwwww</>) : (<li className="details__sidebar-item"
+                                        onClick={() => handleOpen(3)}>
+                                        Как купить выкройку
+                                        <DetailsVectorSidbar /></li>)}
                                 </ul></li>
 
                             <li className="details__sidmaster-title">

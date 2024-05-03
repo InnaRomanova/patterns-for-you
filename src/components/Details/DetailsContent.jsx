@@ -10,6 +10,8 @@ import { arrClothes } from "../Constants/Objects/Massiv";
 import map from "lodash/map";
 import DetailsKategories from "./DelailsKategories";
 import DetailsConsumption from "./DetailsConsumption";
+import DetailsRecommendations from "./DetailsRecommendations";
+import DetailsHowToBuy from "./DetailsHowToBuy";
 // import Like from "../Elements/Like";
 // import Comment from "../Elements/Comment";
 
@@ -88,7 +90,7 @@ function DetailsContent({ cardValuePictures, cardValue }) {
                                         <li className="details__sidebar-item" onClick={() => handleClose(2)}>
                                             Рекомендации по&nbsp;материалам
                                             <DetailsVectorSidbar onOpen={openList2} /></li>
-                                        ghfghfghhgfhf</>) : (
+                                            <DetailsRecommendations /></>) : (
                                         <li className="details__sidebar-item"
                                             onClick={() => handleOpen(2)}>
                                             Рекомендации по&nbsp;материалам
@@ -98,7 +100,7 @@ function DetailsContent({ cardValuePictures, cardValue }) {
                                     <li className="details__sidebar-item" onClick={() => handleClose(3)}>
                                         Как купить выкройку
                                         <DetailsVectorSidbar onOpen={openList3}/></li>
-                                        fdgdgdwwwwwwwwwwwwwwwwwwwwwwwwww</>) : (<li className="details__sidebar-item"
+                                        <DetailsHowToBuy /></>) : (<li className="details__sidebar-item"
                                         onClick={() => handleOpen(3)}>
                                         Как купить выкройку
                                         <DetailsVectorSidbar /></li>)}
@@ -153,7 +155,7 @@ function DetailsContent({ cardValuePictures, cardValue }) {
                                         <li className="details__sidebar-item" onClick={() => handleClose(2)}>
                                             Рекомендации по&nbsp;материалам
                                             <DetailsVectorSidbar onOpen={openList2} /></li>
-                                        ghfghfghhgfhf</>) : (
+                                        <DetailsRecommendations /></>) : (
                                         <li className="details__sidebar-item"
                                             onClick={() => handleOpen(2)}>
                                             Рекомендации по&nbsp;материалам
@@ -163,7 +165,7 @@ function DetailsContent({ cardValuePictures, cardValue }) {
                                     <li className="details__sidebar-item" onClick={() => handleClose(3)}>
                                         Как купить выкройку
                                         <DetailsVectorSidbar onOpen={openList3}/></li>
-                                        fdgdgdwwwwwwwwwwwwwwwwwwwwwwwwww</>) : (<li className="details__sidebar-item"
+                                        <DetailsHowToBuy /></>) : (<li className="details__sidebar-item"
                                         onClick={() => handleOpen(3)}>
                                         Как купить выкройку
                                         <DetailsVectorSidbar /></li>)}

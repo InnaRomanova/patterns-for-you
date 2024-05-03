@@ -49,7 +49,7 @@
 }
 
 .model__list-item {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -176,7 +176,8 @@
     gap: 68px;
 }
 
-.details__sidebar-item:hover, .details__sidebar-kategories:hover {
+.details__sidebar-item:hover,
+.details__sidebar-kategories:hover {
     color: rgba(139, 74, 5, 0.70);
     cursor: pointer;
 }
@@ -287,7 +288,8 @@
     letter-spacing: 0.62px;
 }
 
-.details__sidmaster-price:hover, .details__sidmaster-shopping:hover {
+.details__sidmaster-price:hover,
+.details__sidmaster-shopping:hover {
     background: rgba(215, 196, 176, 0.62);
     cursor: pointer;
 }
@@ -302,7 +304,8 @@
     opacity: 0.5;
 }
 
-.detailsVectorSidbar:hover, .favourites:hover {
+.detailsVectorSidbar:hover,
+.favourites:hover {
     cursor: pointer;
     opacity: 0.5;
 }
@@ -339,7 +342,7 @@
     line-height: 150%;
     letter-spacing: 0.22px;
     color: black;
-
+    text-align: justify;
 }
 
 @media screen and (max-width: 2307px) {
@@ -404,7 +407,7 @@
     }
 
     .model__list-item {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         gap: 20px;
     }

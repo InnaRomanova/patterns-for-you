@@ -11,6 +11,7 @@ import DetailsContent from "./DetailsContent";
 import { useLocation } from 'react-router-dom';
 import get from "lodash/get";
 import { arrClothes } from "../Constants/Objects/Massiv";
+import DetailsTitle from "./DetailsTitle";
 
 function Details() {
     const matchesMobile = useMediaQuery({ query: "(max-width: 999px)" });
@@ -21,9 +22,9 @@ function Details() {
     const selectedCard = arrClothes.filter((item) => item.key === routeSelectedKey);
     const cardValue = selectedCard[0].values.filter((item) => item.id === Number(routeValueId));
     const cardValuePictures = get(cardValue[0], "imageModel", []);
-    const cardValueName = get(cardValue[0], "title", []);
+    const cardValueName = get(cardValue[0], "title");
 
-    console.log(cardValueName)
+    console.log(cardValue)
     return (
         <>
             <Header />
@@ -35,16 +36,17 @@ function Details() {
                     </div>
                     <div className="details__container">
                         <div className="katalogPatterns__block">
-                            <span className="katalogPatterns__navigate">
-                                <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
-                                <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
-                                <Link to="/details" className="katalogPatterns__navigate-link">Выкройка изделия-Платье</Link></span>
-                            {/* <h2 className="news__title katalogPatterns__title-text">Платье/наименование</h2> */}
-
-                            {cardValue.map((kategories, index) => {
-                                <h2 key={index} className="news__title katalogPatterns__title-text">ffffff{kategories.title}</h2>
+                            {cardValue.map((names, index) => {
+                                <>
+                                    <span className="katalogPatterns__navigate">
+                                        <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
+                                        <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
+                                        <Link to="/details" className="katalogPatterns__navigate-link">Выкройка изделия-{names.title}</Link></span>
+                                    <h2 key={index} className="news__title katalogPatterns__title-text">{names.title}</h2> </>
                             })}
 
+                            {/* <DetailsTitle cardValue={cardValueName} />
+                            console.log(cardValueName) */}
                         </div>
 
                         <DetailsContent

@@ -63,6 +63,8 @@
 .katalogPatterns__navigate-link {
     text-decoration: none;
     color: #4D5053;
+    margin: 0;
+    padding: 0;
 }
 
 .katalogPatterns__navigate-link:hover {

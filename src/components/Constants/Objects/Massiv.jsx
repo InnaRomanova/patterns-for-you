@@ -2,12 +2,11 @@ import fotoForum1 from '../../../images/forumFoto1.png';
 import fotoForum2 from '../../../images/forumFoto2.png';
 import fotoForum3 from '../../../images/forumFoto3.png';
 
-//данные для массива arrDetails в компоненте 
-import DetailsSlide1 from "../../../images/detailsSlide1.png";
-import DetailsImage from "../../../images/detailsImage.png";
-import Model1 from "../../../images/model1.png";
-import Model2 from "../../../images/ModelImage2.png";
-import Model3 from "../../../images/ModelImage3.png";
+//данные для массива arrClothes новинки
+import newDress1 from "../../../images/newdress1.jpg";
+import newDress2 from "../../../images/newdress2.jpg";
+import newDress3 from "../../../images/newdress3.jpg";
+import newDress4 from "../../../images/newdress4.jpg";
 
 //данные для массива arrClothes
 import dress from "../../../images/pattern-dress.png";
@@ -329,7 +328,55 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
+      id: 1,
+      active: "new",
+      image: newDress1,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
       id: 2,
+      active: "new",
+      image: newDress2,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
+      id: 3,
+      active: "new",
+      image: newDress3,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
+      id: 4,
+      active: "new",
+      image: newDress4,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
+      id: 5,
+      active: "new",
+      image: newDress1,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
+      id: 6,
+      active: "new",
+      image: newDress2,
+      name: "Modern Kitchen",
+      text: "женское платье",
+      price: 135.0,
+    },
+    {
+      id: 7,
       image: Photo1,
       imageModel: [Photo1, Photo1, Photo1],
       title: "Белое платье",
@@ -338,7 +385,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 3,
+      id: 8,
       image: Photo2,
       imageModel: [Photo2, Photo2, Photo2],
       title: "Желтое платье",
@@ -347,7 +394,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 4,
+      id: 9,
       image: Photo3,
       imageModel: [Photo3, Photo3, Photo3],
       title: "Платье-сарафан",
@@ -356,7 +403,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 5,
+      id: 10,
       image: Photo4,
       imageModel: [Photo4, Photo4, Photo4],
       title: "Комплект",
@@ -365,7 +412,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 6,
+      id: 11,
       image: Photo3,
       imageModel: [Photo3, Photo3, Photo3],
       title: "Синее платье-сарафан",
@@ -374,7 +421,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 7,
+      id: 12,
       image: dress,
       imageModel: [dress, dress, dress],
       title: "Платье Романтика",
@@ -383,7 +430,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 8,
+      id: 13,
       image: Photo1,
       imageModel: [Photo1, Photo1, Photo1],
       title: "Белое платье",
@@ -392,7 +439,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 9,
+      id: 14,
       image: Photo2,
       imageModel: [Photo2, Photo2, Photo2],
       title: "Желтое платье",
@@ -401,7 +448,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 10,
+      id: 15,
       image: Photo3,
       imageModel: [Photo3, Photo3, Photo3],
       title: "Платье-сарафан",
@@ -410,7 +457,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 11,
+      id: 16,
       image: Photo4,
       imageModel: [Photo4, Photo4, Photo4],
       title: "Комплект",
@@ -419,7 +466,7 @@ export const arrClothes = [
       hoveredImage: techpic,
     },
     {
-      id: 12,
+      id: 17,
       image: katalogImage1,
       imageModel: [katalogImage1, katalogImage1, katalogImage1],
       title: "Синее платье-сарафан",
@@ -429,12 +476,24 @@ export const arrClothes = [
     }]
   },
   {
-    id: 3,
+    id: 2,
     key: "Вlouses",
     titles: "Блузки/Вlouses",//Блузки
     image: blouse,
     detailed: "Decor",
     values: [{
+      id: 0,
+      image: blouse,
+      imageModel: [blouse, blouse, blouse],
+      title: "Блузка",
+      text: "женская повседневная блузка",
+      price: 135.00,
+      hoveredImage: techpic,
+      description: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh", //описание
+      materialСonsumption: "dfkjkl  flkjl sjkl sf jl;s df;lj x kl; s l;k s", //расход материала
+      recommendations: "dsfskdgfkf sgfkhsd gfkd gskdkfk jkshkdfjhjksdhfh", //рекомендации по материалам
+    },
+    {
       id: 1,
       image: blouse,
       imageModel: [blouse, blouse, blouse],
@@ -490,15 +549,6 @@ export const arrClothes = [
     },
     {
       id: 7,
-      image: blouse,
-      imageModel: [blouse, blouse, blouse],
-      title: "Блузка",
-      text: "женская повседневная блузка",
-      price: 135.00,
-      hoveredImage: techpic,
-    },
-    {
-      id: 8,
       image: blouse,
       imageModel: [blouse, blouse, blouse],
       title: "Блузка",
@@ -587,7 +637,7 @@ export const arrClothes = [
     }]
   },
   {
-    id: 3,
+    id: 4,
     key: "Jackets",
     titles: "Жакеты/Jackets",//Жакеты
     image: blouse,

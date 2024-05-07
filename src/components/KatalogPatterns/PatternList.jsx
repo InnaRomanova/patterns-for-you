@@ -28,7 +28,7 @@ function PatternList({ selectedPatterns, selectedKey }) {
     // const filterAndSortedCards = swiperKatalog
     //     .filter(card => card.category === selectedCategory)
     //     .sort((a, b) => a.key - b.key);
-    console.log(selectedKey)
+    console.log(selectedPatterns)
 
     return (
         <>

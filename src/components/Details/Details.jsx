@@ -36,14 +36,16 @@ function Details() {
                     </div>
                     <div className="details__container">
                         <div className="katalogPatterns__block">
-                            {cardValue.map((names, index) => {
-                                <>
+                            {cardValue.map((names, index) => (
+                                <React.Fragment key={index}>
                                     <span className="katalogPatterns__navigate">
                                         <Link to="/" className="katalogPatterns__navigate-link">Главная/</Link>
-                                        <Link to="/katalog" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
-                                        <Link to="/details" className="katalogPatterns__navigate-link">Выкройка изделия-{names.title}</Link></span>
-                                    <h2 key={index} className="news__title katalogPatterns__title-text">{names.title}</h2> </>
-                            })}
+                                        <Link to="/katalog/all" className="katalogPatterns__navigate-link">Каталог выроек/</Link>
+                                        <p className="katalogPatterns__navigate-link">{names.title}</p></span>
+
+                                    <h2 key={index} className="news__title katalogPatterns__title-text">{names.title}</h2>
+                                </React.Fragment>
+                            ))}
 
                             {/* <DetailsTitle cardValue={cardValueName} />
                             console.log(cardValueName) */}

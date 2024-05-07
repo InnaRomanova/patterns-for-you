@@ -1,7 +1,3 @@
-//для массива arrReviews - новинки выкройки, компонент News - 
-//для слайдера на главной странице
-import NewsCard from "../../../images/NewsCard.png";
-
 import newDress1 from "../../../images/newdress1.jpg";
 import newDress2 from "../../../images/newdress2.jpg";
 import newDress3 from "../../../images/newdress3.jpg";

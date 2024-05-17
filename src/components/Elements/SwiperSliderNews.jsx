@@ -53,10 +53,10 @@ function SwiperSliderNews({ swiperArray }) {
             <div className="news__cards-list">
               <div className="news__cards">
                 <div className="news__card">
-                  <Link to="/details">
+                  <Link to={`/katalog/${teacher.key}`}>
                     <img
                       src={teacher.image}
-                      alt="картинка выкройки"
+                      alt={teacher.name}
                       className="card__image" /></Link>
                   <div className="card__inform">
                     <h3 className="card__inform-name">{teacher.name}</h3>

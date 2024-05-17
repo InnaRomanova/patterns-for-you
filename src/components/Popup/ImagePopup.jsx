@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./ImagePopup.css";
+import useOnClickOutside from 'use-onclickoutside';
 
 function ImagePopup({ selectedImage, handleClose }) {
 

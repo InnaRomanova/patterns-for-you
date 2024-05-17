@@ -6,14 +6,19 @@ import get from "lodash/get";
 import { arrClothes } from "../Constants/Objects/Massiv";
 import { arrReviews } from "../Constants/Objects/NewMassiv";
 
-function News() {
+function News({ selectedKey }) {
   // const location = useLocation();
-  // const routeSelectedKey = get(location, "pathname").split("/").at(2);
+  // const routeSelectedKey = get(location, "pathname").split("/").at(0);
   // const routeValueId = get(location, "pathname").split("/").at(-1);
   // const selectedCard = arrClothes.filter((item) => item.key === routeSelectedKey);
   // const cardValue = selectedCard[0].values.filter((item) => item.id === Number(routeValueId));
 
-  // console.log(cardValue)
+    //извлекает values безопасным путем
+  // const selectedPatterns = get(selectedTypeOfClothes, "values", [ы]);
+  // const selectedPatterns = selectedTypeOfClothes.values;
+  // const selectedTypeOfClothes = arrReviews.find(item => item.key === selectedKey);
+
+  // console.log(selectedPatterns)
   const reviews = [];
 
   arrReviews.forEach((rewiew, index) => {
@@ -48,7 +53,10 @@ function News() {
           <h2 className="news__title">Новинки!</h2>
           <p className="news__subtitle">Новые модели выкроек!</p>
         </div>
-        <SwiperSliderNews swiperArray={arrReviews} />
+        <SwiperSliderNews
+          swiperArray={arrReviews}
+          // selectedPatterns={selectedPatterns}
+          selectedKey={selectedKey} />
       </div>
     </section>
   );

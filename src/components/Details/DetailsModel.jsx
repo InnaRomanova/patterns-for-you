@@ -9,6 +9,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePopup from "../Popup/ImagePopup";
+import useOnClickOutside from 'use-onclickoutside';
 
 function DetailsModel({ cardValuePictures }) {
     const sliderRef = useRef(null);
@@ -48,10 +49,21 @@ function DetailsModel({ cardValuePictures }) {
         setOpenModal(false);
     }
 
+    //закрытие попапа вне окна/не работает
+    const closeByOverlay = (e) => {
+        if (e.target.classList.contains('popup')) {
+            handleClose()
+        }
+      }
+
     return (
         <>
             {/* открытие модального окна картинки */}
-            {openModal ? (<ImagePopup selectedImage={selectedImage} handleClose={handleClose} />) : ""}
+            {openModal ? (<ImagePopup 
+            onClick={e => e.stopPropagation()}
+            onCloseOverlay={closeByOverlay}
+            selectedImage={selectedImage} 
+            handleClose={handleClose} />) : ""}
 
             {matchesMobile ? (
                 <>

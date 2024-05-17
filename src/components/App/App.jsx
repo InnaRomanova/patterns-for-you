@@ -15,6 +15,7 @@ import SignUp from "../Register/SignUp";
 import SignIn from "../Login/SignIn";
 import newApi from "../utils/MainApi";
 import { restContent } from "../utils/auth";
+import ImagePopup from "../Popup/ImagePopup";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -129,7 +130,6 @@ function App() {
             </Route>
             <Route path="katalog/:selectedKey/details/:cardId" element={<>
               <Details
-
               />
             </>} >
 

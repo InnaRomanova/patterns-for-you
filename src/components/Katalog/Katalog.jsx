@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Katalog.css";
-import CardList from "./CardList";
+import CardList from "./cardList/CardList";
 import { Link } from "react-router-dom";
 import { arrClothes } from "../Constants/Objects/Massiv";
 import KatalogPatterns from "../KatalogPatterns/KatalogPatterns";
